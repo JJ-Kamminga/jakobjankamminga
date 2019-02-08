@@ -8,6 +8,9 @@
     })(window,document,'script','dataLayer','{{ .Site.Params.googleTagManager }}');</script>
     <!-- End Google Tag Manager -->
   {{ end }}
+  <!-- Captcha -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- End Captcha-->
 
   <title>
     {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}

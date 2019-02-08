@@ -5,12 +5,18 @@ theme = "Osprey"
 tags = ["portfolio", "web development", "blog"]
 canonifyURLS = true
 
+[Params]
 # Social media links in footer
-  twitter = "JaJaKamminga"
-  linkedin = "JakobJanKamminga"
-  github = "JJ-Kamminga"
+twitter = "JaJaKamminga"
+linkedin = "JakobJanKamminga"
+github = "JJ-Kamminga"
 
+# Copyright and theme author credit in footer
+  copyright = false
+  credit = false
 
+# Contact form
+ajaxBasin = "https://usebasin.com/f/62af8931a2ba"
 
 
 [[menu.main]]
@@ -27,5 +33,5 @@ canonifyURLS = true
   weight = 3
 [[menu.main]]
   name = "Contact"
-  url  = "/#contact"
+  url = "/#contact"
   weight = 4
