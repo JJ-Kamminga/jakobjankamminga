@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>One page website test</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        section {
+            width: 100%;
+            min-height: 105vh;
+            max-height: 1200px;
+        }
+        
+        section.black {
+            background: black;
+        }
+        
+        section.white {
+            background: white;
+        }
+
+        nav.navigation {
+            position: fixed;
+            top: 2%;
+            left: 10px;
+            min-width: 75px;
+            width: 5vw;
+            background: white;
+            box-shadow: 1px 2px 1px 1px black;
+            border: 1px solid black;
+            border-radius: 2%;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: black;
+
+        }
+        .navigation a:hover {
+            color:darkcyan ;
+        }
+
+        .navigator-item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .fold-button {
+            text-align: center;
+            position: relative;
+        }
+        .fold-button p {
+            font-size: 300%;
+            padding-bottom: 15px;
+            margin: 0px;
+        }
+
+        .navigator-item a, .navigator-item p {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .signature {
+            position: fixed;
+            right: 8%;
+            bottom: 2%;
+        }
+        #signature2 {
+            color: white;
+            text-shadow: black 2px 1px 0px;
+        }
+
+    </style>
+    <script>
+        function foldin() {
+            var foldable = document.getElementsByClassName("foldable");
+            
+            for (var i = 0; i < foldable.length; i++) {
+                if (foldable[i].style.display !== 'none') {
+                foldable[i].style.display = 'none';
+                } else {
+                foldable[i].style.display = 'block';
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <nav id="navigator" class="navigation">
+            <div class="fold-button" onclick="foldin()"><p>...</p></a></div>
+            <div class="navigator-item foldable"><a href="#section01">Home</a></div>
+            <div class="navigator-item foldable"><a href="#section02">Section 2</a></div>
+            <div class="navigator-item foldable"><a href="#section03">Project</a></div>
+            <div class="navigator-item foldable"><a href="#section04">Contact</a></div>
+        </nav>    
+        <section id="section01" class="landing black">
+        </section>
+        
+        <section id="section02" class="white">
+
+        </section>
+        <section id="section03" class="black">
+
+        </section>
+        <section id="section04" class="white">
+
+        </section>
+        <div class="signature">
+            <p id="signature2">Jakob Jan Kamminga</p>
+        </div>
+    </main>
+</body>
+
+</html>
