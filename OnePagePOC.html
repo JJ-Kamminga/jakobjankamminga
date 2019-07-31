@@ -7,24 +7,34 @@
         html {
             scroll-behavior: smooth;
         }
+
         body {
             margin: 0px;
             padding: 0px;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
         section {
             width: 100%;
-            min-height: 105vh;
+            min-height: 400px;
+            height: 100vh;
             max-height: 1200px;
         }
-        
+
         section.black {
             background: black;
         }
-        
+
         section.white {
             background: white;
+        }
+
+        section.black p, section.black li {
+            color: white;
+        }
+
+        section.white p, section.white li {
+            color: black;
         }
 
         nav.navigation {
@@ -44,8 +54,9 @@
             color: black;
 
         }
+
         .navigation a:hover {
-            color:darkcyan ;
+            color: darkcyan;
         }
 
         .navigator-item {
@@ -59,13 +70,15 @@
             text-align: center;
             position: relative;
         }
+
         .fold-button p {
             font-size: 300%;
             padding-bottom: 15px;
             margin: 0px;
         }
 
-        .navigator-item a, .navigator-item p {
+        .navigator-item a,
+        .navigator-item p {
             display: inline-block;
             margin: 10px;
         }
@@ -75,23 +88,80 @@
             right: 8%;
             bottom: 2%;
         }
+
         #signature2 {
             color: white;
             text-shadow: black 2px 1px 0px;
+        }
+
+        .selling-points {
+            position: relative;
+            left: 30%;
+            top: 30vh;
+            min-height: 300px;
+            max-width: 50%;
+            font-size: 250%;
+        }
+
+        .selling-points p {
+            margin-top: 0px;
+        }
+
+        .updown {
+            position: fixed;
+            right: 8%;
+            bottom: 10%;
+        }
+
+        @media only screen and (max-width: 750px) {
+            .updown {
+                display: none;
+            }
+            .selling-points {
+                font-size: 150%;
+            }
+
+        }
+
+        .updownButton {
+            color: white;
+            text-shadow: black 1px 1px 6px;
+            font-size: 400%;
+            width: 350%;
+            text-align: center;
+        }
+        .navigation, .navigator-item, .updown, .updownButton {
+            user-select: none;
+            -moz-user-select: none;
         }
 
     </style>
     <script>
         function foldin() {
             var foldable = document.getElementsByClassName("foldable");
-            
+
             for (var i = 0; i < foldable.length; i++) {
                 if (foldable[i].style.display !== 'none') {
-                foldable[i].style.display = 'none';
+                    foldable[i].style.display = 'none';
                 } else {
-                foldable[i].style.display = 'block';
+                    foldable[i].style.display = 'block';
                 }
             }
+        }
+        function prevSection() {
+            window.scrollBy(0, -window.innerHeight);
+        }
+        function nextSection() {
+            window.scrollBy(0, window.innerHeight);
+        }
+
+        function showAltText(initialText) {
+            console.log(initialText.innerText);
+            // var nowArray = initialText.split(" ");
+            // console.log("nowArray: " + nowArray);
+            // "This website is 3 kilobytes."
+            // "Try it on your phone!"
+            // "Designed for accessability."
         }
     </script>
 </head>
@@ -101,15 +171,26 @@
     </header>
     <main>
         <nav id="navigator" class="navigation">
-            <div class="fold-button" onclick="foldin()"><p>...</p></a></div>
+            <div class="fold-button" onclick="foldin()">
+                <p>...</p></a>
+            </div>
             <div class="navigator-item foldable"><a href="#section01">Home</a></div>
             <div class="navigator-item foldable"><a href="#section02">Section 2</a></div>
             <div class="navigator-item foldable"><a href="#section03">Project</a></div>
             <div class="navigator-item foldable"><a href="#section04">Contact</a></div>
-        </nav>    
+        </nav>
+        <div class="updown">
+            <p class="updownButton" id="upButton" onclick="prevSection()">︷</p>
+            <p class="updownButton" id="downButton" onclick="nextSection()">︸</p>
+        </div>
         <section id="section01" class="landing black">
+            <div class="selling-points">
+                <p id="sellingpoint1" onmouseover="showAltText(this)">Light-weight websites.</p>
+                <p id="sellingpoint2" onmouseover="showAltText(this)">Modern and responsive layouts.</p>
+                <p id="sellingpoint3" onmouseover="showAltText(this)">Adapted to your needs.</p>
+            </div>
         </section>
-        
+
         <section id="section02" class="white">
 
         </section>
