@@ -1,4 +1,4 @@
-baseurl = "https://example.com/"
+baseURL = "https://agitated-curran-41fd3b.netlify.com/"
 title = "Kamminga, J.J."
 theme = "pulp"
 canonifyurls = true
