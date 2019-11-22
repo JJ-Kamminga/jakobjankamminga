@@ -1,0 +1,51 @@
+<footer>
+  <h2 class="credits-title">Credits roll</h2>
+  <p>
+    &copy; {{ .Site.Params.publicationYear }} {{ .Site.Params.Author }}.
+  </p>
+  <p>
+    This site is powered by <a href="https://gohugo.io/">Hugo</a>.
+  </p>
+  It is based on the <a href="https://github.com/koirand/pulp/">pulp</a> theme but is otherwise custom.
+  </p>
+  <p>
+      Owl icon made by Freepik from <a href="https://www.flaticon.com/">Flaticon</a>.
+  </p>
+  <p>
+    Image credits: 
+    <table class="credits-table">
+        <tbody>
+          <tr>
+            <td>Berlin skyline</td>
+            <td class="credits-name">Adam Vradenburg</td>
+        </tr>
+        <tr>
+            <td>Amsterdam skyline</td>
+            <td class="credits-name">Sandro Gonzalez</td>
+        </tr>
+        <tr>
+            <td>The Hague skyline</td>
+            <td class="credits-name">Gerrit Vermeulen</td>
+        </tr>
+        </tbody>
+    </table>
+  </p>
+  <div class="footer-social">
+    <nav>
+        <ul>
+            <li><a href="https://codepen.io/jj-kamminga" class="fab fa-codepen"></a></li>
+            <li><a href="https://www.linkedin.com/in/jakobjankamminga/" class="fab fa-linkedin-in"></a></li>
+            <li><a href="https://twitter.com/JaJaKamminga"class="fab fa-twitter"></a></li>
+            <li><a href="https://github.com/JJ-Kamminga" class="fab fa-github"></a></li>
+            <li><a href="https://www.last.fm/user/andnino" class="fab fa-lastfm"></a></li>
+            <li><a href="https://bandcamp.com/jjkamminga" class="fab fa-bandcamp"></a></li>
+            <li><a href="https://www.discogs.com/user/GammaInk" class="far fa-record-vinyl"></a></li>
+        </ul>
+    </nav>
+  </div>
+</footer>
+{{- range .Site.Params.custom_js -}}
+<script src="{{ . }}"></script>
+{{ end }}
+
+<script src="/js/flower.js"></script>
