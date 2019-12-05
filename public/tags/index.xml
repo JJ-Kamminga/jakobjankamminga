@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Kamminga, J.J.</title>
+    <link>https://agitated-curran-41fd3b.netlify.com/tags/</link>
+    <description>Recent content in Tags on Kamminga, J.J.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 30 Nov 2019 09:41:10 +0100</lastBuildDate>
+    
+	<atom:link href="https://agitated-curran-41fd3b.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>announcements</title>
+      <link>https://agitated-curran-41fd3b.netlify.com/tags/announcements/</link>
+      <pubDate>Sat, 30 Nov 2019 09:41:10 +0100</pubDate>
+      
+      <guid>https://agitated-curran-41fd3b.netlify.com/tags/announcements/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://agitated-curran-41fd3b.netlify.com/tags/hugo/</link>
+      <pubDate>Sat, 30 Nov 2019 09:41:10 +0100</pubDate>
+      
+      <guid>https://agitated-curran-41fd3b.netlify.com/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>site</title>
+      <link>https://agitated-curran-41fd3b.netlify.com/tags/site/</link>
+      <pubDate>Sat, 30 Nov 2019 09:41:10 +0100</pubDate>
+      
+      <guid>https://agitated-curran-41fd3b.netlify.com/tags/site/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web development</title>
+      <link>https://agitated-curran-41fd3b.netlify.com/tags/web-development/</link>
+      <pubDate>Sat, 30 Nov 2019 09:41:10 +0100</pubDate>
+      
+      <guid>https://agitated-curran-41fd3b.netlify.com/tags/web-development/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

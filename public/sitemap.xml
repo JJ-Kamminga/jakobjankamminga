@@ -3,22 +3,73 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://agitated-curran-41fd3b.netlify.com/blog/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://agitated-curran-41fd3b.netlify.com/music/</loc>
-    <priority>0</priority>
+    <loc>https://agitated-curran-41fd3b.netlify.com/</loc>
+    <lastmod>2019-12-04T20:58:46+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://agitated-curran-41fd3b.netlify.com/stories/</loc>
-    <priority>0</priority>
+    <lastmod>2019-12-04T20:58:46+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://agitated-curran-41fd3b.netlify.com/</loc>
+    <loc>https://agitated-curran-41fd3b.netlify.com/stories/</loc>
+    <lastmod>2019-12-04T20:58:43+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agitated-curran-41fd3b.netlify.com/stories/</loc>
+    <lastmod>2019-12-04T20:58:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agitated-curran-41fd3b.netlify.com/stories/</loc>
+    <lastmod>2019-12-01T15:57:25+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agitated-curran-41fd3b.netlify.com/tags/announcements/</loc>
+    <lastmod>2019-11-30T09:41:10+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agitated-curran-41fd3b.netlify.com/blog/first-post-on-new-website/</loc>
+    <lastmod>2019-11-30T09:41:10+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agitated-curran-41fd3b.netlify.com/tags/hugo/</loc>
+    <lastmod>2019-11-30T09:41:10+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agitated-curran-41fd3b.netlify.com/tags/site/</loc>
+    <lastmod>2019-11-30T09:41:10+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agitated-curran-41fd3b.netlify.com/tags/</loc>
+    <lastmod>2019-11-30T09:41:10+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agitated-curran-41fd3b.netlify.com/tags/web-development/</loc>
+    <lastmod>2019-11-30T09:41:10+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agitated-curran-41fd3b.netlify.com/blog/</loc>
+    <lastmod>2019-11-23T16:11:33+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agitated-curran-41fd3b.netlify.com/music/</loc>
+    <lastmod>2019-11-23T16:11:33+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://agitated-curran-41fd3b.netlify.com/stories/</loc>
+    <lastmod>2019-11-23T16:11:33+06:00</lastmod>
   </url>
   
   <url>

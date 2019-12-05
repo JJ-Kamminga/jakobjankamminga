@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>music on Kamminga, J.J.</title>
+    <link>https://agitated-curran-41fd3b.netlify.com/tags/music/</link>
+    <description>Recent content in music on Kamminga, J.J.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 30 Nov 2019 09:50:52 +0100</lastBuildDate>
+    
+	<atom:link href="https://agitated-curran-41fd3b.netlify.com/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test Post 5</title>
+      <link>https://agitated-curran-41fd3b.netlify.com/blog/test-post-5/</link>
+      <pubDate>Sat, 30 Nov 2019 09:50:52 +0100</pubDate>
+      
+      <guid>https://agitated-curran-41fd3b.netlify.com/blog/test-post-5/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque eros vitae porta molestie. Ut euismod massa diam, ac maximus nisi elementum a. Suspendisse eros dolor, interdum eget blandit nec, ultrices at sem. Sed pharetra sapien eu elit tempor varius. Phasellus tempor at sapien sit amet posuere. Curabitur pellentesque est nunc, quis volutpat elit rutrum eu. Donec non felis augue. Vivamus vel elementum est. Suspendisse potenti. Aenean quis tortor in nisi sagittis bibendum id vel ligula.</description>
+    </item>
+    
+    <item>
+      <title>Test Post 4</title>
+      <link>https://agitated-curran-41fd3b.netlify.com/blog/test-post-4/</link>
+      <pubDate>Sat, 30 Nov 2019 09:50:45 +0100</pubDate>
+      
+      <guid>https://agitated-curran-41fd3b.netlify.com/blog/test-post-4/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque eros vitae porta molestie. Ut euismod massa diam, ac maximus nisi elementum a. Suspendisse eros dolor, interdum eget blandit nec, ultrices at sem. Sed pharetra sapien eu elit tempor varius. Phasellus tempor at sapien sit amet posuere. Curabitur pellentesque est nunc, quis volutpat elit rutrum eu. Donec non felis augue. Vivamus vel elementum est. Suspendisse potenti. Aenean quis tortor in nisi sagittis bibendum id vel ligula.</description>
+    </item>
+    
+    <item>
+      <title>Test Post 2</title>
+      <link>https://agitated-curran-41fd3b.netlify.com/blog/test-post-2/</link>
+      <pubDate>Sat, 30 Nov 2019 09:50:36 +0100</pubDate>
+      
+      <guid>https://agitated-curran-41fd3b.netlify.com/blog/test-post-2/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque eros vitae porta molestie. Ut euismod massa diam, ac maximus nisi elementum a. Suspendisse eros dolor, interdum eget blandit nec, ultrices at sem. Sed pharetra sapien eu elit tempor varius. Phasellus tempor at sapien sit amet posuere. Curabitur pellentesque est nunc, quis volutpat elit rutrum eu. Donec non felis augue. Vivamus vel elementum est. Suspendisse potenti. Aenean quis tortor in nisi sagittis bibendum id vel ligula.</description>
+    </item>
+    
+    <item>
+      <title>Test Post 1</title>
+      <link>https://agitated-curran-41fd3b.netlify.com/blog/test-post-1/</link>
+      <pubDate>Sat, 30 Nov 2019 09:50:31 +0100</pubDate>
+      
+      <guid>https://agitated-curran-41fd3b.netlify.com/blog/test-post-1/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque eros vitae porta molestie. Ut euismod massa diam, ac maximus nisi elementum a. Suspendisse eros dolor, interdum eget blandit nec, ultrices at sem. Sed pharetra sapien eu elit tempor varius. Phasellus tempor at sapien sit amet posuere. Curabitur pellentesque est nunc, quis volutpat elit rutrum eu. Donec non felis augue. Vivamus vel elementum est. Suspendisse potenti. Aenean quis tortor in nisi sagittis bibendum id vel ligula.</description>
+    </item>
+    
+  </channel>
+</rss>
