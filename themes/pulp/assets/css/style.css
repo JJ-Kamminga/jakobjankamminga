@@ -10,6 +10,7 @@
   --highlight-color-secondary: #2F9492;
   --highlight-color-tertiary: rgb(148, 47, 47);
   --accent-color-primary: #8CDEC0;
+  --background-color-white: rgb(243, 243, 243);
   --background-color-light: #DDDDDD;
   --background-color-dark: #1B1C22;
 }
@@ -21,7 +22,6 @@ html {
 body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  /* min-height:100vh; */
   margin: 0;
   padding: 0px 20px 20px;
   box-sizing:border-box;
@@ -68,6 +68,13 @@ img.weapon-image {
   position: relative;
   top: 20px;
   height: 50px;
+  z-index: 7;
+}
+img.weapon-image-overlay {
+  position: sticky;
+  top: 0px;
+  height: 50px;
+  z-index: 6;
 }
 
 nav.header-nav {
@@ -335,6 +342,13 @@ span.nav-item {
   color: var(--text-color-contrast);
 }
 
+.keyword, .feature-name {
+  transform: translateX(-0.0625em);
+  animation-name: taglineEmerge;
+  animation-duration: 1400ms;
+  animation-fill-mode: forwards;
+}
+
 @media only screen and (max-device-width: 896px) {
   .keywords {
     position: relative;
@@ -363,6 +377,20 @@ span.nav-item {
     font-size: 200px;
     display: block;
   }
+
+  @keyframes taglineEmerge {
+    0% {
+     -webkit-transform:translateY(50px);
+     transform:translateY(50px);
+     opacity:0
+    }
+    100% {
+     -webkit-transform:translateY(0px);
+     transform:translateY(0px);
+     opacity:1
+    }
+   }
+   
 }
 
 section.feature-bio {
@@ -621,3 +649,293 @@ nav li {
   padding: 20px 0;
   text-align: left;
 }
+
+/* Blog */
+
+section.blog {
+  width: 90vw;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 9px 10px 0px var(--background-color-dark);
+  background: var(--background-color-white);
+  padding-top: 5px;
+  margin-top: 50px;
+}
+
+section.blog div.blog-header {
+  line-height: 0.65;
+}
+
+section.blog div.blog-header h1, section.blog div.blog-header h4 {
+  text-align: left;
+  margin-left: 20%;
+}
+
+section.blog .blog-logo-image {
+  display: block;
+  position: relative;
+  height: 100px;
+  left: 65vw;
+  bottom: -10px;
+}
+
+section.blog .blog-tags {
+  width: 90%;
+  line-height: 1;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-top: 2px solid var(--background-color-dark);
+  border-bottom: 2px solid var(--background-color-dark);
+}
+
+section.blog .tag-text-area {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+section.blog .blog-tags span {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 200%;
+  margin-right: 50px;
+}
+
+section.blog h1 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1000%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+section.blog h4 {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 200;
+  font-size: 225%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+section.blog h3 {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 200;
+  font-size: 225%;
+  margin: 2%;
+}
+
+section.blog .blog-section, section.blog .tag-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+section.blog article {
+  padding-left: 20px;
+  margin-top: 20px;
+  width: 300px;
+  /* height: 400px; */
+  overflow: hidden;
+}
+
+section.blog article p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+section.blog article .readmore {
+  display: inline;
+}
+
+div.tag-section {
+  padding-top: 20px;
+}
+
+.tags {
+  list-style: none;
+}
+
+section.blog article .tags {
+  text-align: left;
+  max-height: 50px;
+  margin-top: 2px;
+  padding-left: 0px;
+  overflow: scroll;
+}
+
+.tag {
+  display: inline;
+}
+.tag:before {
+  content: "#";
+}
+
+/* blog post specific */
+
+.single-page-header {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.single-page-title {
+  border-bottom: 2px solid var(--background-color-dark);
+  width: 65%;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.single-page-details {
+  width: 40%;
+  border-bottom: 2px solid var(--background-color-dark);
+
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.single-page .tags {
+  padding: 0;
+}
+
+.single-page h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 200;
+  font-size: 300%;
+  margin-top: 2%;
+  margin-bottom: 0%;
+}
+
+/* Stories */
+
+section.stories h2, section.stories h3 {
+  font-family: 'IM Fell DW Pica', serif;
+}
+
+section.stories h3 {
+  font-size: 200%;
+}
+
+section.stories h3 {
+  font-size: 150%;
+  font-weight: 200;
+  text-decoration: underline;
+  margin-left: 15px;
+}
+
+div.stories-feature {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: 'IM Fell DW Pica', serif;
+  border-radius: 5px;
+}
+
+#parchment-img {
+  background-image: url("/img/backgrounds/parchment.jpg");
+  background-repeat: repeat-y;
+  background-size: auto;
+  border: 1px solid  var(--background-color-light);
+  box-shadow: 1px 1px 5px var(--highlight-color-tertiary);
+}
+
+div.stories-header {
+  padding-top: 30px;
+  opacity: 0.85;
+  color: var(--text-color);
+}
+
+div.stories-title {
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight: 300;
+  font-size: 800%;
+  border-bottom: 5px ridge var(--background-color-dark);
+  box-shadow: 0px 1px 0px var(--background-color-dark);
+}
+
+div.stories-subtitle {
+  text-align: center;
+  font-weight: 200;
+  font-size: 400%;
+}
+
+div.stories-subtitle img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+div.stories-subtitle span {
+  margin-right: 15px;
+}
+
+.stories-title .first-letter {
+  font-weight: 500;
+  font-size: 110%;
+}
+
+.stories-title .or {
+  font-size: 50%;
+}
+
+div.stories-introduction {
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 200%;
+  opacity: 0.95;
+  border-bottom: 2px ridge var(--background-color-dark);
+
+}
+
+div.stories-introduction .first-word {
+  font-weight: 600;
+  font-size: 150%;
+}
+
+.stories-content {
+  margin-top: 30px;
+  border-radius: 5px;
+  background: var(--background-color-light);
+  border: 1px solid  var(--background-color-dark);
+  box-shadow: 1px 1px 5px var(--background-color-dark);
+}
+
+.stories-content .story {
+  width: 700px;
+  font-family: serif;
+  font-size: 120%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--highlight-color-tertiary);
+  background: var(--background-color-light);
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+}
+
+.story-index {
+  margin-top: 30px;
+}
+
+.story-index-titles {
+  font-size: 150%;
+}
+
+.story-index-title:after {
+  content: ",";
+}
+
+.story-index-title:last-of-type:after {
+  content: ".";
+}
+
+/* #refraction-img {
+  background-image: url("/img/backgrounds/refraction-map.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
