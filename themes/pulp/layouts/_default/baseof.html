@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   {{ partial "head.html" . }}
-  <body>
+  <body id="body">
+    {{- partial "headernav.html" . -}}
     {{ block "main" . }}{{ end }}
   </body>
 </html>

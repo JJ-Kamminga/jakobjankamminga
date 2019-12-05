@@ -1,0 +1,12 @@
+<h2>Latest publication:</h2>
+
+<div class="story latest-story">
+  {{ range first 1 .Pages}}
+  <h3>{{ .Title }}</h3>
+  {{ .Content }}
+  <h4><a href="{{ .Title }}">Link to this story</a></h4>
+
+  <a href="{{ .Permalink }}/{{ .Title }}"></a>
+
+{{ end }}
+</div>

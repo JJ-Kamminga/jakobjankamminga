@@ -1,18 +1,35 @@
-{{ define "main"}}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {{ $css := "css/bootstrap.min.css" | absURL }}
+    <link rel="stylesheet" href="{{ $css }}">
+    <title>{{ .Title }}</title>
+  </head>  
+  <body>
+    <div class="container">
+      <main id="main">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+      </main>
+    </div>
+  </body>
+</html>
+
+
+
+<!-- {{ define "main"}}
 <section class="single-page">
   <div class="single-page-header">
   <div class="single-page-title">
     <h1>{{ .Title }}</h1>
   </div>
-  <!-- {{ partial "header.html" . }} -->
-  <!-- date -->
   <div class="single-page-details">
   {{ $singlePageDateFormat := .Site.Params.singlePageDateFormat | default "January 2, 2006"}}
   <p class="date">{{ .Date.Format $singlePageDateFormat }}</p>
   {{ partial "tags.html" .}}
 </div>
 </div>
-  <!-- content -->
   <div id="contentBody">
     {{ .Content }}
   </div>
@@ -28,4 +45,4 @@
   {{ end }}
 </section>
   {{ partial "footer.html" . }}
-{{ end }}
+{{ end }} -->

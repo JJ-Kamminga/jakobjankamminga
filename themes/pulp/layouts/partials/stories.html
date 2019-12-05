@@ -1,0 +1,36 @@
+        <script>
+            let body = document.getElementById("body");
+            body.style = "background: var(--background-color-dark);"
+        </script>
+        <section class="stories">
+            <div class="stories-feature" id="parchment-img">
+            <div class="stories-header">
+                <div class="stories-title">
+                    <span class="first-letter">R </span>e f r a c t i o n <span class="or"><i>, o r</i></span>
+                </div>
+                <div class="stories-subtitle">
+                    <span>e n l i g h t e n m e n t </span><span><i>, a n d </span><span>t h e </span>
+                    <span> s t a t e </span>
+                    <span> o f </span></i>
+                </div>
+                <div class="stories-subtitle">
+                    <span> t h e </span>
+                    <span> e m p i r e </span>
+                    <img src="/img/other/sun.png">
+
+                    <span> t h e </span>
+                    <span> w o r l d .</span>
+                </div>
+            </div>
+            <div class="stories-introduction">
+                <p>
+                    <p><span class="first-word">Refraction</span> is a collection of stories about a world of <i>light</i> and <i>darkness</i>, of the pursuit of <i>knowledge</i> and the pursuit of <i>faith</i>, about the power of <i>systems</i> and the power of <i>people</i>.</p>
+                    <p>Writing is not my livelihood, so I write new stories only occasionally. What you find here is all that I deem in a presentable state. Having said I am not a professional, I welcome professional feedback, and ideas to evolve this project in whatever form. Feel free to get in touch.</p>
+                </p>
+            </div>
+            {{ partial "stories-index.html" . }}
+        </div>
+        <section id="parchment-img" class="stories-content">
+            {{ partial "stories-content.html" . }}
+        </section>
+        </section>

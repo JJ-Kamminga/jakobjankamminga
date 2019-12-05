@@ -2,9 +2,7 @@
 <html>
 {{- partial "head.html" . -}}
 <body>
-  <div class="indexhtml">
-    {{- partial "headernav.html" . -}}
-  </div>
+  {{- partial "headernav.html" . -}}
   <main>
     <section class="feature">
       <section class="keywords">
@@ -14,8 +12,9 @@
       </section>
       <div class="skyline" id="berlin"></div>
       <div class="skyline" id="amsterdam"></div>
+      <span id="feature-bio"></span>
       <div class="skyline" id="thehague">
-        <section id="feature-bio" class="feature-bio">
+        <section class="feature-bio">
           <p><span class="feature-name">Jakob Jan Kamminga</span><br>
             is a web developer who lives in The Hague, The Netherlands <span class="and">with</span><br>
             experience in content editing and content curation <span class="and">and</span><br>
@@ -24,7 +23,13 @@
           </p>
         </section>
       </div>
+      </div>
     </section>
+    <!--test-->
+    <div id="contentBody">
+        {{ .Content }}
+      </div>
+    <!-- end test -->
     <section class="section-portfolio">
       <h1>Projects & work </h1>
       <div class="portfolio-flex-container">
