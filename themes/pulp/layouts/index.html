@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 {{- partial "head.html" . -}}
-<body>
+<body onload="main()">
   {{- partial "headernav.html" . -}}
+  {{- partial "flower.html" . -}}
   <main>
     <section class="feature">
       <section class="keywords">
@@ -22,6 +23,16 @@
             an eye for user centered design
           </p>
         </section>
+      </div>
+      <div class="feature-contact">
+        <p>For anything work related, please contact me via one of the following channels</p>
+        <ul class="feature-contact">
+            <li><a href="https://angel.co/jakob-jan-kamminga" target="blank"><span class="fab fa-angellist"></span></a></li>
+            <li><a href="https://codepen.io/jj-kamminga" target="blank"><span class="fab fa-codepen"></span></a></li>
+            <li><a href="https://www.linkedin.com/in/jakobjankamminga/" target="blank"><span class="fab fa-linkedin-in"></span></a></li>
+            <li><a href="https://twitter.com/JaJaKamminga" target="blank"><span class="fab fa-twitter"></span></a></li>
+            <li><a href="https://github.com/JJ-Kamminga" target="blank"><span class="fab fa-github"></span></a></li>
+        </ul>
       </div>
       </div>
     </section>
@@ -46,7 +57,7 @@
         <div class="portfolio-item" title="Custom websites">
             <h4>Custom websites</h4>
             <ul>
-              <li>Creation of custom <i>JAMstack</i> websites</li>
+              <li>Creation of custom <i>JAMstack</i> websites (including this one)</li>
               <li>Experience with Hugo, Netlify, Forestry</li>
             </ul>
           <div class="portfolio-item-img" id="portfolio-opmaat">

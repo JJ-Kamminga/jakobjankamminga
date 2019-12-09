@@ -1,0 +1,67 @@
+{{ define "main"}}
+
+
+<!-- Partial comes here! -->
+<section class="music-header">
+  <div class="music-feature">
+      <img class="music-owl" src="/img/icons/{{ .Site.Params.weaponalt }}" alt="owl icon">
+      <span class="logo-sub">O.W.L. <span class="suffix">Ltd.</span></span>
+    <span class="music-feature-keyword">Mixed feelings</span>
+    <!-- <span class="music-feature-keyword">Playlists</span> -->
+    <!-- <span class="music-feature-keyword">Reviews</span> -->
+  </div>
+  <div class="music-intro">
+      The following mixtapes, playlists and reviews are covered by the <span class="van-schneider"><a href="https://www.vanschneider.com/mixtapes"
+          target="blank">H O V S</a></span> rules for usage:
+      <div class="hovs-rules">
+        <span>1. Listen & make cool things.</span>
+        <span>2. Share with your friends.</span>
+        <span>3. Let me know if you like them.</span>
+      </div>
+    </div>
+  <div id="music-showcase-image">
+  </div>
+  <div class="music-feature-subtitle">
+      <p>“The making of a great compilation tape, like breaking up, is hard to do and takes ages longer than it might
+        seem.
+        You gotta kick off with a killer, to grab attention. Then you got to take it up a notch, but you don’t wanna blow
+        your wad, so then you got to cool it off a notch. There are a lot of rules.”<br>- Rob Gordon, High Fidelity</p>
+      <p>It's better not to take advice from someone like Rob Gordon. But for mixtapes, we'll make an exception. The
+        mixtape has a long and winded history, and it has fulfilled many functions over the decades. It could be a love
+        (or a break up) letter, a political statement, or simply a concentrated effort to make a good party a great party.
+        It can also simply be an expression of how you feel at a given time. </p>
+      <p>In eiter case, the mixtape is in this sense a pure for of <i>curation</i>. When done badly, it takes a work of
+        art out of its context, making it estrange its listeners. But when done right, it takes something that the artist
+        might not have consciously embedded into his work, and it places it together with other works that share that
+        characteristic, to create something new that makes you realize <i>that it fits</i>, that makes you think <br> 
+        <span class="conclusion"><i>"this sounds so good."</i></span>
+  
+      </p>
+    </div>
+    <div class="music-brands">
+      <span class="music-disclaimer">This presentation has been brought to you by</span>
+      <div class="brands-flex">
+        <img class="brand-logo" src="/img/icons/spotify.svg" alt="Spotify logo">
+        <img class="brand-logo" src="/img/icons/mixcloud.svg" alt="Mixcloud logo">
+        <div class="brand-logo" title="Seriously. When they were not racist, sexist or scientifically wrong, they were incredible!">1970's music ads</div>
+
+      </div>
+    </div>
+  
+</section>
+
+{{ range .Pages }}
+<section>
+  <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+  <p>{{ .Content }}</p>
+</section>
+{{ end }}
+
+{{ partial "footer.html" . }}
+<!-- {{ $jquery := resources.Get "js/jquery-3.3.1.min.js" }} -->
+<!-- {{ $mark := resources.Get "js/jquery.mark.es6.min.js" }} -->
+<!-- {{ $lunr := resources.Get "js/lunr.js" }} -->
+<!-- {{ $search := resources.Get "js/search.js" }} -->
+<!-- {{ $js := slice $jquery $mark $lunr $search | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint }} -->
+<script src="{{ $js.Permalink }}"></script>
+{{ end }}

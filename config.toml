@@ -14,6 +14,7 @@ hasCJKLanguage = true
 [params]
     author = "Jakob Jan Kamminga"
     weapon = "owl.svg"
+    weaponalt = "owl-white.svg"
     avatar = "avatar.jpg"
     favicon = "favicon.ico"
     description = """

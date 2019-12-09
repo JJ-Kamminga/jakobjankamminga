@@ -28,7 +28,7 @@ body {
   background-color: var(--background-color-light);
   color: var(--text-color);
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, 'roboto', BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.5;
   font-size: 16px;
   word-wrap: break-word;
@@ -46,6 +46,32 @@ a:hover {
 a:active {
   color: var(--highlight-color-secondary);
 }
+/* Transition effect */
+
+.overlay{
+  background: black;
+  z-index: 2;
+  position: fixed;
+  top: 0%;
+  left: -25%;
+  width: 150%;
+  height: 100%;
+  transform: scaleX(0) skewX(-40deg);
+  transform-origin: left
+}
+
+.transition {
+  -webkit-animation: scaletoright 2000ms both cubic-bezier(0.770, 0.000, 0.175, 1.000);
+          animation: scaletoright 2000ms both cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+@keyframes scaletoright {
+  0%   { transform: scaleX(0) skewX(-40deg); transform-origin: left; }
+  50%  { transform: scaleX(1) skewX(0deg); transform-origin: left; }
+  51%  { transform: scaleX(1) skewX(0deg);; transform-origin: right; }
+  100% { transform: scaleX(0) skewX(40deg);; transform-origin: right;}
+}
+
 
 /* Header */
 
@@ -83,12 +109,13 @@ nav.header-nav {
   top: 0;
   background: var(--background-color-dark);
   border-bottom: 5px solid var(--highlight-color-primary);
+  white-space: nowrap;
   padding: 23.5px;
   transform: skew(20deg);
   font-size: 23px;
   margin-right: auto;
   margin-left: auto;
-  min-width: 300px;
+  overflow-x: auto;
   max-width: 750px;
 }
 
@@ -98,9 +125,14 @@ nav .anchors {
 
 span.nav-item {
   color: var(--text-color-contrast);
+  display: inline-block;
 }
 
 @media only screen and (max-device-width: 896px) {
+  nav.header-nav {
+    position: relative;
+  }
+  
   span.nav-item {
     padding: 0px 15px 0px 0px;
   }
@@ -147,7 +179,6 @@ span.nav-item {
   left: 100px;
 }
 .cp-nav__button {
-  /*background-color: var(--background-color-dark);*/
   background-image:
     radial-gradient(
       rgba(0,0,0,1) 0,
@@ -314,7 +345,6 @@ span.nav-item {
   transform: scale(1.5);
 }
 
-
 /* Main */
 
 .skyline {
@@ -340,6 +370,16 @@ span.nav-item {
   z-index: 6;
   text-align: right;
   color: var(--text-color-contrast);
+}
+
+.keyword {
+  overflow: visible;
+  white-space: nowrap;
+
+}
+
+.feature-name {
+ overflow: hidden;
 }
 
 .keyword, .feature-name {
@@ -422,6 +462,22 @@ span.feature-name {
   opacity: 0.5;
 }
 
+div.feature-contact {
+  border-bottom: 1px solid var(--text-color-accent);
+}
+div.feature-contact p {
+  font-size: 20px;
+  color: var(--text-color-accent);
+}
+ul.feature-contact {
+  list-style: none;
+  word-spacing: 10vw;
+}
+ul.feature-contact li {
+  display: inline-block;
+  font-size: 30px;
+}
+
 /* Portfolio */
 
 .portfolio-flex-container {
@@ -444,7 +500,7 @@ span.feature-name {
   background: var(--highlight-color-secondary);
   padding: 5px 0px 0px 5px;
   width: 300px;
-  height: 300px;
+  /* height: 300px; */
   margin-top: 10px;
   border-radius: 0px 0px 30px 0px;
   color: white;
@@ -671,6 +727,19 @@ section.blog div.blog-header h1, section.blog div.blog-header h4 {
   margin-left: 20%;
 }
 
+@media only screen and (max-device-width: 897px) {
+  section.blog div.blog-header h1, section.blog div.blog-header h4 {
+    margin-left: 0%;
+  } 
+  section.blog .blog-header h1 {
+    font-size: 700%;
+  }
+  section.blog div.blog-header {
+    line-height: 1.2;
+    overflow: hidden;
+  }
+}
+
 section.blog .blog-logo-image {
   display: block;
   position: relative;
@@ -688,6 +757,8 @@ section.blog .blog-tags {
   padding-bottom: 10px;
   border-top: 2px solid var(--background-color-dark);
   border-bottom: 2px solid var(--background-color-dark);
+  white-space: nowrap;
+  overflow-x: scroll;
 }
 
 section.blog .tag-text-area {
@@ -697,6 +768,7 @@ section.blog .tag-text-area {
 }
 
 section.blog .blog-tags span {
+  display: inline;
   font-family: 'Bebas Neue', cursive;
   font-size: 200%;
   margin-right: 50px;
@@ -895,6 +967,25 @@ div.stories-introduction .first-word {
   font-size: 150%;
 }
 
+@media only screen and (max-device-width: 897px) {
+  div.stories-introduction {
+    font-size: 125%;
+    width: 80%;
+  }
+  div.stories-title {
+    font-size: 350%;
+  }
+  div.stories-subtitle {
+    font-size: 200%;
+  }
+
+  div.stories-subtitle img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+  
 .stories-content {
   margin-top: 30px;
   border-radius: 5px;
@@ -904,7 +995,7 @@ div.stories-introduction .first-word {
 }
 
 .stories-content .story {
-  width: 700px;
+  max-width: 700px;
   font-family: serif;
   font-size: 120%;
   padding: 20px;
@@ -939,3 +1030,157 @@ div.stories-introduction .first-word {
   background-repeat: no-repeat;
   background-size: cover;
 } */
+
+/* Music */
+
+section.music-header {
+  border: 15px ridge darkgray;
+}
+
+.music-owl {
+  position: absolute;
+  left: 60px;
+  top: 130px;
+  height: 50px;
+  opacity: 0.5;
+}
+.logo-sub {
+  position: absolute;
+  left: 70px;
+  top: 180px;
+  font-size: 10pt;
+  text-shadow: none;
+  color: var(--text-color-lightest);
+}
+.logo-sub .suffix {
+  font-size: 50%;
+}
+@media only screen and (max-device-width: 896px) {
+  img.music-owl {
+    display: none;
+  }
+  span.logo-sub {
+    display: none;
+  }
+}
+
+section.music-header .music-feature {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid var(--background-color-dark);
+  color: var(--text-color-contrast);
+  border-bottom: 1px solid var(--highlight-color-secondary);
+  background: black;
+  font-size: 200%;
+  /* word-spacing: 50px; */
+  font-weight: 500;
+  text-shadow: 1px 1px 1px white;
+}
+
+section.music-header .music-feature-keyword {
+  position: relative;
+  display: inline-block;
+  font-size: 200%;
+  z-index: 5;
+  text-shadow: 1px 1px 5px var(--background-color-dark);
+  /* background: rgb(0,11,47);
+  background: linear-gradient(270deg, rgba(0,11,47,1) 0%, rgba(0,119,117,1) 58%, rgba(7,169,140,1) 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; */
+}
+
+section.music-header .music-feature-subtitle {
+  padding: 20px;
+  /* background: rgb(0,11,47);
+  background: linear-gradient(90deg, rgba(0,11,47,1) 0%, rgba(0,119,117,1) 58%, rgba(7,169,140,1) 100%); */
+  background: white;
+  /* color: var(--text-color-contrast); */
+  color: black;
+  font-weight: 500;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.conclusion {
+  font-size: 150%;
+  font-weight: 900;
+  letter-spacing: -1px;
+  word-spacing: -0px;
+  }
+
+@media only screen and (min-device-width: 897px) {
+  section.music-header .music-feature-subtitle {
+    column-count: 4;
+    column-gap: 30px;
+  }
+}
+
+#music-showcase-image {
+  height: 50vh;
+  background-image: url("/img/backgrounds/amplifier.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 1px solid var(--highlight-color-secondary);
+  border-bottom: 1px solid var(--highlight-color-secondary);
+}
+
+section.music-header .music-intro {
+  padding: 15px;
+  line-height: 2;
+  background: rgb(0,11,47);
+  background: linear-gradient(270deg, rgba(0,11,47,1) 0%, rgba(0,119,117,1) 58%, rgba(7,169,140,1) 100%);
+  color: var(--text-color-contrast);
+  text-align: left;
+}
+
+.van-schneider {
+  background: #e50000;
+  padding: 15px 10px 15px 10px;
+  color: var(--text-color);
+}
+
+.van-schneider a, .van-schneider a:visited {
+  color: var(--text-color);
+}
+.van-schneider a:hover {
+  text-decoration: underline;
+}
+.van-schneider a:focus {
+  border: 2px dotted black;
+}
+
+.hovs-rules {
+  /* border-top: 2px solid var(--background-color-dark);
+  border-left: 2px solid var(--background-color-dark); */
+  font-family: monospace;
+}
+
+div.music-brands {
+  background: var(--background-color-dark);
+  text-align: left;
+}
+
+div.music-brands .music-disclaimer {
+  color: var(--text-color-lightest);
+  font-weight: 300;
+  margin: 20px;
+}
+
+div.music-brands .brands-flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.brands-flex .brand-logo {
+  max-width: 200px;
+  
+  color: var(--text-color-lightest);
+  margin-top: auto;
+  margin-bottom: auto;  
+  font-size: 140%;
+  font-weight: 900;
+  word-spacing: 1px;
+  letter-spacing: -2px;
+}
