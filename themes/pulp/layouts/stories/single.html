@@ -1,11 +1,22 @@
 {{ define "main"}}
-  <body>
-    <div class="container">
-      <main id="main">
+<script>
+  let body = document.getElementById("body");
+  body.style = "background: var(--background-color-dark);"
+</script>
+<main id="main">
+  <section class="single-page stories" id="parchment-img">
+    <div class="single-page-header">
+      <div class="single-page-title">
         <h1>{{ .Title }}</h1>
-        {{ .Content }}
-      </main>
+      </div>
     </div>
-  </body>
-  {{ partial "footer.html" . }}
+    <div class="container story">
+      <div id="contentBody">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+
+</main>
+{{ partial "footer.html" . }}
 {{ end }}

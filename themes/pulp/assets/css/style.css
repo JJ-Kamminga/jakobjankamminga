@@ -32,6 +32,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
   word-wrap: break-word;
+  overflow-x: hidden;
 }
 
 a {
@@ -699,8 +700,8 @@ nav li {
 }
 
 /* Page */
-#contentBody {
-  max-width: 800px;
+div#contentBody {
+  max-width: 700px;
   margin: 0 auto;
   padding: 20px 0;
   text-align: left;
@@ -851,17 +852,19 @@ section.blog article .tags {
 }
 
 .single-page-title {
-  border-bottom: 2px solid var(--background-color-dark);
   width: 65%;
   margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
 }
+.blog .single-page-title {
+  border-bottom: 2px solid var(--background-color-dark);
+}
+
 
 .single-page-details {
   width: 40%;
   border-bottom: 2px solid var(--background-color-dark);
-
   margin-right: auto;
   margin-left: auto;
 }
@@ -870,7 +873,7 @@ section.blog article .tags {
   padding: 0;
 }
 
-.single-page h1 {
+.single-page.blog h1 {
   font-family: 'Bebas Neue', cursive;
   font-weight: 200;
   font-size: 300%;
@@ -994,7 +997,7 @@ div.stories-introduction .first-word {
   box-shadow: 1px 1px 5px var(--background-color-dark);
 }
 
-.stories-content .story {
+.stories-content .story, .single-page .story {
   max-width: 700px;
   font-family: serif;
   font-size: 120%;
@@ -1024,12 +1027,18 @@ div.stories-introduction .first-word {
   content: ".";
 }
 
-/* #refraction-img {
-  background-image: url("/img/backgrounds/refraction-map.jpg");
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
+.single-page.stories h1 {
+  font-family: 'IM Fell DW Pica', serif;
+  font-weight: 200;
+  font-size: 300%;
+  margin-top: 2%;
+  margin-bottom: 0%;
+}
+
+.single-page.stories {
+  background: var(--background-color-light);
+  border-radius: 5px;
+}
 
 /* Music */
 
@@ -1072,7 +1081,6 @@ section.music-header .music-feature {
   border-bottom: 1px solid var(--highlight-color-secondary);
   background: black;
   font-size: 200%;
-  /* word-spacing: 50px; */
   font-weight: 500;
   text-shadow: 1px 1px 1px white;
 }
@@ -1083,18 +1091,11 @@ section.music-header .music-feature-keyword {
   font-size: 200%;
   z-index: 5;
   text-shadow: 1px 1px 5px var(--background-color-dark);
-  /* background: rgb(0,11,47);
-  background: linear-gradient(270deg, rgba(0,11,47,1) 0%, rgba(0,119,117,1) 58%, rgba(7,169,140,1) 100%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text; */
 }
 
 section.music-header .music-feature-subtitle {
   padding: 20px;
-  /* background: rgb(0,11,47);
-  background: linear-gradient(90deg, rgba(0,11,47,1) 0%, rgba(0,119,117,1) 58%, rgba(7,169,140,1) 100%); */
   background: white;
-  /* color: var(--text-color-contrast); */
   color: black;
   font-weight: 500;
   text-align: justify;
@@ -1151,8 +1152,6 @@ section.music-header .music-intro {
 }
 
 .hovs-rules {
-  /* border-top: 2px solid var(--background-color-dark);
-  border-left: 2px solid var(--background-color-dark); */
   font-family: monospace;
 }
 
@@ -1175,7 +1174,6 @@ div.music-brands .brands-flex {
 
 .brands-flex .brand-logo {
   max-width: 200px;
-  
   color: var(--text-color-lightest);
   margin-top: auto;
   margin-bottom: auto;  
@@ -1184,3 +1182,92 @@ div.music-brands .brands-flex {
   word-spacing: 1px;
   letter-spacing: -2px;
 }
+
+/* Music articles */
+
+article.music-item {
+  background: black;
+}
+article.music-item .title {
+  width: 95%;
+  border-bottom: 1px solid var(--highlight-color-primary);
+}
+
+article.music-item .music-item-header {
+  margin-left: 10px;
+  text-align: left;
+}
+article.music-item h4 {
+  margin: 10px;
+  color: var(--highlight-color-primary);
+  font-size: 600%;
+}
+
+article.music-item .music-links {
+  margin: 25px;
+  color: var(--text-color-accent);
+}
+
+article.music-item a {
+  color: var(--text-color-accent-light);
+}
+article.music-item a:hover {
+  color: var(--highlight-color-primary);
+}
+article.music-item a:focus {
+  color: var(--text-color-accent-light);
+}
+
+article.music-item .headline {
+  text-align: left;
+  margin-left: 10px;
+  color: var(--highlight-color-secondary);
+  font-size: 200%;
+}
+
+article.music-item .subtitle {
+  color: var(--text-color-lightest);
+  margin-left: 10px;
+}
+
+article.music-item .sidenote {
+  color: var(--text-color-lightest);
+  margin-left: 10px;
+}
+
+.music-item .music-content {
+  /* background: var(--background-color-light); */
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  width: 95%;
+  overflow: auto;
+}
+
+article.music-item p, article.music-item table {
+  background: var(--background-color-dark);
+  max-width: 100%;
+  color: #c6c6c6;
+  border: 0px;
+}
+
+article.music-item table th {
+  border: 0px;
+  padding: 5px 150px 0px 5px;
+  color: var(--highlight-color-secondary);
+}
+
+article.music-item table tr {
+  border: 0px;
+}
+
+article.music-item table td {
+  border: 0px;
+  padding: 5px;
+}
+
+article.music-item table tr:nth-child(2n) {
+  background: black;
+}
+

@@ -4,4 +4,8 @@ date: {{ .Date }}
 tags: []
 layout: "playlist"
 draft: false
+headline:
+subtitle:
+sidenote:
+spotify:
 ---
