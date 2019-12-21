@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>announcements on Kamminga, J.J.</title>
-    <link>https://agitated-curran-41fd3b.netlify.com/tags/announcements/</link>
+    <link>https://jakobjankamminga.com/tags/announcements/</link>
     <description>Recent content in announcements on Kamminga, J.J.</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 30 Nov 2019 09:41:10 +0100</lastBuildDate>
     
-	<atom:link href="https://agitated-curran-41fd3b.netlify.com/tags/announcements/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jakobjankamminga.com/tags/announcements/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>First Post on My New Website!</title>
-      <link>https://agitated-curran-41fd3b.netlify.com/blog/first-post-on-new-website/</link>
+      <link>https://jakobjankamminga.com/blog/first-post-on-new-website/</link>
       <pubDate>Sat, 30 Nov 2019 09:41:10 +0100</pubDate>
       
-      <guid>https://agitated-curran-41fd3b.netlify.com/blog/first-post-on-new-website/</guid>
+      <guid>https://jakobjankamminga.com/blog/first-post-on-new-website/</guid>
       <description>Hooray! This post marks the start of my blogging adventure on my brand new, self created website.
 This blog is going to be about all kinds of things. Whatever I feel like writing about, honestly, but there will be some major themes: web development, music, and just some personal thoughts about&amp;hellip; well, not sure about what yet! I may also fill up an archive of blogposts from my previous site. But for now, please have a look around and let me know if you like it!</description>
     </item>

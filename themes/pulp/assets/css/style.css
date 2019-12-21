@@ -89,6 +89,7 @@ a:active {
   margin-left: auto;
   background: var(--highlight-color-primary);
   clip-path: polygon(50% 100%, 100% 62%, 82% 0, 18% 0, 0 62%);
+  -webkit-clip-path: polygon(50% 100%, 100% 62%, 82% 0, 18% 0, 0 62%);
 }
 
 img.weapon-image {

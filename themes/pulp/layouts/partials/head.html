@@ -1,5 +1,6 @@
 <head>
-  <title>
+    {{ partial "seo_schema" . }}
+    <title>
       {{ if eq .Title .Site.Title }}
           {{ .Site.Title }}
       {{ else }}
