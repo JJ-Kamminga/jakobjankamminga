@@ -1237,18 +1237,29 @@ article.music-item .sidenote {
 }
 
 .music-item .music-content {
-  /* background: var(--background-color-light); */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 20px;
   margin-bottom: 20px;
   width: 95%;
+}
+
+.music-item .music-content-block {
+  width: 450px;
+  height: 450px;
+  margin: 20px;
+  padding: 5px;
   overflow: auto;
+  border-radius: 5px;
 }
 
 article.music-item p, article.music-item table {
   background: var(--background-color-dark);
-  max-width: 100%;
+  min-width: 375px;
+  width: 100%;
   color: #c6c6c6;
   border: 0px;
 }

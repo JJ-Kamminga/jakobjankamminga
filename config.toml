@@ -9,6 +9,9 @@ hasCJKLanguage = true
 # googleAnalytics = "{your tracking code}"
 enableRobotsTXT = true
 
+summaryLength = 30
+
+
 [taxonomies]
   series = "series"
   tag = "tags"
@@ -29,7 +32,6 @@ enableRobotsTXT = true
     # custom_js = ["/js/custom.js"]
     
     #blog section
-    summaryLength = 30
                     #don't use spaces here!
     featuredTag1 = "web-development"
     featuredTag2 = "music"
