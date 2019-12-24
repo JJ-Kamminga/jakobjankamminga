@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
-  {{ partial "head.html" . }}
+{{ partial "head.html" . }}
   <body>
-    {{ partial "header.html" . }}
+    {{ partial "headernav.html" . }}  
+
     <div class="main">
       <div>
-        <h1>404 page not found.</h1>
-        <p><a href="{{ .Site.BaseURL }}">Go Home</a></p>
+        <h1>404: page not found</h1>
+        <p>But you can still read the credits!</p>
+        <p>Or, <a href="{{ .Site.BaseURL }}">go back to Home</a>.</p>
       </div>
     </div>
     {{ partial "footer.html" . }}
