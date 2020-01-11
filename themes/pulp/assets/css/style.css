@@ -702,11 +702,26 @@ nav li {
 
 /* Page */
 div#contentBody {
-  max-width: 700px;
+  max-width: 90%;
   margin: 0 auto;
   padding: 20px 0;
+
   text-align: left;
+
+  /* display: flex;
+  flex-wrap: wrap; */
 }
+
+/* #contentBody li {
+  background-color: var(--background-color-light);
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  margin: 5px;
+  text-align: left;
+  vertical-align: top;
+  box-shadow: 2px 2px 0px black;
+} */
 
 /* Blog */
 
@@ -732,7 +747,7 @@ section.blog div.blog-header h1, section.blog div.blog-header h4 {
 @media only screen and (max-device-width: 897px) {
   section.blog div.blog-header h1, section.blog div.blog-header h4 {
     margin-left: 0%;
-  } 
+  }
   section.blog .blog-header h1 {
     font-size: 700%;
   }
@@ -882,6 +897,19 @@ section.blog article .tags {
   margin-bottom: 0%;
 }
 
+/* Discogs lists */
+
+div.feature-albums {
+  display: flex;
+  padding: 20px 50px 20px 50px;
+  justify-content: space-between;
+}
+
+img.feature-album-img {
+  width: 250px;
+}
+
+
 /* Stories */
 
 section.stories h2, section.stories h3 {
@@ -989,7 +1017,7 @@ div.stories-introduction .first-word {
     margin-right: auto;
   }
 }
-  
+
 .stories-content {
   margin-top: 30px;
   border-radius: 5px;
@@ -1177,7 +1205,7 @@ div.music-brands .brands-flex {
   max-width: 200px;
   color: var(--text-color-lightest);
   margin-top: auto;
-  margin-bottom: auto;  
+  margin-bottom: auto;
   font-size: 140%;
   font-weight: 900;
   word-spacing: 1px;

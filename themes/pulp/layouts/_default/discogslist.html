@@ -1,0 +1,48 @@
+{{ define "main"}}
+<section class="single-page blog">
+  <div class="single-page-header">
+    <div class="single-page-title">
+      <h1>{{ .Title }}</h1>
+    </div>
+  <!-- {{ partial "header.html" . }} -->
+  <!-- date -->
+  
+  <div class="single-page-details">
+      {{ $singlePageDateFormat := .Site.Params.singlePageDateFormat | default "January 2, 2006"}}
+      <p class="date">{{ .Date.Format $singlePageDateFormat }}</p>
+      {{ partial "tags.html" .}}
+    </div>
+  </div>
+  <!-- content -->
+  <div id="contentBody">
+    {{ .Content }}
+    <ol reversed class="discogs-list" id="{{ .Params.discogslistid }}">
+
+    </ol>
+  </div>
+  {{ $related := .Site.RegularPages.Related . | first 5 }}
+  {{ with $related }}
+  <h3>See Also</h3>
+  <ul>
+    {{ range . }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+  <a href="/blog">Back to blog home</a>
+  <br>
+  <br>
+
+</section>
+  {{ partial "footer.html" . }}
+<script src="/js/discogs.js">
+</script>
+<script>
+  var listIdClass = document.getElementsByClassName("discogs-list");
+  try {
+    enrichList(listIdClass[0].id)
+  } catch (e) {
+    console.warn("Error in discogs script: " + e)
+  }
+</script>
+{{ end }}

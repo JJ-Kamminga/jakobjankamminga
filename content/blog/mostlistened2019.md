@@ -1,5 +1,5 @@
 ---
-title: "Most listened 2019"
+title: "Most listened albums 2019"
 date: 2019-12-20T22:22:00+01:00
 tags: ["music", "lists", "2019", "habittracking", "lastfm"]
 draft: false
