@@ -47,6 +47,7 @@ a:hover {
 a:active {
   color: var(--highlight-color-secondary);
 }
+
 /* Transition effect */
 
 .overlay{
@@ -359,6 +360,10 @@ span.nav-item {
   color: var(--text-color-accent);
   background: var(--background-color-white);
   border: 3px solid var(--text-color-accent);
+}
+
+.button:active {
+  border: 3px solid var(--highlight-color-primary);
 }
 
 .skyline {
@@ -857,18 +862,18 @@ div.tag-section {
 }
 
 section.blog article .tags {
+  white-space: nowrap;
   text-align: left;
   max-height: 50px;
-  margin-top: 2px;
-  padding-left: 0px;
-  overflow: scroll;
+  margin: 2px 0px 0px 0px;
+  padding: 10px 10px 10px 0px;
+  overflow-x: scroll;
+  border-top: 1px solid var(--text-color-accent);
+  border-bottom: 1px solid var(--text-color-accent);
 }
 
 .tag {
   display: inline;
-}
-.tag:before {
-  content: "#";
 }
 
 /* blog post specific */
@@ -917,6 +922,10 @@ div.blog-related-posts h3 {
   display: flex;
   align-items: center;  
   margin: 1em -1em;
+}
+
+div.blog-related-posts a:visited {
+  color: rgb(12, 37, 41);
 }
 
 div.blog-related-posts h3:before, div.blog-related-posts h3:after {
