@@ -16,17 +16,18 @@
   <div id="contentBody">
     {{ .Content }}
   </div>
-  
-  {{ $related := .Site.RegularPages.Related . | first 5 }}
-  {{ with $related }}
-  <h3>See Also</h3>
-  <ul>
-    {{ range . }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  <div class="blog-related-posts">
+    {{ $related := .Site.RegularPages.Related . | first 5 }}
+    {{ with $related }}
+    <h3>Related posts</h3>
+    <ul>
+      {{ range . }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
     {{ end }}
-  </ul>
-  {{ end }}
-  <a href="/blog">Back to blog home</a>
+  </div>
+  <a href="/blog" class="button">Back to blog home</a>
   <br>
   <br>
 

@@ -349,6 +349,18 @@ span.nav-item {
 
 /* Main */
 
+.button {
+  background: var(--text-color-accent);
+  padding: 10px;
+  color: var(--text-color-contrast);
+}
+
+.button:hover, button:focus {
+  color: var(--text-color-accent);
+  background: var(--background-color-white);
+  border: 3px solid var(--text-color-accent);
+}
+
 .skyline {
   height: 400px; 
   background-position: center;
@@ -695,7 +707,7 @@ nav li {
 }
 
 #contentsList hr.separator {
-  width: 10px;
+  width: 10§px;
   margin: 30px auto;
   border: solid 1px #c9c9c9;
 }
@@ -895,6 +907,31 @@ section.blog article .tags {
   font-size: 300%;
   margin-top: 2%;
   margin-bottom: 0%;
+}
+
+div.blog-related-posts {
+  margin: 0px 30px 40px 30px;
+}
+
+div.blog-related-posts h3 {
+  display: flex;
+  align-items: center;  
+  margin: 1em -1em;
+}
+
+div.blog-related-posts h3:before, div.blog-related-posts h3:after {
+  flex: 1;
+  content: "";
+  margin: 0 1em;
+  background: black;
+  height: 2px;
+}
+
+div.blog-related-posts li {
+  display: inline;
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px dotted var(--text-color-lighter);
 }
 
 /* Discogs lists */
