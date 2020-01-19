@@ -792,7 +792,7 @@ section.blog .blog-tags {
   border-top: 2px solid var(--background-color-dark);
   border-bottom: 2px solid var(--background-color-dark);
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 section.blog .tag-text-area {
@@ -863,11 +863,11 @@ div.tag-section {
 
 section.blog article .tags {
   white-space: nowrap;
+  line-height: 1;
   text-align: left;
-  max-height: 50px;
   margin: 2px 0px 0px 0px;
   padding: 10px 10px 10px 0px;
-  overflow-x: scroll;
+  overflow-x: auto;
   border-top: 1px solid var(--text-color-accent);
   border-bottom: 1px solid var(--text-color-accent);
 }
