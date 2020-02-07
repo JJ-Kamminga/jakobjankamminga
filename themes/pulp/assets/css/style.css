@@ -1321,6 +1321,19 @@ article.music-item .sidenote {
   width: 95%;
 }
 
+.music-item .music-item-art-img {
+  margin: 40px 0px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.music-item .music-item-art-img {
+  width: 300px;
+  height: 300px;
+  border: 1px solid var(--text-color-accent);
+  box-shadow: 1px 3px 1px var(--highlight-color-primary);
+}
+
 .music-item .music-content-block {
   width: 450px;
   height: 450px;

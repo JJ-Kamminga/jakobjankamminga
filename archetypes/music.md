@@ -9,4 +9,5 @@ subtitle:
 sidenote:
 spotify:
 spotifyembed:
+image: "/img/playlists/default.jpg"
 ---
