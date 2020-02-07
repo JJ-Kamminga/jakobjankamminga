@@ -356,7 +356,7 @@ span.nav-item {
   color: var(--text-color-contrast);
 }
 
-.button:hover, button:focus {
+.button:hover, .button:focus {
   color: var(--text-color-accent);
   background: var(--background-color-white);
   border: 3px solid var(--text-color-accent);
@@ -519,7 +519,6 @@ ul.feature-contact li {
   background: var(--highlight-color-secondary);
   padding: 5px 0px 0px 5px;
   width: 300px;
-  /* height: 300px; */
   margin-top: 10px;
   border-radius: 0px 0px 30px 0px;
   color: white;
@@ -711,12 +710,6 @@ nav li {
   padding: 20px 0;
 }
 
-#contentsList hr.separator {
-  width: 10§px;
-  margin: 30px auto;
-  border: solid 1px #c9c9c9;
-}
-
 /* Page */
 div#contentBody {
   max-width: 90%;
@@ -792,7 +785,7 @@ section.blog .blog-tags {
   border-top: 2px solid var(--background-color-dark);
   border-bottom: 2px solid var(--background-color-dark);
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 section.blog .tag-text-area {
@@ -827,20 +820,30 @@ section.blog h3 {
   font-family: 'Abril Fatface', cursive;
   font-weight: 200;
   font-size: 225%;
-  margin: 2%;
+  margin: 20px;
 }
 
-section.blog .blog-section, section.blog .tag-section {
+section.blog .blog-articles, section.blog .blog-month-section, section.blog .tag-section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
+@media only screen and (min-device-width: 897px) {
+  section.blog .blog-articles {
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70vw;
+  }
+}
+
+
+
 section.blog article {
-  padding-left: 20px;
+  padding: 0px 20px 0px 20px;
   margin-top: 20px;
   width: 300px;
-  /* height: 400px; */
   overflow: hidden;
 }
 
@@ -863,11 +866,11 @@ div.tag-section {
 
 section.blog article .tags {
   white-space: nowrap;
+  line-height: 1;
   text-align: left;
-  max-height: 50px;
   margin: 2px 0px 0px 0px;
   padding: 10px 10px 10px 0px;
-  overflow-x: scroll;
+  overflow-x: auto;
   border-top: 1px solid var(--text-color-accent);
   border-bottom: 1px solid var(--text-color-accent);
 }
@@ -1160,6 +1163,8 @@ section.music-header .music-feature {
   text-shadow: 1px 1px 1px white;
 }
 
+
+
 section.music-header .music-feature-keyword {
   position: relative;
   display: inline-block;
@@ -1184,12 +1189,28 @@ section.music-header .music-feature-subtitle {
   word-spacing: -0px;
   }
 
+@media only screen and (max-device-width: 896px) {
+  div#music-showcase-image {
+    max-height: 200px;
+  }
+  
+  div.music-feature-subtitle {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+
+  div.music-brands {
+    display: none;
+  }
+}
+
 @media only screen and (min-device-width: 897px) {
   section.music-header .music-feature-subtitle {
     column-count: 4;
     column-gap: 30px;
   }
 }
+
 
 #music-showcase-image {
   height: 50vh;
