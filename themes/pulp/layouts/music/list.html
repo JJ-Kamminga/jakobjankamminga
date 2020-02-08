@@ -51,7 +51,7 @@
 </section>
 <section class="music-articles">
 {{ range .Pages }}
-<article class="music-item">
+<article class="music-item" id="music-item-{{ .Title }}">
   <!-- <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4> -->
   <div class="music-item-header">
     <div class="title">
@@ -62,6 +62,7 @@
     <div class="sidenote">{{ .Param "sidenote" }}</div>
     <div class="music-links">
       <i class="fas fa-link"></i> <a href='{{ .Param "spotify" }}' target="blank">Spotify</a>
+      <i class="fas fa-link"></i> <a href='#music-item-{{ .Title }}'>Permalink</a>
     </div>
   </div>
   <div class="music-content">
