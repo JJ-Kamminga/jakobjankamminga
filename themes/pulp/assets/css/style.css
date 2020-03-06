@@ -1352,7 +1352,6 @@ article.music-item .sidenote {
   width: 300px;
   height: 300px;
   border: 1px solid var(--text-color-accent);
-  box-shadow: 1px 3px 1px var(--highlight-color-primary);
 }
 
 .music-item .music-content-block {
