@@ -1293,6 +1293,13 @@ article.music-item .music-item-header {
   margin-left: 10px;
   text-align: left;
 }
+
+@media only screen and (max-device-width: 896px) { 
+  article.music-item .music-item-header {
+    font-size: 60%;
+  }
+}
+
 article.music-item h4 {
   margin: 10px;
   color: var(--highlight-color-primary);
@@ -1342,7 +1349,7 @@ article.music-item .sidenote {
   width: 95%;
 }
 
-.music-item .music-item-art-img {
+.music-item .music-item-art {
   margin: 40px 0px;
   max-width: 100%;
   overflow: hidden;
@@ -1351,6 +1358,7 @@ article.music-item .sidenote {
 .music-item .music-item-art-img {
   width: 300px;
   height: 300px;
+  margin-left: 22px;
   border: 1px solid var(--text-color-accent);
 }
 
