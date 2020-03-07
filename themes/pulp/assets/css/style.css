@@ -409,6 +409,10 @@ span.nav-item {
 }
 
 @media only screen and (max-device-width: 896px) {
+  .skyline.feature-bio {
+    height: 700px;
+  }
+  
   .keywords {
     position: relative;
     max-width: 80vw;
