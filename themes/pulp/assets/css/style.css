@@ -446,16 +446,20 @@ span.nav-item {
   }
   
   .keywords {
-    position: relative;
-    max-width: 80vw;
-    line-height: 3.8em;
-    top: 250px;
-    right: 0px;
+    /* text-align: center; */
+    border-right: 1px solid var(--text-color-contrast);
+    overflow: auto;
+    position: absolute;
+    max-width: 90vw;
+    line-height: 10em;
+    top: 150px;
   }
   
   .keyword {
     font-size: 83px;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
