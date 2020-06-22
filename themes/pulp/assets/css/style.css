@@ -857,6 +857,10 @@ section.blog h4 {
   margin-bottom: 1%;
 }
 
+section.blog h2 {
+  font-family: 'Abril Fatface', cursive;
+}
+
 section.blog h3 {
   font-family: 'Abril Fatface', cursive;
   font-weight: 200;
@@ -868,6 +872,11 @@ section.blog .blog-articles, section.blog .blog-month-section, section.blog .tag
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+section.blog .blog-img-center {
+  display: block;
+  margin: 20px auto 20px auto;
 }
 
 @media only screen and (min-device-width: 897px) {

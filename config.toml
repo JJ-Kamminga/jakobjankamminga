@@ -38,7 +38,8 @@ summaryLength = 30
     featuredTag3 = "writing"
     featuredTag4 = "announcements"
 
-
+[markup.goldmark.renderer] 
+ unsafe= true
 
 [permalinks]
     stories = "/stories/:filename"
