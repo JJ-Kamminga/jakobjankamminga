@@ -537,6 +537,11 @@ ul.feature-contact li {
   display: inline-block;
   font-size: 30px;
 }
+@media only screen and (max-device-width: 897px) {
+  ul.feature-contact {
+    word-spacing: 15px;
+  }
+}
 
 /* Portfolio */
 
