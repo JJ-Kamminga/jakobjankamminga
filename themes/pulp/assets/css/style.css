@@ -757,8 +757,18 @@ nav li {
 }
 
 /* Page */
+
+@media only screen and (min-device-width: 897px) {
+  div#contentBody {
+    max-width: 53vw;
+  }
+}
+@media only screen and (max-device-width: 896px) {
+  div#contentBody {
+    max-width: 90%;
+  }
+}
 div#contentBody {
-  max-width: 90%;
   margin: 0 auto;
   padding: 20px 0;
 
