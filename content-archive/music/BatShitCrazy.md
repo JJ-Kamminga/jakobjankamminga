@@ -1,6 +1,8 @@
 ---
 title: "Bat Shit Crazy"
 date: 2020-02-07T16:26:55+01:00
+author:
+    name: Jakob Jan Kamminga
 tags: []
 layout: "playlist"
 draft: false

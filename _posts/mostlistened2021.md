@@ -1,7 +1,11 @@
 ---
 title: "Most listened albums of 2021"
-date: 2021-12-24T16:11:37+01:00
+excerpt: "As usual, accompanying my albums of the year 2020, these are my most listened albums of the year."
+date: '2021-12-24T16:11:37+01:00'
+author:
+    name: Jakob Jan Kamminga
 tags: ["music", "lists", "2021", "habittracking", "lastfm"]
+coverImage: '/assets/img/albums/jamesgrant-anjunadeep12.jpg'
 draft: false
 ---
 

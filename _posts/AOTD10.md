@@ -1,6 +1,9 @@
 ---
 title: "Albums of the decade: 2010 - 2019"
-date: 2020-01-11T17:31:40+01:00
+excerpt: "I don't think I ever put this much effort into making a list. The past decade I have listened to music in near obsessive quantities, and so there were tons of records to go through and evaluate."
+date: '2020-01-11T17:31:40+01:00'
+author:
+    name: Jakob Jan Kamminga
 tags: ["music", "lists", "2019", "web-development", "discogs"]
 layout: discogslist
 discogslistid: "546672"

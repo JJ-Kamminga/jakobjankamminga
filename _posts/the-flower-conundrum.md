@@ -1,8 +1,10 @@
 ---
 title: "The Flower Conundrum"
-date: 2020-06-23T12:54:22+02:00
+date: '2020-06-23T12:54:22+02:00'
+author:
+    name: Jakob Jan Kamminga
 tags: ["web-development", "site", "css"]
-draft: false
+draft: true
 unsafe: true
 ---
 

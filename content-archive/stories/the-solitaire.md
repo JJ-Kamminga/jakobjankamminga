@@ -1,6 +1,8 @@
 ---
 title: "The Solitaire"
 date: 2019-12-01T15:57:25+01:00
+author:
+    name: Jakob Jan Kamminga
 tags: []
 draft: false
 ---

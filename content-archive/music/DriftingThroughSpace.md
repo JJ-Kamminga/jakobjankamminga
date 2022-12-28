@@ -1,6 +1,8 @@
 ---
 title: "Drifting Through Space"
 date: 2020-03-06T15:45:43+01:00
+author:
+    name: Jakob Jan Kamminga
 tags: []
 layout: "playlist"
 draft: false

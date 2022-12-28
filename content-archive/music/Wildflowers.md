@@ -1,6 +1,8 @@
 ---
 title: "Wildflowers"
 date: 2020-05-03T16:14:40+02:00
+author:
+    name: Jakob Jan Kamminga
 tags: []
 layout: "playlist"
 draft: false

@@ -1,6 +1,9 @@
 ---
 title: "Most listened albums of 2020"
-date: 2021-01-03T11:37:37+01:00
+excerpt: "December 2020 has felt like the shortest and the longest month at the same time, however weird that may sound. Working from home, I had all the time in the world to listen to new music, yet..."
+date: '2021-01-03T11:37:37+01:00'
+author:
+    name: Jakob Jan Kamminga
 tags: ["music", "lists", "2020", "habittracking", "lastfm"]
 draft: false
 ---
