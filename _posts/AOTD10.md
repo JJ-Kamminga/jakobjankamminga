@@ -15,7 +15,7 @@ I don't think I ever put this much effort into making a list. The past decade I 
 The other reason this list took longer, is because I wanted to use it for an experiment with my website. The list you (hopefully) see below is loaded dynamically from the Discogs API. Making and maintaining lists on Discogs is convenient, using their gigantic and accurate database. I haven't gotten around to a lot of styling, or making the script re-usable, but I am definitely excited to explore doing more with the Discogs API in the future.
 
 <div class="feature-albums">
-    <img class="feature-album-img" src="/img/albums/shining-blackjazz.jpg" alt="album cover"></img>
-    <img class="feature-album-img" src="/img/albums/kendricklamar-topimpabutterfly.jpg" alt="album cover"></img>
-    <img class="feature-album-img" src="/img/albums/fourtet-thereisloveinyou.jpg" alt="album cover"></img>
+    <img class="feature-album-img" src="/img/blog/shining-blackjazz.jpg" alt="album cover"></img>
+    <img class="feature-album-img" src="/img/blog/kendricklamar-topimpabutterfly.jpg" alt="album cover"></img>
+    <img class="feature-album-img" src="/img/blog/fourtet-thereisloveinyou.jpg" alt="album cover"></img>
 </div>

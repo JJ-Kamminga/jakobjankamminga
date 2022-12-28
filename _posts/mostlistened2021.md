@@ -5,7 +5,7 @@ date: '2021-12-24T16:11:37+01:00'
 author:
     name: Jakob Jan Kamminga
 tags: ["music", "lists", "2021", "habittracking", "lastfm"]
-coverImage: '/assets/img/albums/jamesgrant-anjunadeep12.jpg'
+coverImage: '/assets/img/blog/jamesgrant-anjunadeep12.jpg'
 draft: false
 ---
 
