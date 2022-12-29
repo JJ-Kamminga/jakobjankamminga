@@ -8,6 +8,9 @@
     "lint": "npx eslint --ext .tsx,.js,.ts",
     "typecheck": "tsc"
   },
+  "engines": {
+    "node": ">16"
+  },
   "dependencies": {
     "classnames": "^2.3.1",
     "date-fns": "^2.28.0",
