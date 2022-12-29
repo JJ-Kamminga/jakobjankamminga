@@ -1,6 +1,6 @@
 ---
 title: "Most listened albums of 2021"
-excerpt: "As usual, accompanying my albums of the year 2020, these are my most listened albums of the year."
+excerpt: "As usual, accompanying my albums of the year 2021, these are my most listened albums of the year."
 date: '2021-12-24T16:11:37+01:00'
 author:
     name: Jakob Jan Kamminga
