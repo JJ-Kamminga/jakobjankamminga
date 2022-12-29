@@ -4,7 +4,6 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "export": "next export",
     "start": "next start",
     "lint": "npx eslint --ext .tsx,.js,.ts",
     "typecheck": "tsc"
