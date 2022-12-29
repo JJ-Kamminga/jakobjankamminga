@@ -15,7 +15,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       }
       }>
         <img
-          src="/assets/icons/owl.svg"
+          src="/assets/icons/owl-white.svg"
           alt="owl icon"
           style={{
             position: 'relative',

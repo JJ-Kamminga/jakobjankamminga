@@ -27,16 +27,16 @@ const Alert = ({ preview }: Props) => {
               to exit preview mode.
             </>
           ) : (
-            <>
-              The source code for this blog is{' '}
+            <div className='relative z-50'>
+              Welcome to my rebuilt site. It's still barebones at the moment, while it's being built you can find the old site
+              {' '}
               <a
-                href={`https://github.com/vercel/next.js/tree/canary/examples`}
+                href={`https://jakobjankamminga-hugo.netlify.app/`}
                 className="underline hover:text-blue-600 duration-200 transition-colors"
-              >
-                available on GitHub
+              >here
               </a>
               .
-            </>
+            </div>
           )}
         </div>
       </Container>
