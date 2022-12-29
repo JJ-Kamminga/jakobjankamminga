@@ -31,13 +31,12 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     if (field === 'content') {
       items[field] = content
     }
+    if (field === 'ogImage') {
+      items[field] = data[field] || { url: HOME_OG_IMAGE_URL }
+    }
 
     if (typeof data[field] !== 'undefined') {
       items[field] = data[field]
-    }
-
-    if (field === 'ogImage') {
-      items[field] = data[field] || { url: HOME_OG_IMAGE_URL }
     }
   })
 

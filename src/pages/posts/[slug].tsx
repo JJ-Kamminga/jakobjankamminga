@@ -34,7 +34,7 @@ export default function Post({ post, morePosts, preview }: Props) {
             <article className="mb-32">
               <Head>
                 <title>
-                  {post.title} | {SITE_NAME}
+                  {`${post.title}, ${SITE_NAME}`}
                 </title>
                 <meta property='og:image' content={post.ogImage.url} />
               </Head>
@@ -68,8 +68,6 @@ export async function getStaticProps({ params }: Params) {
     'ogImage',
     'coverImage',
   ])
-
-  console.log(post.ogImage);
 
   const content = await markdownToHtml(post.content || '')
 
