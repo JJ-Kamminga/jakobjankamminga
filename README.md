@@ -1,12 +1,12 @@
 # jakobjankamminga
-Welcome to the repository for my personal website. 
-You can view it at [jakobjankamminga.com](https://jakobjankamminga.com/).
-I created it with Hugo.
+Welcome to the repository for my personal website.
+This is an older version of my site. You can view it at [https://jakobjankamminga-hugo.netlify.app/](https://jakobjankamminga-hugo.netlify.app/). I created it with Hugo.
+My current site is at  [jakobjankamminga.com](https://jakobjankamminga.com/).
 
 # Deploy status
 This project is hosted on Netlify.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/01b836bc-1bbf-427e-a2d5-51ccd62f72c5/deploy-status)](https://app.netlify.com/sites/agitated-curran-41fd3b/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8300e5c7-8976-4e12-b601-d24949ca46b3/deploy-status)](https://app.netlify.com/sites/jakobjankamminga-hugo/deploys)
 
 # License
 This project (code, design) is licensed under the MIT License.

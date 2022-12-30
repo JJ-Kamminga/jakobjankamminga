@@ -1,4 +1,4 @@
-baseURL = "https://jakobjankamminga.com"
+baseURL = "https://jakobjankamminga-hugo.netlify.app"
 title = "Kamminga, J.J."
 author = "Jakob Jan Kamminga"
 theme = "pulp"
