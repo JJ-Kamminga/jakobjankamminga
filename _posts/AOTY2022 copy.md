@@ -1,6 +1,6 @@
 ---
 title: "Album of the year 2023"
-excerpt: ""
+excerpt: "Coming out of a blogging slumber, I simply cannot skip posting a list with my favourite albums of the year."
 date: "2023-12-28T21:11:37+01:00"
 author:
   name: Jakob Jan Kamminga
