@@ -5,15 +5,17 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "npx eslint --ext .tsx,.js,.ts",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "typecheck": "tsc"
   },
   "engines": {
-    "node": ">13"
+    "node": ">=18.17.0"
   },
   "dependencies": {
     "classnames": "^2.3.1",
     "date-fns": "^2.28.0",
+    "eslint-config-next": "^14.0.4",
     "gray-matter": "^4.0.3",
     "next": "latest",
     "react": "^18.2.0",

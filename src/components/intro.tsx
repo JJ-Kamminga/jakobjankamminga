@@ -1,4 +1,4 @@
-import { AUTHOR_NAME } from "../lib/constants"
+import { AUTHOR_NAME } from "../lib/constants";
 
 const Intro = () => {
   return (
@@ -17,7 +17,7 @@ const Intro = () => {
         ...and writes more about music than about technology :-).
       </h4>
     </section>
-  )
-}
+  );
+};
 
-export default Intro
+export default Intro;
