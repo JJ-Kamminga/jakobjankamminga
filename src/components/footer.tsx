@@ -1,5 +1,5 @@
-import Container from './container'
-import { AUTHOR_NAME } from '../lib/constants'
+import Container from "./container";
+import { AUTHOR_NAME } from "../lib/constants";
 
 const Footer = () => {
   return (
@@ -18,7 +18,7 @@ const Footer = () => {
               Next.js
             </a>
             <a
-              href={`https://github.com/JJ-Kamminga/jakobjankamminga`}
+              href={"https://github.com/JJ-Kamminga/jakobjankamminga"}
               className="mx-3 font-bold hover:underline"
             >
               View on GitHub
@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
       </Container>
     </footer >
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

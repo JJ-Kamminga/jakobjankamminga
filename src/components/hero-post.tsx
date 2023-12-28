@@ -1,8 +1,8 @@
-import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
-import Link from 'next/link'
+import DateFormatter from "./date-formatter";
+import CoverImage from "./cover-image";
+import Link from "next/link";
 
-type Props = {
+interface Props {
   title: string
   coverImage: string
   date: string
@@ -15,7 +15,7 @@ const HeroPost = ({
   coverImage,
   date,
   excerpt,
-  slug,
+  slug
 }: Props) => {
   return (
     <section>
@@ -42,7 +42,7 @@ const HeroPost = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroPost
+export default HeroPost;

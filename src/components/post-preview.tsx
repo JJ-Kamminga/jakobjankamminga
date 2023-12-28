@@ -1,10 +1,10 @@
-import Avatar from './avatar'
-import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
-import Link from 'next/link'
-import type Author from '../interfaces/author'
+import Avatar from "./avatar";
+import DateFormatter from "./date-formatter";
+import CoverImage from "./cover-image";
+import Link from "next/link";
+import type Author from "../interfaces/author";
 
-type Props = {
+interface Props {
   title: string
   coverImage: string
   date: string
@@ -17,7 +17,7 @@ const PostPreview = ({
   coverImage,
   date,
   excerpt,
-  slug,
+  slug
 }: Props) => {
   return (
     <div>
@@ -39,7 +39,7 @@ const PostPreview = ({
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       {/* <Avatar name={author?.name} picture={author?.picture} /> */}
     </div>
-  )
-}
+  );
+};
 
-export default PostPreview
+export default PostPreview;
