@@ -2,7 +2,7 @@ import Container from "./container";
 import cn from "classnames";
 
 interface Props {
-  preview?: boolean
+  preview?: boolean;
 }
 
 const Alert = ({ preview }: Props) => {
