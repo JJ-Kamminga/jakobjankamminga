@@ -1,15 +1,19 @@
-import { Grid2 } from '@mui/material'
+import { Box, Grid2 } from '@mui/material'
+import { styled } from '@mui/material/styles';
 import Link from 'next/link'
 
 const navItems = {
   '/': {
-    name: 'home',
+    name: 'Home',
+    borderColor: '#FFCB18'
   },
   '/blog': {
-    name: 'blog',
+    name: 'Blog',
+    borderColor: '#544FBF'
   },
   'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-    name: 'deploy',
+    name: 'Music',
+    borderColor: '#F45B69'
   },
 }
 
@@ -18,15 +22,17 @@ export function Navbar() {
     <>
       <nav id="nav">
         <Grid2 container spacing={2}>
-          {Object.entries(navItems).map(([path, { name }]) => {
+          {Object.entries(navItems).map(([path, { name, borderColor }]) => {
             return (
-              <Grid2 size={3}>
-                <Link
-                  key={path}
-                  href={path}
-                >
-                  {name}
-                </Link>
+              <Grid2 size={4}>
+                <Box sx={{ borderLeft: `12px solid ${borderColor}`, borderBottom: `12px solid #565254` }}>
+                  <Link
+                    key={path}
+                    href={path}
+                  >
+                    {name}
+                  </Link>
+                </Box>
               </Grid2>
             )
           })}
