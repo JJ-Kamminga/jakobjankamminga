@@ -2,6 +2,7 @@ import './global.css'
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
+import '@fontsource-variable/eb-garamond';
 import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -49,7 +50,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        GeistSans.variable,
+        // GeistSans.variable,
         GeistMono.variable
       )}
     >

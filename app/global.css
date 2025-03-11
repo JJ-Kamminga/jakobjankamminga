@@ -30,7 +30,9 @@
 html {
   min-width: 360px;
 }
-
+ {
+   {
+    /* 
 .prose .anchor {
   @apply absolute invisible no-underline;
 
@@ -77,7 +79,6 @@ html {
 }
 
 .prose img {
-  /* Don't apply styles to next/image */
   @apply m-0;
 }
 
@@ -114,9 +115,10 @@ html {
 }
 
 .prose > :first-child {
-  /* Override removing top margin, causing layout shift */
   margin-top: 1.25em !important;
   margin-bottom: 1.25em !important;
+} */
+  }
 }
 
 pre::-webkit-scrollbar {

@@ -24,7 +24,7 @@ export function BlogPosts() {
               <p>
                 {formatDate(post.metadata.publishedAt, false)}
               </p>
-              <p >
+              <p>
                 {post.metadata.title}
               </p>
             </div>
