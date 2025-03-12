@@ -9,7 +9,6 @@ const theme = createTheme({
       'EB Garamond Variable',
       '"Helvetica Neue"',
       'serif',
-      'Roboto',
       'Arial',
     ].join(','),
   },

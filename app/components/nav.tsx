@@ -1,39 +1,51 @@
-import { Box, Grid2 } from '@mui/material'
-import Link from 'next/link'
+import { Box, Grid2, Link as MuiLink, Typography } from '@mui/material'
+import NextLink from 'next/link'
 
 const navItems = {
   '/': {
     name: 'Home',
-    borderColor: '#FFCB18'
   },
   '/blog': {
     name: 'Blog',
-    borderColor: '#544FBF'
   },
   'https://vercel.com/templates/next.js/portfolio-starter-kit': {
+    name: 'Thoughts',
+  },
+  '/contact': {
     name: 'Music',
-    borderColor: '#F45B69'
   },
 }
 
 export function Navbar() {
   return (
-    <>
-      <nav id="nav">
-        <Grid2 container spacing={2}>
-          {Object.entries(navItems).map(([path, { name, borderColor }]) => {
-            return (
-              <Grid2 key={path} size={4}>
-                <Box sx={{ borderLeft: `12px solid ${borderColor}`, borderBottom: `12px solid #565254` }}>
-                  <Link href={path}>
+    <nav id="nav" style={{ position: 'sticky', top: '0' }}>
+      <Grid2 container spacing={0}>
+        {Object.entries(navItems).map(([path, { name }]) => {
+          return (
+            <Grid2 key={path} size={12 / Object.keys(navItems).length}>
+              <Box sx={{
+                background: 'white',
+                borderBottom: `8px solid #565254`
+              }}>
+                <Typography component='span' sx={{ margin: 'auto', padding: '12px' }}>
+                  <MuiLink
+                    component={NextLink}
+                    href={path}
+                    underline='always'
+                    color='textPrimary'
+                    sx={{
+                      fontFamily: 'inherit',
+                      fontSize: '1.5rem'
+                    }}
+                  >
                     {name}
-                  </Link>
-                </Box>
-              </Grid2>
-            )
-          })}
-        </Grid2>
-      </nav >
-    </>
+                  </MuiLink>
+                </Typography>
+              </Box>
+            </Grid2>
+          )
+        })}
+      </Grid2>
+    </nav >
   )
 }

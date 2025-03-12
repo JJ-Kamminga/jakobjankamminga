@@ -1,7 +1,6 @@
 import './global.css'
 import type { Metadata } from 'next'
 import '@fontsource-variable/eb-garamond';
-import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
@@ -39,35 +38,17 @@ export const metadata: Metadata = {
   },
 }
 
-// const playfairDisplay = PlayfairDisplay({
-//   +  weight: ['300', '400', '500', '700'],
-//   +  subsets: ['latin'],
-//   +  display: 'swap',
-//   +  variable: '--font-roboto',
-//   +});
-
-const cx = (...classes) => classes.filter(Boolean).join(' ')
-
-export default function RootLayout({
-  children,
-}: {
+export default function RootLayout({ children }: {
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-    // className={cx(
-    //   // GeistSans.variable,
-    //   // GeistMono.variable
-    // )}
-    >
+    <html lang="en">
       <CssBaseline>
         <GlobalStyles styles={globalStyles} />
-        <body className=''>
+        <body>
           <AppRouterCacheProvider>
             <ThemeProvider theme={theme}>
               <main>
-                <Navbar />
                 {children}
                 <Footer />
                 <Analytics />
