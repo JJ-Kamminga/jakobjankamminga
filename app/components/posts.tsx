@@ -1,8 +1,9 @@
+import { formatDate } from 'app/blog/utils/client'
+import { getBlogPosts } from 'app/blog/utils/server'
 import Link from 'next/link'
-import { formatDate, getBlogPosts } from 'app/blog/utils'
 
-export function BlogPosts() {
-  let allBlogs = getBlogPosts()
+export async function BlogPosts() {
+  const allBlogs = await getBlogPosts()
 
   return (
     <div>
