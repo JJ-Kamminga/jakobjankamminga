@@ -3,7 +3,7 @@ import NextLink from 'next/link'
 
 const navItems = {
   '/': {
-    name: 'Home',
+    name: 'About',
   },
   '/blog': {
     name: 'Blog',
@@ -22,10 +22,13 @@ export function Navbar() {
       <Grid2 container spacing={0}>
         {Object.entries(navItems).map(([path, { name }]) => {
           return (
-            <Grid2 key={path} size={12 / Object.keys(navItems).length}>
+            <Grid2
+              key={path}
+              size={12 / Object.keys(navItems).length}
+            >
               <Box sx={{
                 background: 'white',
-                borderBottom: `8px solid #565254`
+                borderBottom: `8px double #3891A6`
               }}>
                 <Typography component='span' sx={{ margin: 'auto', padding: '12px' }}>
                   <MuiLink
