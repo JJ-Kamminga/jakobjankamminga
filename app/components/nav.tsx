@@ -28,7 +28,10 @@ export function Navbar() {
             >
               <Box sx={{
                 background: 'white',
-                borderBottom: `8px double #3891A6`
+                borderTop: `2px solid #41333B`,
+                borderBottom: `8px double #41333B`,
+                paddingTop: '8px',
+                paddingBottom: '8px'
               }}>
                 <Typography component='span' sx={{ margin: 'auto', padding: '12px' }}>
                   <MuiLink

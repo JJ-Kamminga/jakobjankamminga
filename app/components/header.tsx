@@ -16,9 +16,11 @@ export default function Header() {
             paddingBottom: '50px',
             paddingTop: '25px',
             fontSize: matches ? '3rem' : '6rem',
-            // overflowWrap: 'break-word'
+            textAlign: 'center',
           }}
-        >Jakob Jan Kamminga</Typography>
+        >
+          Jakob Jan Kamminga
+        </Typography>
       </Container>
       <div style={{
         position: "absolute",
