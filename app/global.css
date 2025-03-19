@@ -3,13 +3,20 @@
   color: #fefefe;
 }
 
+.sentence:first-letter {
+  float: left;
+  font-size: 5rem;
+  line-height: 4.5rem;
+  margin: 0 6px 0 0;
+}
+
 :root {
-  --main-darkgrey: #1B1C22;
-  --main-lightgrey: #DDDDDD;
+  --main-darkgrey: #1b1c22;
+  --main-lightgrey: #dddddd;
   --main-yellow: #ffcb18;
   --main-white: #fff;
   --main-teal: #007f7a;
-  
+
   --sh-class: #2d5e9d;
   --sh-identifier: #354150;
   --sh-sign: #8996a3;
@@ -36,9 +43,9 @@
 html {
   min-width: 360px;
 }
- /* {
+/* {
    { */
-    /* 
+/* 
 .prose .anchor {
   @apply absolute invisible no-underline;
 
@@ -124,7 +131,7 @@ html {
   margin-top: 1.25em !important;
   margin-bottom: 1.25em !important;
 } */
-  /* }
+/* }
 } */
 
 pre::-webkit-scrollbar {

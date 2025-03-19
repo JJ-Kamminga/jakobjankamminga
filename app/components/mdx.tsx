@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote/rsc'
-import { highlight } from 'sugar-high'
+// import { highlight } from 'sugar-high'
 import React from 'react'
 
 function Table({ data }) {
@@ -48,9 +48,12 @@ function RoundedImage(props) {
   return <Image alt={props.alt} {...props} />
 }
 
-function Code({ children, ...props }) {
-  const codeHTML = highlight(children)
-  return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
+function Code({ ...props }) {
+  // const codeHTML = highlight(children)
+  return <code
+    /** ??? */
+    // dangerouslySetInnerHTML={{ __html: codeHTML }} 
+    {...props} />
 }
 
 function slugify(str) {

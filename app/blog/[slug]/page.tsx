@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation'
-import { CustomMDX } from 'app/components/mdx'
+// import { CustomMDX } from 'app/components/mdx'
 import { baseUrl } from 'app/sitemap'
 import { getBlogPosts } from '../utils/server'
-import { formatDate } from '../utils/client'
+// import { formatDate } from '../utils/client'
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts()
@@ -65,27 +65,28 @@ export default async function Blog({ params }) {
     <section>
       <script
         type="application/ld+json"
-        suppressHydrationWarning
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BlogPosting',
-            headline: post.metadata.title,
-            datePublished: post.metadata.publishedAt,
-            dateModified: post.metadata.publishedAt,
-            description: post.metadata.summary,
-            image: post.metadata.image
-              ? `${baseUrl}${post.metadata.image}`
-              : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${baseUrl}/blog/${post.slug}`,
-            author: {
-              '@type': 'Person',
-              name: 'My Portfolio',
-            },
-          }),
-        }}
+      /**tf is this doing */
+      // suppressHydrationWarning
+      // dangerouslySetInnerHTML={{
+      //   __html: JSON.stringify({
+      //     '@context': 'https://schema.org',
+      //     '@type': 'BlogPosting',
+      //     headline: post.metadata.title,
+      //     datePublished: post.metadata.publishedAt,
+      //     dateModified: post.metadata.publishedAt,
+      //     description: post.metadata.summary,
+      //     image: post.metadata.image
+      //       ? `${baseUrl}${post.metadata.image}`
+      //       : `/og?title=${encodeURIComponent(post.metadata.title)}`,
+      //     url: `${baseUrl}/blog/${post.slug}`,
+      //     author: {
+      //       '@type': 'Person',
+      //       name: 'My Portfolio',
+      //     },
+      //   }),
+      // }}
       />
-      <h1>
+      {/* <h1>
         {post.metadata.title}
       </h1>
       <div>
@@ -95,7 +96,7 @@ export default async function Blog({ params }) {
       </div>
       <article>
         <CustomMDX source={post.content} />
-      </article>
+      </article> */}
     </section>
   )
 }

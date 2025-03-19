@@ -1,5 +1,4 @@
-import { Container, Divider, Typography } from '@mui/material'
-import { BlogPosts } from 'app/components/posts'
+import { Container } from '@mui/material'
 import Header from './components/header'
 import { AboutSection } from './components/aboutsection'
 
@@ -7,14 +6,12 @@ export default function Page() {
   return (
     <>
       <Header />
-      <section>
-        <Container maxWidth='md' sx={{
-          background: 'white',
-          border: '2px solid #41333B',
-        }}
-        >
+      <section style={{
+        borderTop: '4px double var(--main-darkgrey)'
+      }}>
+        <Container maxWidth='md'>
           <AboutSection />
-          <BlogPosts />
+          {/* <BlogPosts /> */}
         </Container>
       </section>
     </>

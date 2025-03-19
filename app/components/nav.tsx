@@ -1,4 +1,4 @@
-import { Box, Grid2, Link as MuiLink, Typography } from '@mui/material'
+import { Grid2, Link as MuiLink, Typography } from '@mui/material'
 import NextLink from 'next/link'
 import Image from 'next/image'
 
@@ -6,16 +6,16 @@ const navItems = {
   '/': {
     name: 'About',
   },
-  '/blog': {
+  '/?target=blog': {
     name: 'Blog',
   },
-  'https://vercel.com/templates/next.js/portfolio-starter-kit': {
+  '/?target=thoughts': {
     name: 'Thoughts',
   },
-  '/contact': {
+  '/?target=music': {
     name: 'Music',
   },
-  '/home': {
+  '/?target=owl': {
     name: 'owl',
   },
 }
@@ -40,8 +40,8 @@ export function Navbar() {
               size={12 / Object.keys(navItems).length}
               sx={{
                 maxHeight: '95px',
-                background: path === '/home' ? '#ffcb18' : '#1B1C22',
-                borderBottom: path === '/home' ? `4px solid var(--main-darkgrey)` : `4px solid var(--main-yellow)`,
+                background: path === '/?target=owl' ? '#ffcb18' : '#1B1C22',
+                borderBottom: path === '/?target=owl' ? `4px solid var(--main-darkgrey)` : `4px solid var(--main-yellow)`,
               }}
             >
               <Typography component='span' sx={{
@@ -66,7 +66,7 @@ export function Navbar() {
                     },
                   }}
                 >
-                  {path === '/home' ? (
+                  {path === '/?target=owl' ? (
                     <Image
                       src="/assets/icons/owl.svg"
                       alt="owl icon"

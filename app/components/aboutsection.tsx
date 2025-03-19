@@ -1,62 +1,82 @@
-import { Divider, Typography } from "@mui/material"
+import { Typography } from "@mui/material"
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
+import SchemaIcon from '@mui/icons-material/Schema';
 
 /** Palette
  * #ffcb18, #8a7560, #3891a6, #41333b, #e2afde
  */
-const Sentence = ({ children }: { children: React.ReactNode }) => {
+const Sentence = ({ children, accent }: { children: React.ReactNode, accent: 'left' | 'right' }) => {
   return (
-    <Typography variant='body1' component='div' sx={{
+    <Typography variant='body1' className='sentence' component='div' sx={{
       padding: '10px',
-      textAlign: 'center',
       fontSize: '1.5rem',
+      background: 'var(--main-lightgrey)',
+      borderLeft: accent == 'left' ? '4px solid var(--main-teal)' : undefined,
+      borderRight: accent == 'right' ? '4px solid var(--main-teal)' : undefined,
     }}>
       {children}
     </Typography>
   )
 }
 
+const PipelineGraph = () => {
+  return (
+    <div style={{}}>
+      <span style={{
+        display: 'inline-block',
+        width: '80%',
+        background: 'var(--main-teal)',
+        transform: 'SkewX(-20deg)',
+        textAlign: 'center',
+        paddingTop: '10px'
+      }}>
+        <QuestionAnswerIcon fontSize="large" sx={{ color: 'var(--main-lightgrey)' }} />
+      </span>
+      <span style={{
+        display: 'inline-block',
+        width: '20%',
+        background: 'var(--main-yellow)',
+        transform: 'SkewX(-20deg)',
+        textAlign: 'center',
+        paddingTop: '10px'
+      }}>
+        <SchemaIcon fontSize="large" sx={{ color: 'var(--main-darkgrey)' }} />
+      </span>
+    </div>
+  )
+}
 const Spacer = () => {
   return (
-    <div style={{ height: '80px' }} />
+    <div style={{ height: '40px' }} />
   )
 }
 
 export const AboutSection = () => {
   return (
     <p style={{ fontSize: '2rem' }}>
-      {/* <Typography variant='subtitle1'>Quality engineer <i>by trade</i></Typography>
-        {/* <Typography variant='subtitle1'>Quality engineer <i>by trade</i></Typography>
-          <Typography variant='subtitle1'>Music enthusiast <i>by heart</i></Typography>
-          <Typography variant='subtitle1'>Philosopher <i>whether I want it or not</i> (but also by MA degree)</Typography> */}
       <>
-        <Sentence>
-          If you&apos;ve worked in software development,
-        </Sentence>
-        <Sentence>
-          you probably know that everyone dreams of one thing: <i>to deliver value</i>.
+        <Sentence accent="left">
+          If you&apos;ve worked in software development,<br />
+          you probably know what everyone is chasing; <i>to deliver value</i>.
         </Sentence>
       </>
       <Spacer />
       <>
-        <Sentence>
-          If you&apos;ve studied philosophy,
-        </Sentence>
-        <Sentence>
-          you probably know where this is going.
+        <Sentence accent="right">
+          If you&apos;ve studied philosophy,<br />
+          you probably see where this is going.
         </Sentence>
       </>
       <Spacer />
-      <>
-        <Sentence>
-          I help teams build better software.
-        </Sentence>
-        <Sentence>
-          80% asking questions.
-        </Sentence>
-        <Sentence>
-          20% writing code and CI/CD pipelines.
-        </Sentence>
-      </>
+      <Spacer />
+      <Typography variant="body1" sx={{ fontSize: '3rem', textAlign: 'center' }}>
+        I help teams build better software.
+      </Typography>
+      <Spacer />
+      <Spacer />
+      <Typography style={{ textAlign: 'left', fontSize: '2.5rem' }}>80% asking questions.</Typography>
+      <PipelineGraph />
+      <Typography style={{ textAlign: 'right', fontSize: '1.5rem' }}>20% writing code and CI/CD pipelines.</Typography>
     </p >
   )
 }
