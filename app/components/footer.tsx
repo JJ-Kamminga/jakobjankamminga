@@ -1,58 +1,46 @@
-function ArrowIcon() {
-  return (
-    <svg
-      width="12"
-      height="12"
-      viewBox="0 0 12 12"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
-        fill="currentColor"
-      />
-    </svg>
-  )
-}
+'use client';
+import { Container, Drawer, IconButton, Typography } from "@mui/material"
+import { useState } from "react";
+import InfoIcon from '@mui/icons-material/Info';
+import Link from "next/link";
 
 export default function Footer() {
+  const [isDrawerOpen, setDrawerOpen] = useState<boolean>(false);
+
+  const toggleDrawer = (shouldDrawerOpen: boolean) => () => {
+    setDrawerOpen(shouldDrawerOpen);
+  };
+
   return (
     <footer>
-      <ul>
-        <li>
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="/rss"
-          >
-            <ArrowIcon />
-            <p>rss</p>
-          </a>
-        </li>
-        <li>
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://github.com/vercel/next.js"
-          >
-            <ArrowIcon />
-            <p>github</p>
-          </a>
-        </li>
-        <li>
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://vercel.com/templates/next.js/portfolio-starter-kit"
-          >
-            <ArrowIcon />
-            <p>view source</p>
-          </a>
-        </li>
-      </ul>
-      <p>
-        © {new Date().getFullYear()} MIT Licensed
-      </p>
+      <Container sx={{ textAlign: 'center', marginTop: '100px', marginBottom: '20px' }}>
+        <IconButton onClick={toggleDrawer(true)} aria-label='toggle footer'>
+          <InfoIcon fontSize='large' />
+        </IconButton>
+      </Container>
+      <Drawer
+        anchor='bottom'
+        open={isDrawerOpen}
+        onClose={toggleDrawer(false)}
+      >
+        <Container sx={{ padding: '25px' }}>
+          <Typography component='h2'><b>Copyright</b></Typography>
+          <Typography>
+            <p>Owl icon by Freepik on <Link target="_blank" href='https://www.flaticon.com/'>Flatikon</Link>.</p>
+            <p>
+              Source code © {new Date().getFullYear()} under MIT License.
+            </p>
+            <p>
+              All content © Jakob Jan Kamminga.
+            </p>
+          </Typography>
+          <Typography component='h2'><b>Links</b></Typography>
+          <Typography>
+            <p>This site was made with <Link target="_blank" href='https://nextjs.org/'>Next.js</Link> and <Link href='https://mui.com/material-ui/'>Material UI</Link>.</p>
+            <p>You can find the source code on <Link target="_blank" href='https://github.com/JJ-Kamminga/jakobjankamminga'>GitHub</Link>.</p>
+          </Typography>
+        </Container>
+      </Drawer >
     </footer>
   )
 }

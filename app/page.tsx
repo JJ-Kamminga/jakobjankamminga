@@ -1,8 +1,10 @@
 import { Container } from '@mui/material'
 import Header from './components/header'
 import { AboutSection } from './components/aboutsection'
+import Footer from './components/footer';
 
 export default function Page() {
+
   return (
     <>
       <Header />
@@ -13,7 +15,8 @@ export default function Page() {
           <AboutSection />
           {/* <BlogPosts /> */}
         </Container>
-      </section>
+        <Footer />
+      </section >
     </>
   )
 }
