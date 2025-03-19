@@ -1,7 +1,6 @@
 'use client'
 
 import { Container, Divider, Typography, useMediaQuery } from '@mui/material'
-import Image from 'next/image'
 import { Navbar } from './nav';
 
 export default function Header() {
@@ -17,12 +16,18 @@ export default function Header() {
             paddingBottom: '50px',
             paddingTop: '25px',
             fontSize: matches ? '3rem' : '6rem',
-            textAlign: 'left',
+            textAlign: 'center',
           }}
         >
           Jakob Jan Kamminga
+          <Divider variant='middle' sx={{
+            background: 'var(--main-teal)',
+            borderWidth: '2px',
+            marginLeft: '250px',
+            marginRight: '130px',
+          }} />
         </Typography>
       </Container>
-    </section>
+    </section >
   )
 }

@@ -44,38 +44,39 @@ export function Navbar() {
                 borderBottom: path === '/home' ? `4px solid var(--main-darkgrey)` : `4px solid var(--main-yellow)`,
               }}
             >
-                <Typography component='span' sx={{
-                  margin: 'auto',
-                  padding: '12px',
-                  textAlign: 'center',
-                }}>
-                    <MuiLink
-                      component={NextLink}
-                      href={path}
-                      sx={{
-                        display: 'block',
-                        transform: 'skew(-20deg)',
-                        fontFamily: 'inherit',
-                        fontSize: '1.6rem',
-                        color: 'white',
-                        fontWeight: '400',
-                        textDecoration: 'none',
-                        '&:hover': {
-                          color: '#ffcb18',
-                        },
-                      }}
-                    >
-                      {path === '/home' ? (
-                        <Image
-                          src="/assets/icons/owl.svg"
-                          alt="owl icon"
-                          height={75}
-                          width={75}
-                        />
-                      ) : (<>{name}</>)
-                    }
-                    </MuiLink>
-                </Typography>
+              <Typography component='span' sx={{
+                margin: 'auto',
+                padding: '12px',
+                textAlign: 'center',
+              }}>
+                <MuiLink
+                  component={NextLink}
+                  href={path}
+                  sx={{
+                    display: 'block',
+                    transform: 'skew(-20deg)',
+                    fontFamily: 'inherit',
+                    fontSize: '1.6rem',
+                    color: 'white',
+                    fontWeight: '400',
+                    textDecoration: 'none',
+                    overflow: 'hidden',
+                    '&:hover': {
+                      color: '#ffcb18',
+                    },
+                  }}
+                >
+                  {path === '/home' ? (
+                    <Image
+                      src="/assets/icons/owl.svg"
+                      alt="owl icon"
+                      height={75}
+                      width={75}
+                    />
+                  ) : (<>{name}</>)
+                  }
+                </MuiLink>
+              </Typography>
             </Grid2>
           )
         })}
