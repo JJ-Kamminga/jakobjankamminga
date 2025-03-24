@@ -9,22 +9,16 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@emotion/cache": "^11.14.0",
-    "@emotion/react": "^11.14.0",
-    "@emotion/server": "^11.11.0",
-    "@emotion/styled": "^11.14.0",
     "@fontsource-variable/eb-garamond": "^5.2.5",
     "@mui/icons-material": "^6.4.8",
     "@mui/material": "^6.4.7",
     "@mui/material-nextjs": "^6.4.3",
     "@types/node": "20.11.17",
-    "@types/react": "18.2.55",
-    "@types/react-dom": "18.2.19",
+    "@types/react": "19.0.12",
+    "@types/react-dom": "19.0.4",
     "next": "15.2.2",
-    "next-mdx-remote": "^4.4.1",
-    "react": "^18.2.0",
-    "react-dom": "18.2.0",
-    "sugar-high": "^0.6.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "typescript": "5.3.3"
   },
   "devDependencies": {
