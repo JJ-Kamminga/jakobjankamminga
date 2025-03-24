@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material"
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import SchemaIcon from '@mui/icons-material/Schema';
+import Link from "next/link";
 
 /** Palette
  * #ffcb18, #8a7560, #3891a6, #41333b, #e2afde
@@ -77,6 +78,10 @@ export const AboutSection = () => {
       <Typography style={{ textAlign: 'left', fontSize: '2.5rem' }}>80% asking questions.</Typography>
       <PipelineGraph />
       <Typography style={{ textAlign: 'right', fontSize: '1.5rem' }}>20% writing code and CI/CD pipelines.</Typography>
+      <Spacer />
+      <Typography variant="body1" sx={{ fontSize: '2rem', textAlign: 'center' }}>
+        <Link target="_blank" href='https://www.linkedin.com/in/jakobjankamminga/'>Get in touch</Link>
+      </Typography>
     </p >
   )
 }

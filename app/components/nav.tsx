@@ -6,7 +6,7 @@ const navItems = {
   '/': {
     name: 'About',
   },
-  '/?target=blog': {
+  '/blog': {
     name: 'Blog',
   },
   '/?target=thoughts': {

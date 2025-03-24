@@ -6,6 +6,8 @@ import { CssBaseline, GlobalStyles, ThemeProvider } from '@mui/material'
 import { globalStyles } from './components/globalstyles'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import theme from './theme';
+import { Navbar } from './components/nav';
+import Footer from './components/footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -46,13 +48,13 @@ export default function RootLayout({ children }: {
           <AppRouterCacheProvider>
             <ThemeProvider theme={theme}>
               <main>
+                <Navbar />
                 {children}
-                {/* <Footer /> */}
-                {/* <Analytics />
-                <SpeedInsights /> */}
+                <Footer />
               </main>
             </ThemeProvider>
           </AppRouterCacheProvider>
+
         </body>
       </CssBaseline>
     </html>

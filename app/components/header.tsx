@@ -1,14 +1,12 @@
 'use client'
 
 import { Container, Divider, Typography, useMediaQuery } from '@mui/material'
-import { Navbar } from './nav';
 
-export default function Header() {
+export default function Header({ title }: { title: String }) {
   const matches = useMediaQuery('(max-width:500px)');
 
   return (
-    <section>
-      <Navbar />
+    <>
       <Container maxWidth='lg'>
         <Typography
           variant='h1'
@@ -19,7 +17,7 @@ export default function Header() {
             textAlign: 'center',
           }}
         >
-          Jakob Jan Kamminga
+          {title}
           <Divider variant='middle' sx={{
             background: 'var(--main-teal)',
             borderWidth: '2px',
@@ -28,6 +26,6 @@ export default function Header() {
           }} />
         </Typography>
       </Container>
-    </section >
+    </ >
   )
 }

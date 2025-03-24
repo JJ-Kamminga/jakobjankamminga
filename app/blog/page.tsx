@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { getAllBlogPosts, sortBlogPosts } from "./utils/blog.utils"
+import { Container } from "@mui/material"
+import Header from "app/components/header"
 
 export const metadata = {
   title: 'Blog',
@@ -12,16 +14,18 @@ export default async function BlogPage() {
 
   return (
     <section>
-      <h2>My Blog</h2>
-      <ul>
-        {blogPosts.map((blogPost) => (
-          <li key={blogPost.id}>
-            <Link href={`/blog/${blogPost.id}`}>
-              blogPost.title
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <Header title='Blog' />
+      <Container maxWidth='md'>
+        <ul>
+          {blogPosts.map((blogPost) => (
+            <li key={blogPost.id}>
+              <Link href={`/blog/${blogPost.id}`}>
+                blogPost.title
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </Container>
 
     </section>
   )
