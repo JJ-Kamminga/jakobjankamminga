@@ -1,8 +1,10 @@
 "use client";
 
+import { Typography } from "@mui/material";
+
 export const PostContents = ({ contents }: { contents: String }) => {
   return (
-    <p dangerouslySetInnerHTML={{ __html: contents }}>
-    </p>
+    <Typography variant='body1' sx={{ fontSize: '1.2rem' }} dangerouslySetInnerHTML={{ __html: contents }}>
+    </Typography>
   )
 }

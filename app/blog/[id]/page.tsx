@@ -2,6 +2,9 @@ import { remark } from "remark";
 import { getBlogPostById, parseFileId, readAllBlogPostFiles } from "../utils/blog.utils";
 import remarkHtml from "remark-html";
 import { PostContents } from "app/components/postcontents";
+import { Container, Typography } from "@mui/material";
+import Header from "app/components/header";
+import { blogMetadata } from "../page";
 
 export const dynamicParams = false;
 
@@ -40,11 +43,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
   const htmlContent = (await remark().use(remarkHtml).process(blogPost.content)).toString()
 
   return (
-    <>
-      <h3>{blogPost.title}</h3>
-      {/**<p>{blogPost.date.toString()}</p>**/}
-      <p>{new Date(blogPost.date).toLocaleDateString()}</p>
-      <PostContents contents={htmlContent}></PostContents>
-    </>
+    <section>
+      <Header title={blogMetadata.title} />
+      <Container maxWidth='md'>
+        <Typography variant="h2">{blogPost.title}</Typography>
+        {/**<p>{blogPost.date.toString()}</p>**/}
+        <Typography variant="subtitle1">{new Date(blogPost.date).toLocaleDateString()}</Typography>
+        <PostContents contents={htmlContent}></PostContents>
+      </Container>
+    </section>
   )
 }

@@ -3,7 +3,7 @@ import { getAllBlogPosts, sortBlogPosts } from "./utils/blog.utils"
 import { Container } from "@mui/material"
 import Header from "app/components/header"
 
-export const metadata = {
+export const blogMetadata = {
   title: 'Blog',
   description: 'Read my blog.',
 }
@@ -14,13 +14,13 @@ export default async function BlogPage() {
 
   return (
     <section>
-      <Header title='Blog' />
+      <Header title={blogMetadata.title} />
       <Container maxWidth='md'>
         <ul>
           {blogPosts.map((blogPost) => (
             <li key={blogPost.id}>
               <Link href={`/blog/${blogPost.id}`}>
-                blogPost.title
+                {blogPost.title}
               </Link>
             </li>
           ))}
