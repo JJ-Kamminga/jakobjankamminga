@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { getAllBlogPosts, sortBlogPosts } from "./utils/blog.utils"
-import { Container } from "@mui/material"
+import { Container, Typography } from "@mui/material"
 import Header from "app/components/header"
 
 export const blogMetadata = {
@@ -16,15 +16,18 @@ export default async function BlogPage() {
     <section>
       <Header title={blogMetadata.title} />
       <Container maxWidth='md'>
-        <ul>
-          {blogPosts.map((blogPost) => (
-            <li key={blogPost.id}>
-              <Link href={`/blog/${blogPost.id}`}>
-                {blogPost.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
+          <ul>
+            {blogPosts.map((blogPost) => (
+              <li key={blogPost.id}>
+                <Link href={`/blog/${blogPost.id}`}>
+                  {blogPost.title}
+                </Link>
+              </li>
+            ))}
+            <li><Link href='/asdasd'>test link</Link></li>
+          </ul>
+        </Typography>
       </Container>
 
     </section>
