@@ -5,11 +5,13 @@ import { PostContents } from "app/components/postcontents";
 import { Container, Typography } from "@mui/material";
 import Header from "app/components/header";
 import { blogMetadata } from "../page";
+import path from "path";
 
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const entries = await readAllBlogPostFiles()
+  const postsPath = path.join(process.cwd(), 'app', 'blog', 'posts');
+  const entries = await readAllBlogPostFiles(postsPath);
 
   return entries.map((entry) => ({
     id: parseFileId(entry),
@@ -18,7 +20,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const blogPost = await getBlogPostById(id)
+  const postsPath = path.join(process.cwd(), 'app', 'blog', 'posts');
+  const blogPost = await getBlogPostById(id, postsPath)
 
   if (!blogPost) return {}
 
@@ -36,7 +39,9 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const blogPost = await getBlogPostById(id);
+  const postsPath = path.join(process.cwd(), 'app', 'blog', 'posts');
+
+  const blogPost = await getBlogPostById(id, postsPath);
 
   if (!blogPost) return;
 

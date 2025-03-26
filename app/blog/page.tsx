@@ -2,6 +2,7 @@ import Link from "next/link"
 import { getAllBlogPosts, sortBlogPosts } from "./utils/blog.utils"
 import { Container, Typography } from "@mui/material"
 import Header from "app/components/header"
+import path from "path"
 
 export const blogMetadata = {
   title: 'Blog',
@@ -9,7 +10,8 @@ export const blogMetadata = {
 }
 
 export default async function BlogPage() {
-  const blogPosts = await getAllBlogPosts()
+  const postsPath = path.join(process.cwd(), 'app', 'blog', 'posts');
+  const blogPosts = await getAllBlogPosts(postsPath)
   blogPosts.sort(sortBlogPosts).reverse()
 
   return (

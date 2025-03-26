@@ -1,18 +1,16 @@
-import fs from 'fs'
+import fs, { PathLike } from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { BlogPostMetadata } from './blog.types'
 import { cache } from 'react'
 
-export const blogPostsFolder = path.join(process.cwd(), 'app', 'blog', 'posts')
-
-export async function readAllBlogPostFiles() {
+export async function readAllBlogPostFiles(blogPostsFolder: PathLike) {
   const dirEntries = await fs.promises.readdir(blogPostsFolder, { recursive: true, withFileTypes: true })
   return dirEntries.filter(entry => entry.isFile())
 }
 
-export async function getAllBlogPosts() {
-  const blogPostFiles = await readAllBlogPostFiles()
+export async function getAllBlogPosts(blogPostsFolder: PathLike) {
+  const blogPostFiles = await readAllBlogPostFiles(blogPostsFolder)
   return Promise.all(blogPostFiles.map(mapFileToBlogPost))
 }
 
@@ -21,23 +19,14 @@ export function sortBlogPosts(a: BlogPostMetadata, b: BlogPostMetadata) {
   return -1
 }
 
-// export async function getBlogPostById(id: string): Promise<BlogPostMetadata | undefined> {
-//   const allBlogPostFiles = await readAllBlogPostFiles()
-//   const blogPostFile = allBlogPostFiles.find(entry => parseFileId(entry) === id)
-//   if (!blogPostFile) return undefined
-//   return mapFileToBlogPost(blogPostFile)
-// }
-
 export const getBlogPostById = cache(fetchBlogPostById)
 
-export async function fetchBlogPostById(id: string): Promise<BlogPostMetadata | undefined> {
-  const allBlogPostFiles = await readAllBlogPostFiles()
+export async function fetchBlogPostById(id: string, blogPostsFolder: PathLike): Promise<BlogPostMetadata | undefined> {
+  const allBlogPostFiles = await readAllBlogPostFiles(blogPostsFolder)
   const blogPostFile = allBlogPostFiles.find(entry => parseFileId(entry) === id)
   if (!blogPostFile) return undefined
   return mapFileToBlogPost(blogPostFile)
 }
-
-
 
 async function mapFileToBlogPost(file: fs.Dirent): Promise<BlogPostMetadata> {
   const fileContents = await fs.promises.readFile(getFilePath(file), { encoding: 'utf8' })
@@ -59,4 +48,3 @@ function getFilePath(file: fs.Dirent): string {
 export function parseFileId(file: fs.Dirent): string {
   return file.name.replace(/\.md$/, '') // remove the '.md' file extension
 }
-
