@@ -4,13 +4,13 @@ import remarkHtml from "remark-html";
 import { PostContents } from "app/components/postcontents";
 import { Container, Typography } from "@mui/material";
 import Header from "app/components/header";
-import { blogMetadata } from "../page";
 import path from "path";
+import { thoughtsMetadata } from "../page";
 
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const postsPath = path.join(process.cwd(), 'app', 'blog', 'posts');
+  const postsPath = path.join(process.cwd(), 'app', 'thoughts', 'posts');
   const entries = await readAllBlogPostFiles(postsPath);
 
   return entries.map((entry) => ({
@@ -19,9 +19,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params
-  const postsPath = path.join(process.cwd(), 'app', 'blog', 'posts');
-  const blogPost = await getBlogPostById(id, postsPath)
+  const { id } = await params;
+  const postsPath = path.join(process.cwd(), 'app', 'thoughts', 'posts');
+  const blogPost = await getBlogPostById(id, postsPath);
 
   if (!blogPost) return {}
 
@@ -32,14 +32,14 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       title: blogPost.title,
       description: blogPost.summary,
       type: 'article',
-      publishedTime: blogPost.date/**?.toISOString()**/,
+      publishedTime: blogPost.date,
     }
   }
 }
 
-export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function ThoughtPostPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const postsPath = path.join(process.cwd(), 'app', 'blog', 'posts');
+  const postsPath = path.join(process.cwd(), 'app', 'thoughts', 'posts');
 
   const blogPost = await getBlogPostById(id, postsPath);
 
@@ -49,10 +49,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
 
   return (
     <section>
-      <Header title={blogMetadata.title} />
+      <Header title={thoughtsMetadata.title} />
       <Container maxWidth='md'>
         <Typography variant="h2">{blogPost.title}</Typography>
-        {/**<p>{blogPost.date.toString()}</p>**/}
         <Typography variant="subtitle1">{new Date(blogPost.date).toLocaleDateString()}</Typography>
         <PostContents contents={htmlContent}></PostContents>
       </Container>

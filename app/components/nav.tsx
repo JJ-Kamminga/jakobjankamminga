@@ -9,7 +9,7 @@ const navItems = {
   '/blog': {
     name: 'Blog',
   },
-  '/?target=thoughts': {
+  '/thoughts': {
     name: 'Thoughts',
   },
   '/?target=music': {

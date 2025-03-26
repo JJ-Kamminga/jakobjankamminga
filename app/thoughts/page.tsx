@@ -1,35 +1,38 @@
-// import Link from "next/link"
-// import { getAllBlogPosts, sortBlogPosts } from "./utils/blog.utils"
-// import { Container, Typography } from "@mui/material"
-// import Header from "app/components/header"
+import Link from "next/link"
+import { Container, Typography } from "@mui/material"
+import Header from "app/components/header"
+import { getAllBlogPosts, sortBlogPosts } from "app/blog.utils"
+import path from "path"
 
-// export const blogMetadata = {
-//   title: 'Blog',
-//   description: 'Read my blog.',
-// }
+export const thoughtsMetadata = {
+  title: 'Thoughts',
+  description: 'Read my thoughts.',
+}
 
-// export default async function BlogPage() {
-//   const blogPosts = await getAllBlogPosts()
-//   blogPosts.sort(sortBlogPosts).reverse()
+export default async function ThoughtsPage() {
+  const postsPath = path.join(process.cwd(), 'app', 'thoughts', 'posts');
 
-//   return (
-//     <section>
-//       <Header title={blogMetadata.title} />
-//       <Container maxWidth='md'>
-//         <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
-//           <ul>
-//             {blogPosts.map((blogPost) => (
-//               <li key={blogPost.id}>
-//                 <Link href={`/blog/${blogPost.id}`}>
-//                   {blogPost.title}
-//                 </Link>
-//               </li>
-//             ))}
-//             <li><Link href='/asdasd'>test link</Link></li>
-//           </ul>
-//         </Typography>
-//       </Container>
+  const blogPosts = await getAllBlogPosts(postsPath)
+  blogPosts.sort(sortBlogPosts).reverse()
 
-//     </section>
-//   )
-// }
+  return (
+    <section>
+      <Header title={thoughtsMetadata.title} />
+      <Container maxWidth='md'>
+        <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
+          <ul>
+            {blogPosts.map((blogPost) => (
+              <li key={blogPost.id}>
+                <Link href={`/thoughts/${blogPost.id}`}>
+                  {blogPost.title}
+                </Link>
+              </li>
+            ))}
+            <li><Link href='/asdasd'>test link</Link></li>
+          </ul>
+        </Typography>
+      </Container>
+
+    </section>
+  )
+}

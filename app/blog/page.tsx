@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { getAllBlogPosts, sortBlogPosts } from "./utils/blog.utils"
+import { getAllBlogPosts, sortBlogPosts } from "../blog.utils"
 import { Container, Typography } from "@mui/material"
 import Header from "app/components/header"
 import path from "path"
