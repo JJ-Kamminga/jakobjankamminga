@@ -27,11 +27,9 @@ export default async function BlogPage() {
                 </Link>
               </li>
             ))}
-            <li><Link href='/asdasd'>test link</Link></li>
           </ul>
         </Typography>
       </Container>
-
     </section>
   )
 }

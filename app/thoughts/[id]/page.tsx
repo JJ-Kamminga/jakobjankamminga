@@ -10,7 +10,7 @@ import { thoughtsMetadata } from "../page";
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const postsPath = path.join(process.cwd(), 'app', 'music', 'posts');
+  const postsPath = path.join(process.cwd(), 'app', 'thoughts', 'posts');
   const entries = await readAllBlogPostFiles(postsPath);
 
   return entries.map((entry) => ({
@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const postsPath = path.join(process.cwd(), 'app', 'music', 'posts');
+  const postsPath = path.join(process.cwd(), 'app', 'thoughts', 'posts');
   const blogPost = await getBlogPostById(id, postsPath);
 
   if (!blogPost) return {}
@@ -35,11 +35,11 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       publishedTime: blogPost.date,
     }
   }
-}
+};
 
-export default async function MusicPostPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function ThoughtsPostPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const postsPath = path.join(process.cwd(), 'app', 'music', 'posts');
+  const postsPath = path.join(process.cwd(), 'app', 'thoughts', 'posts');
 
   const blogPost = await getBlogPostById(id, postsPath);
 
@@ -57,4 +57,4 @@ export default async function MusicPostPage({ params }: { params: Promise<{ id: 
       </Container>
     </section>
   )
-}
+};

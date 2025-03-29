@@ -5,12 +5,12 @@ import { PostContents } from "app/components/postcontents";
 import { Container, Typography } from "@mui/material";
 import Header from "app/components/header";
 import path from "path";
-import { thoughtsMetadata } from "../page";
+import { musicMetadata } from "../page";
 
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const postsPath = path.join(process.cwd(), 'app', 'thoughts', 'posts');
+  const postsPath = path.join(process.cwd(), 'app', 'music', 'posts');
   const entries = await readAllBlogPostFiles(postsPath);
 
   return entries.map((entry) => ({
@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const postsPath = path.join(process.cwd(), 'app', 'thoughts', 'posts');
+  const postsPath = path.join(process.cwd(), 'app', 'music', 'posts');
   const blogPost = await getBlogPostById(id, postsPath);
 
   if (!blogPost) return {}
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 export default async function ThoughtPostPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const postsPath = path.join(process.cwd(), 'app', 'thoughts', 'posts');
+  const postsPath = path.join(process.cwd(), 'app', 'music', 'posts');
 
   const blogPost = await getBlogPostById(id, postsPath);
 
@@ -49,7 +49,7 @@ export default async function ThoughtPostPage({ params }: { params: Promise<{ id
 
   return (
     <section>
-      <Header title={thoughtsMetadata.title} />
+      <Header title={musicMetadata.title} />
       <Container maxWidth='md'>
         <Typography variant="h2">{blogPost.title}</Typography>
         <Typography variant="subtitle1">{new Date(blogPost.date).toLocaleDateString()}</Typography>

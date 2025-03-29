@@ -23,12 +23,11 @@ export default async function ThoughtsPage() {
           <ul>
             {blogPosts.map((blogPost) => (
               <li key={blogPost.id}>
-                <Link href={`/thoughts/${blogPost.id}`}>
+                <Link href={`/music/${blogPost.id}`}>
                   {blogPost.title}
                 </Link>
               </li>
             ))}
-            <li><Link href='/asdasd'>test link</Link></li>
           </ul>
         </Typography>
       </Container>
