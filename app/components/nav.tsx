@@ -12,7 +12,7 @@ const navItems = {
   '/thoughts': {
     name: 'Thoughts',
   },
-  '/?target=music': {
+  '/music': {
     name: 'Music',
   },
   '/?target=owl': {
