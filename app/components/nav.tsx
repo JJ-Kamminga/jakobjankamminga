@@ -15,7 +15,7 @@ const navItems = {
   '/music': {
     name: 'Music',
   },
-  '/?target=owl': {
+  '/?target=home': {
     name: 'owl',
   },
 }
@@ -40,8 +40,8 @@ export function Navbar() {
               size={12 / Object.keys(navItems).length}
               sx={{
                 maxHeight: '95px',
-                background: path === '/?target=owl' ? '#ffcb18' : '#1B1C22',
-                borderBottom: path === '/?target=owl' ? `4px solid var(--main-darkgrey)` : `4px solid var(--main-yellow)`,
+                background: name === 'owl' ? '#ffcb18' : '#1B1C22',
+                borderBottom: name === 'owl' ? `4px solid var(--main-darkgrey)` : `4px solid var(--main-yellow)`,
               }}
             >
               <Typography component='span' sx={{
@@ -66,7 +66,7 @@ export function Navbar() {
                     },
                   }}
                 >
-                  {path === '/?target=owl' ? (
+                  {name === 'owl' ? (
                     <Image
                       src="/assets/icons/owl.svg"
                       alt="owl icon"
