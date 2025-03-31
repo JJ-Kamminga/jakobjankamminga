@@ -6,7 +6,7 @@ import path from "path"
 
 export const musicMetadata = {
   title: 'Music',
-  description: 'About music.',
+  description: 'I sometimes write about music. Mostly, it\'s just lists.',
 }
 
 export default async function ThoughtsPage() {
@@ -17,7 +17,7 @@ export default async function ThoughtsPage() {
 
   return (
     <section>
-      <Header title={musicMetadata.title} />
+      <Header title={musicMetadata.title} subtitle={musicMetadata.description} />
       <Container maxWidth='md'>
         <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
           <ul>

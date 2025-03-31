@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   }
 }
 
-export default async function ThoughtPostPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function MusicPostPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const postsPath = path.join(process.cwd(), 'app', 'music', 'posts');
 
@@ -49,7 +49,8 @@ export default async function ThoughtPostPage({ params }: { params: Promise<{ id
 
   return (
     <section>
-      <Header title={musicMetadata.title} />
+      {/* todo: do i want this here */}
+      {/* <Header title={musicMetadata.title} /> */}
       <Container maxWidth='md'>
         <Typography variant="h2">{blogPost.title}</Typography>
         <Typography variant="subtitle1">{new Date(blogPost.date).toLocaleDateString()}</Typography>

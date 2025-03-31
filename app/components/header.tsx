@@ -2,7 +2,12 @@
 
 import { Container, Divider, Typography, useMediaQuery } from '@mui/material'
 
-export default function Header({ title }: { title: String }) {
+type HeaderProps = {
+  title: String,
+  subtitle?: String,
+}
+
+export default function Header({ title, subtitle }: HeaderProps) {
   const matches = useMediaQuery('(max-width:500px)');
 
   return (
@@ -18,6 +23,20 @@ export default function Header({ title }: { title: String }) {
           }}
         >
           {title}
+          {subtitle && <Container maxWidth='sm'>
+            <Typography
+              variant='subtitle1'
+              sx={{
+                paddingBottom: '50px',
+                paddingTop: '25px',
+                fontSize: matches ? '1.2rem' : '1.6rem',
+                textAlign: 'center',
+              }}
+            >
+              {subtitle}
+            </Typography>
+          </Container>
+          }
           <Divider variant='middle' sx={{
             background: 'var(--main-teal)',
             borderWidth: '2px',

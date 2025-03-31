@@ -6,7 +6,7 @@ import path from "path"
 
 export const blogMetadata = {
   title: 'Blog',
-  description: 'Read my blog.',
+  description: 'I think about technology, philosophy and history. This blog may or may not contain structured thoughts.',
 }
 
 export default async function BlogPage() {
@@ -16,7 +16,7 @@ export default async function BlogPage() {
 
   return (
     <section>
-      <Header title={blogMetadata.title} />
+      <Header title={blogMetadata.title} subtitle={blogMetadata.description} />
       <Container maxWidth='md'>
         <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
           <ul>
