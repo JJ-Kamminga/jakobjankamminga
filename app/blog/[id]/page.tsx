@@ -2,7 +2,7 @@ import { getBlogPostById, parseFileId, processBlogPostContent, readAllBlogPostFi
 import { PostContents } from "app/components/postcontents";
 import { Container, Typography } from "@mui/material";
 import path from "path";
-import { blogMetadata } from "../metadata";
+import { metadata } from "../page";
 
 export const dynamicParams = false;
 
@@ -46,7 +46,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
 
   return (
     <section>
-      <Typography variant="h1" sx={{ fontSize: '2rem', textAlign: 'center' }}>{blogMetadata.title}</Typography>
+      <Typography variant="h1" sx={{ fontSize: '2rem', textAlign: 'center' }}>
+        {metadata.title?.toString() || ''}
+      </Typography>
       <Container maxWidth='md'>
         <Typography variant="h2">{blogPost.title}</Typography>
         {/**<p>{blogPost.date.toString()}</p>**/}

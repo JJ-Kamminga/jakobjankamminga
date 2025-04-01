@@ -5,7 +5,12 @@ import { getAllBlogPosts, processBlogPostContent, sortBlogPosts } from "app/blog
 import path from "path";
 import { PostContents } from "app/components/postcontents";
 import { Thought } from "app/components/thought";
-import { thoughtsMetadata } from "./metadata";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Thoughts',
+  description: 'My condensed thoughts on specific topics. Always well-considered but never final.',
+};
 
 export default async function ThoughtsPage() {
   const postsPath = path.join(process.cwd(), 'app', 'thoughts', 'posts');
@@ -15,7 +20,8 @@ export default async function ThoughtsPage() {
 
   return (
     <section>
-      <Header title={thoughtsMetadata.title} subtitle={thoughtsMetadata.description} />
+      <Header title={metadata.title?.toString() || ''} subtitle={metadata.description?.toString() || ''} />
+
       <Container maxWidth='xl'>
         <Grid container maxWidth='xl' spacing={4}>
           {blogPosts.map(async (blogPost) => {

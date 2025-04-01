@@ -5,7 +5,13 @@ import { getAllBlogPosts, sortBlogPosts } from "app/blog.utils";
 import path from "path";
 import { formatDate } from "app/blog/utils/client";
 import { MusicPostIcon } from "./components/posticon";
-import { musicMetadata } from "./metadata";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Music',
+  description: 'I sometimes write about music. Mostly, it\'s just lists.',
+};
+
 
 export default async function MusicPage() {
   const postsPath = path.join(process.cwd(), 'app', 'music', 'posts');
@@ -15,7 +21,7 @@ export default async function MusicPage() {
 
   return (
     <section>
-      <Header title={musicMetadata.title} subtitle={musicMetadata.description} />
+      <Header title={metadata.title?.toString() || ''} subtitle={metadata.description?.toString() || ''} />
       <Container maxWidth='md'>
         <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
           <List>
