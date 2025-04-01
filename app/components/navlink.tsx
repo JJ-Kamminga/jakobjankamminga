@@ -2,14 +2,11 @@
 
 import { Typography, Link as MuiLink } from "@mui/material";
 import Image from "next/image";
-import NextLink from 'next/link'
-import { usePathname } from 'next/navigation'
+import NextLink from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export function NavLink({ linkPath, linkName }: { linkPath: string, linkName: string }) {
   const clientPath = usePathname();
-
-  console.log(clientPath)
-  console.log(linkPath)
 
   return (
     <Typography component='span' sx={{
@@ -45,6 +42,6 @@ export function NavLink({ linkPath, linkName }: { linkPath: string, linkName: st
         }
       </MuiLink>
     </Typography>
-  )
+  );
 
 }

@@ -1,20 +1,16 @@
-import Link from "next/link"
-import { getAllBlogPosts, sortBlogPosts } from "../blog.utils"
-import { Container, List, ListItem, Typography } from "@mui/material"
-import Header from "app/components/header"
-import path from "path"
-import { NotesOutlined } from "@mui/icons-material"
-import { formatDate } from "./utils/client"
-
-export const blogMetadata = {
-  title: 'Blog',
-  description: 'I think about technology, philosophy and history. This blog may or may not contain structured thoughts.',
-}
+import Link from "next/link";
+import { getAllBlogPosts, sortBlogPosts } from "../blog.utils";
+import { Container, List, ListItem, Typography } from "@mui/material";
+import Header from "app/components/header";
+import path from "path";
+import { NotesOutlined } from "@mui/icons-material";
+import { formatDate } from "./utils/client";
+import { blogMetadata } from "./metadata";
 
 export default async function BlogPage() {
   const postsPath = path.join(process.cwd(), 'app', 'blog', 'posts');
-  const blogPosts = await getAllBlogPosts(postsPath)
-  blogPosts.sort(sortBlogPosts).reverse()
+  const blogPosts = await getAllBlogPosts(postsPath);
+  blogPosts.sort(sortBlogPosts).reverse();
 
   return (
     <section>
@@ -35,5 +31,5 @@ export default async function BlogPage() {
         </Typography>
       </Container>
     </section>
-  )
+  );
 }

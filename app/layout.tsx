@@ -1,9 +1,9 @@
-import './global.css'
-import type { Metadata } from 'next'
+import './global.css';
+import type { Metadata } from 'next';
 import '@fontsource-variable/eb-garamond';
-import { baseUrl } from './sitemap'
-import { CssBaseline, GlobalStyles, ThemeProvider } from '@mui/material'
-import { globalStyles } from './components/globalstyles'
+import { baseUrl } from './sitemap';
+import { CssBaseline, GlobalStyles, ThemeProvider } from '@mui/material';
+import { globalStyles } from './components/globalstyles';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import theme from './theme';
 import { Navbar } from './components/nav';
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-}
+};
 
 export default function RootLayout({ children }: {
   children: React.ReactNode
@@ -58,5 +58,5 @@ export default function RootLayout({ children }: {
         </body>
       </CssBaseline>
     </html>
-  )
+  );
 }

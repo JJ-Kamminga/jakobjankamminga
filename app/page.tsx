@@ -1,5 +1,5 @@
-import { Container } from '@mui/material'
-import { AboutSection } from './components/aboutsection'
+import { Container } from '@mui/material';
+import { AboutSection } from './components/aboutsection';
 import Header from './components/header';
 
 export default function Page() {
@@ -14,5 +14,5 @@ export default function Page() {
         </Container>
       </section >
     </>
-  )
+  );
 };

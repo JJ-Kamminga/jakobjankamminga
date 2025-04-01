@@ -22,5 +22,5 @@ export const Thought = ({ children }: PropsWithChildren) => {
         {children}
       </Typography>
     </Grid>
-  )
-}
+  );
+};

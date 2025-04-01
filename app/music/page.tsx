@@ -1,22 +1,17 @@
-import Link from "next/link"
-import { Container, List, ListItem, Typography } from "@mui/material"
-import Header from "app/components/header"
-import { getAllBlogPosts, sortBlogPosts } from "app/blog.utils"
-import path from "path"
-import { formatDate } from "app/blog/utils/client"
-import { ListAlt, MusicNote, MusicNoteOutlined, PlaylistPlay, PlaylistPlayOutlined } from "@mui/icons-material"
-import { MusicPostIcon } from "./components/posticon"
-
-export const musicMetadata = {
-  title: 'Music',
-  description: 'I sometimes write about music. Mostly, it\'s just lists.',
-}
+import Link from "next/link";
+import { Container, List, ListItem, Typography } from "@mui/material";
+import Header from "app/components/header";
+import { getAllBlogPosts, sortBlogPosts } from "app/blog.utils";
+import path from "path";
+import { formatDate } from "app/blog/utils/client";
+import { MusicPostIcon } from "./components/posticon";
+import { musicMetadata } from "./metadata";
 
 export default async function MusicPage() {
   const postsPath = path.join(process.cwd(), 'app', 'music', 'posts');
 
-  const blogPosts = await getAllBlogPosts(postsPath)
-  blogPosts.sort(sortBlogPosts).reverse()
+  const blogPosts = await getAllBlogPosts(postsPath);
+  blogPosts.sort(sortBlogPosts).reverse();
 
   return (
     <section>
@@ -38,5 +33,5 @@ export default async function MusicPage() {
       </Container>
 
     </section>
-  )
+  );
 }

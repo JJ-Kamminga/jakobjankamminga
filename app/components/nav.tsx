@@ -1,6 +1,6 @@
-import { Grid } from '@mui/material'
+import { Grid } from '@mui/material';
 
-import { NavLink } from './navlink'
+import { NavLink } from './navlink';
 
 const navItems = {
   '/': {
@@ -18,7 +18,7 @@ const navItems = {
   '/?target=home': {
     name: 'owl',
   },
-}
+};
 
 export function Navbar() {
   return (
@@ -47,9 +47,9 @@ export function Navbar() {
             >
               <NavLink linkPath={path} linkName={name} />
             </Grid>
-          )
+          );
         })}
       </Grid>
     </nav>
-  )
+  );
 }

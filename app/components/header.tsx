@@ -1,10 +1,10 @@
-'use client'
+'use client';
 
-import { Container, Divider, Typography, useMediaQuery } from '@mui/material'
+import { Container, Divider, Typography, useMediaQuery } from '@mui/material';
 
 type HeaderProps = {
-  title: String,
-  subtitle?: String,
+  title: string,
+  subtitle?: string,
 }
 
 export default function Header({ title, subtitle }: HeaderProps) {
@@ -46,5 +46,5 @@ export default function Header({ title, subtitle }: HeaderProps) {
         </Typography>
       </Container>
     </ >
-  )
+  );
 }

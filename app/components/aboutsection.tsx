@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material"
+import { Typography } from "@mui/material";
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import SchemaIcon from '@mui/icons-material/Schema';
 import Link from "next/link";
@@ -17,8 +17,8 @@ const Sentence = ({ children, accent }: { children: React.ReactNode, accent: 'le
     }}>
       {children}
     </Typography>
-  )
-}
+  );
+};
 
 const PipelineGraph = () => {
   return (
@@ -44,13 +44,13 @@ const PipelineGraph = () => {
         <SchemaIcon fontSize="large" sx={{ color: 'var(--main-darkgrey)' }} />
       </span>
     </div>
-  )
-}
+  );
+};
 const Spacer = () => {
   return (
     <div style={{ height: '40px' }} />
-  )
-}
+  );
+};
 
 export const AboutSection = () => {
   return (
@@ -83,5 +83,5 @@ export const AboutSection = () => {
         <Link target="_blank" href='https://www.linkedin.com/in/jakobjankamminga/'>Get in touch</Link>
       </Typography>
     </p >
-  )
-}
+  );
+};

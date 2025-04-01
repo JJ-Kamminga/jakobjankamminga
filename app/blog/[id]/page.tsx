@@ -1,11 +1,8 @@
-import { remark } from "remark";
 import { getBlogPostById, parseFileId, processBlogPostContent, readAllBlogPostFiles } from "../../blog.utils";
-import remarkHtml from "remark-html";
 import { PostContents } from "app/components/postcontents";
 import { Container, Typography } from "@mui/material";
-import Header from "app/components/header";
-import { blogMetadata } from "../page";
 import path from "path";
+import { blogMetadata } from "../metadata";
 
 export const dynamicParams = false;
 
@@ -15,15 +12,15 @@ export async function generateStaticParams() {
 
   return entries.map((entry) => ({
     id: parseFileId(entry),
-  }))
+  }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params
+  const { id } = await params;
   const postsPath = path.join(process.cwd(), 'app', 'blog', 'posts');
-  const blogPost = await getBlogPostById(id, postsPath)
+  const blogPost = await getBlogPostById(id, postsPath);
 
-  if (!blogPost) return {}
+  if (!blogPost) return {};
 
   return {
     title: blogPost.title,
@@ -34,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       type: 'article',
       publishedTime: blogPost.date/**?.toISOString()**/,
     }
-  }
+  };
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
@@ -57,5 +54,5 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
         <PostContents contents={htmlContent}></PostContents>
       </Container>
     </section>
-  )
+  );
 }

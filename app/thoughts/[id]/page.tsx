@@ -1,11 +1,9 @@
-import { remark } from "remark";
 import { getBlogPostById, parseFileId, processBlogPostContent, readAllBlogPostFiles } from "../../blog.utils";
-import remarkHtml from "remark-html";
 import { PostContents } from "app/components/postcontents";
 import { Container, Typography } from "@mui/material";
 import Header from "app/components/header";
 import path from "path";
-import { thoughtsMetadata } from "../page";
+import { thoughtsMetadata } from "../metadata";
 
 export const dynamicParams = false;
 
@@ -15,7 +13,7 @@ export async function generateStaticParams() {
 
   return entries.map((entry) => ({
     id: parseFileId(entry),
-  }))
+  }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
@@ -23,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const postsPath = path.join(process.cwd(), 'app', 'thoughts', 'posts');
   const blogPost = await getBlogPostById(id, postsPath);
 
-  if (!blogPost) return {}
+  if (!blogPost) return {};
 
   return {
     title: blogPost.title,
@@ -34,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       type: 'article',
       publishedTime: blogPost.date,
     }
-  }
+  };
 };
 
 export default async function ThoughtsPostPage({ params }: { params: Promise<{ id: string }> }) {
@@ -56,5 +54,5 @@ export default async function ThoughtsPostPage({ params }: { params: Promise<{ i
         <PostContents contents={htmlContent}></PostContents>
       </Container>
     </section>
-  )
+  );
 };
