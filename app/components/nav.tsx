@@ -1,6 +1,6 @@
-import { Grid2, Link as MuiLink, Typography } from '@mui/material'
-import NextLink from 'next/link'
-import Image from 'next/image'
+import { Grid } from '@mui/material'
+
+import { NavLink } from './navlink'
 
 const navItems = {
   '/': {
@@ -28,14 +28,15 @@ export function Navbar() {
         margin: 'auto',
         position: 'sticky',
         top: '0px',
+        zIndex: '1'
       }
     }>
-      <Grid2 container spacing={0} sx={{
+      <Grid container spacing={0} sx={{
         transform: 'skew(20deg)',
       }}>
         {Object.entries(navItems).map(([path, { name }]) => {
           return (
-            <Grid2
+            <Grid
               key={path}
               size={12 / Object.keys(navItems).length}
               sx={{
@@ -44,43 +45,11 @@ export function Navbar() {
                 borderBottom: name === 'owl' ? `4px solid var(--main-darkgrey)` : `4px solid var(--main-yellow)`,
               }}
             >
-              <Typography component='span' sx={{
-                margin: 'auto',
-                padding: '12px',
-                textAlign: 'center',
-              }}>
-                <MuiLink
-                  component={NextLink}
-                  href={path}
-                  sx={{
-                    display: 'block',
-                    transform: 'skew(-20deg)',
-                    fontFamily: 'inherit',
-                    fontSize: '1.6rem',
-                    color: 'white',
-                    fontWeight: '400',
-                    textDecoration: 'none',
-                    overflow: 'hidden',
-                    '&:hover': {
-                      color: '#ffcb18',
-                    },
-                  }}
-                >
-                  {name === 'owl' ? (
-                    <Image
-                      src="/assets/icons/owl.svg"
-                      alt="owl icon"
-                      height={75}
-                      width={75}
-                    />
-                  ) : (<>{name}</>)
-                  }
-                </MuiLink>
-              </Typography>
-            </Grid2>
+              <NavLink linkPath={path} linkName={name} />
+            </Grid>
           )
         })}
-      </Grid2>
+      </Grid>
     </nav>
   )
 }

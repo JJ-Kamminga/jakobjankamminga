@@ -1,11 +1,12 @@
 import { remark } from "remark";
-import { getBlogPostById, parseFileId, readAllBlogPostFiles } from "../../blog.utils";
+import { getBlogPostById, parseFileId, processBlogPostContent, readAllBlogPostFiles } from "../../blog.utils";
 import remarkHtml from "remark-html";
 import { PostContents } from "app/components/postcontents";
-import { Container, Typography } from "@mui/material";
+import { Container, Divider, Typography } from "@mui/material";
 import Header from "app/components/header";
 import path from "path";
 import { musicMetadata } from "../page";
+import { formatDate } from "app/blog/utils/client";
 
 export const dynamicParams = false;
 
@@ -45,15 +46,14 @@ export default async function MusicPostPage({ params }: { params: Promise<{ id: 
 
   if (!blogPost) return;
 
-  const htmlContent = (await remark().use(remarkHtml).process(blogPost.content)).toString()
+  const htmlContent = await processBlogPostContent(blogPost.content);
 
   return (
     <section>
-      {/* todo: do i want this here */}
-      {/* <Header title={musicMetadata.title} /> */}
-      <Container maxWidth='md'>
+      <Container maxWidth='md' >
         <Typography variant="h2">{blogPost.title}</Typography>
-        <Typography variant="subtitle1">{new Date(blogPost.date).toLocaleDateString()}</Typography>
+        <Typography variant="subtitle1" sx={{ fontSize: '1.2rem' }}>{formatDate(blogPost.date)}</Typography>
+        <Divider sx={{ padding: '10px' }} />
         <PostContents contents={htmlContent}></PostContents>
       </Container>
     </section>

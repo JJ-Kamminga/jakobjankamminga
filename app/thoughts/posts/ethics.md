@@ -1,6 +1,6 @@
 ---
 title: "Ethics"
-date: 2025-03-31
+date: "2025-03-31"
 ---
 
 What a silly subject of study.

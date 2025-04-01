@@ -1,14 +1,12 @@
 ---
 title: "Most listened albums of 2022"
 excerpt: "As usual, accompanying my albums of the year 2022, these are my most listened albums of the year."
-date: '2022-12-29T16:10:37+01:00'
-author:
-    name: Jakob Jan Kamminga
+date: "2022-12-29T16:10:37+01:00"
 tags: ["music", "lists", "2022", "habittracking", "lastfm"]
-coverImage: '/assets/img/cover/denzelcurry-meltmyeyez.jpg'
+coverImage: "/assets/img/cover/denzelcurry-meltmyeyez.jpg"
 ogImage:
-  url: '/assets/img/og/denzelcurry-meltmyeyez.jpg'
-draft: false
+  url: "/assets/img/og/denzelcurry-meltmyeyez.jpg"
+type: "list"
 ---
 
 As usual, accompanying [my albums of the year 2022](../posts/AOTY2022/), these are my most listened albums of the year. This year brought a lot more good music to my taste, and I'm not surprised to see many of this year's albums back in the list.

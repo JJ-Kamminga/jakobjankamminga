@@ -1,11 +1,12 @@
 import Link from "next/link"
-import { Container, Typography } from "@mui/material"
+import { Container, Divider, Grid, Typography } from "@mui/material"
 import Header from "app/components/header"
-import { getAllBlogPosts, sortBlogPosts } from "app/blog.utils"
+import { getAllBlogPosts, processBlogPostContent, sortBlogPosts } from "app/blog.utils"
 import path from "path"
 import { remark } from "remark"
 import remarkHtml from "remark-html"
 import { PostContents } from "app/components/postcontents"
+import { Thought } from "app/components/thought"
 
 export const thoughtsMetadata = {
   title: 'Thoughts',
@@ -21,26 +22,27 @@ export default async function ThoughtsPage() {
   return (
     <section>
       <Header title={thoughtsMetadata.title} subtitle={thoughtsMetadata.description} />
-      <Container maxWidth='md'>
-        <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
-          <ul>
-            {blogPosts.map(async (blogPost) => {
-              const htmlContent = (await remark().use(remarkHtml).process(blogPost.content)).toString()
+      <Container maxWidth='xl'>
+        <Grid container maxWidth='xl' spacing={4}>
+          {blogPosts.map(async (blogPost) => {
+            const htmlContent = await processBlogPostContent(blogPost.content)
+            {/* <Typography variant="body1" sx={{ fontSize: '1.2rem' }}> */ }
 
-              return (
+            return (
+              <Thought>
                 <article>
-                  <h3>{blogPost.title}</h3>
+                  <Typography variant='h3'>{blogPost.title}</Typography>
                   <PostContents contents={htmlContent}></PostContents>
                   <Link href={`/thoughts/${blogPost.id}`}>
                     Link
                   </Link>
                 </article>
-              )
-            })}
-          </ul>
-        </Typography>
+              </Thought>
+            )
+          })}
+          {/* </Typography> */}
+        </Grid>
       </Container>
-
-    </section>
+    </section >
   )
 }

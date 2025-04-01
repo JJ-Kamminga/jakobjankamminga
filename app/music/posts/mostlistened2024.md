@@ -2,13 +2,11 @@
 title: "Most listened albums of 2024"
 excerpt: "As usual, accompanying my albums of the year 2024, these are my most listened albums of the year."
 date: "2024-12-21T10:10:37+01:00"
-author:
-  name: Jakob Jan Kamminga
 tags: ["music", "lists", "2024", "habittracking", "lastfm"]
 coverImage: "/assets/img/cover/yussefdayes-blackclassicalmusic.jpg"
 ogImage:
   url: "/assets/img/og/yussefdayes-blackclassicalmusic.jpg"
-draft: false
+type: "list"
 ---
 
 As usual, accompanying [my albums of the year 2024](../posts/AOTY2024/), these are my most listened albums of the year.

@@ -1,6 +1,6 @@
 ---
 title: "Writing"
-date: 2025-03-24
+date: "2025-03-24"
 ---
 
 I write as catharsis. I put to paper what I need to say. I rarely look back. When I do, I see a past version of myself. I recognise myself partially at best. When I have no urgency to write, there is an active resistance in me to do so.

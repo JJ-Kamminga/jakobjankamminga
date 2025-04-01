@@ -1,14 +1,12 @@
 ---
 title: "Most listened albums of 2023"
 excerpt: "As usual, accompanying my albums of the year 2023, these are my most listened albums of the year."
-date: '2023-12-28T10:10:37+01:00'
-author:
-    name: Jakob Jan Kamminga
+date: "2023-12-28T10:10:37+01:00"
 tags: ["music", "lists", "2023", "habittracking", "lastfm"]
-coverImage: '/assets/img/cover/kelela-raven.jpg'
+coverImage: "/assets/img/cover/kelela-raven.jpg"
 ogImage:
-  url: '/assets/img/og/kelela-raven.jpg'
-draft: false
+  url: "/assets/img/og/kelela-raven.jpg"
+type: "list"
 ---
 
 As usual, accompanying [my albums of the year 2023](../posts/AOTY2023/), these are my most listened albums of the year. Many of my favourites this year were suitable for playing on repeat, and it is no surprise to find them here. Notable high rankers that I didn't include in my best albums list are Flavien Berger and Gabriels - who released very strong albums, but simply had stronger competition.

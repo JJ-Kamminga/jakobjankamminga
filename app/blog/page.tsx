@@ -1,8 +1,10 @@
 import Link from "next/link"
 import { getAllBlogPosts, sortBlogPosts } from "../blog.utils"
-import { Container, Typography } from "@mui/material"
+import { Container, List, ListItem, Typography } from "@mui/material"
 import Header from "app/components/header"
 import path from "path"
+import { NotesOutlined } from "@mui/icons-material"
+import { formatDate } from "./utils/client"
 
 export const blogMetadata = {
   title: 'Blog',
@@ -19,15 +21,17 @@ export default async function BlogPage() {
       <Header title={blogMetadata.title} subtitle={blogMetadata.description} />
       <Container maxWidth='md'>
         <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
-          <ul>
+          <List>
             {blogPosts.map((blogPost) => (
-              <li key={blogPost.id}>
+              <ListItem key={blogPost.id}>
+                <NotesOutlined sx={{ marginRight: '15px', color: 'var(--main-dimgrey)' }} />
                 <Link href={`/blog/${blogPost.id}`}>
                   {blogPost.title}
                 </Link>
-              </li>
+                <span style={{ marginLeft: 'auto' }}>{formatDate(blogPost.date)}</span>
+              </ListItem>
             ))}
-          </ul>
+          </List>
         </Typography>
       </Container>
     </section>

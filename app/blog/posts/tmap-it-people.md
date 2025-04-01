@@ -1,6 +1,6 @@
 ---
 title: "Succesful high-performance IT delivery depends on people"
-date: 2025-03-24
+date: "2025-03-24"
 ---
 
 ## Introduction
