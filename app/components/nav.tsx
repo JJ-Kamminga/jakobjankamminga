@@ -27,7 +27,7 @@ export function Navbar() {
   return (
     <nav id="nav" style={
       {
-        width: matchesMedium ? '500px' : '750px',
+        width: matchesMedium ? '500px' : '650px',
         margin: 'auto',
         position: 'sticky',
         top: '0px',
