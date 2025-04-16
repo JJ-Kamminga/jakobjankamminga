@@ -1,4 +1,6 @@
-import { Grid } from '@mui/material';
+'use client';
+
+import { Grid, useMediaQuery } from '@mui/material';
 
 import { NavLink } from './navlink';
 
@@ -21,14 +23,16 @@ const navItems = {
 };
 
 export function Navbar() {
+  const matchesMedium = useMediaQuery('(max-width:800px)');
   return (
     <nav id="nav" style={
       {
-        maxWidth: '750px',
+        width: matchesMedium ? '500px' : '650px',
         margin: 'auto',
         position: 'sticky',
         top: '0px',
-        zIndex: '1'
+        zIndex: '1',
+        maxWidth: '100vw',
       }
     }>
       <Grid container spacing={0} sx={{
@@ -41,6 +45,7 @@ export function Navbar() {
               size={12 / Object.keys(navItems).length}
               sx={{
                 maxHeight: '95px',
+                minWidth: '95px',
                 background: name === 'owl' ? '#ffcb18' : '#1B1C22',
                 borderBottom: name === 'owl' ? `4px solid var(--main-darkgrey)` : `4px solid var(--main-yellow)`,
               }}
