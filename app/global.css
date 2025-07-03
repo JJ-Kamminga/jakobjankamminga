@@ -188,3 +188,54 @@ table {
 .title {
   text-wrap: balance;
 }
+
+blockquote {
+  display: block;
+  /* background: var(--main-lavender); */
+  outline: 3px dotted var(--main-lightgrey);
+  padding: 15px 10px 15px 45px;
+  margin: 0 0 10px;
+  position: relative;
+
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: '1.2rem';
+  font-style: italic;
+  line-height: 1.2;
+  color: var(--main-darkgrey);
+  text-align: justify;
+
+  /*Borders - (Optional)*/
+  border-left: 15px solid var(--main-yellow);
+  border-right: 2px solid var(--main-yellow);
+}
+
+blockquote::before {
+  content: "\201C";
+  font-size: 4rem;
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
+
+blockquote::after {
+  /*Reset to make sure*/
+  content: "";
+}
+
+/* 
+blockquote a{
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c;
+}
+
+blockquote a:hover{
+ color: #666;
+}
+
+blockquote em{
+  font-style: italic;
+} */
