@@ -123,4 +123,7 @@ As emphasized above, good testing is informed by domain and technology specific 
 
 1. Good software development is iterative
 2. Good testing is part of development
-3. Good test automation enables development to retain quality at speed
+3. Good test automation enables development by
+    - having a clear goal and scope
+    - running quickly and reliably
+    - produce output that is used
