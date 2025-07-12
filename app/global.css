@@ -223,19 +223,6 @@ blockquote::after {
   content: "";
 }
 
-/* 
-blockquote a{
-  text-decoration: none;
-  background: #eee;
-  cursor: pointer;
-  padding: 0 3px;
-  color: #c76c0c;
+section img {
+  max-width: 100%;
 }
-
-blockquote a:hover{
- color: #666;
-}
-
-blockquote em{
-  font-style: italic;
-} */

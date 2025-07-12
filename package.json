@@ -25,6 +25,7 @@
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.1",
     "remark-html": "^16.0.1",
+    "remark-images": "^4.1.0",
     "typescript": "5.3.3"
   },
   "devDependencies": {

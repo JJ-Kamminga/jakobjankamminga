@@ -6,6 +6,7 @@ import { cache } from 'react';
 import { remark } from 'remark';
 import remarkHtml from 'remark-html';
 import remarkGfm from 'remark-gfm';
+import remarkImages from 'remark-images';
 
 export async function readAllBlogPostFiles(blogPostsFolder: PathLike) {
   const dirEntries = await fs.promises.readdir(blogPostsFolder, { recursive: true, withFileTypes: true });
@@ -58,6 +59,7 @@ export async function processBlogPostContent(content: string) {
     await remark()
       .use(remarkHtml)
       .use(remarkGfm)
+      .use(remarkImages)
       .process(content)
   )
     .toString();

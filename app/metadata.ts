@@ -15,5 +15,5 @@ export const blogMetadata: SimpleMetadata = {
 
 export const thoughtsMetadata: SimpleMetadata = {
   title: 'Thoughts',
-  description: 'My condensed thoughts on specific topics. Sometimes a bit cheesy, but always well-considered, and never final.',
+  description: 'My condensed thoughts on specific topics. Personal and possibly cheesy, but always well-considered, and never final.',
 };
