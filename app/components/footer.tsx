@@ -14,14 +14,8 @@ export default function Footer() {
   return (
     <footer>
       <Container sx={{ textAlign: 'center', marginTop: '100px', marginBottom: '20px' }}>
-        <IconButton>
-          <InfoIcon fontSize="large" />
-        </IconButton>
         <IconButton onClick={toggleDrawer(true)} aria-label='toggle footer'>
           <InfoIcon fontSize='large' />
-        </IconButton>
-        <IconButton>
-          <InfoIcon fontSize="large" />
         </IconButton>
       </Container>
       <Drawer
