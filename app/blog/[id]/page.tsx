@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       title: blogPost.title,
       description: blogPost.summary,
       type: 'article',
-      publishedTime: blogPost.date/**?.toISOString()**/,
+      publishedTime: blogPost.date
     }
   };
 }
