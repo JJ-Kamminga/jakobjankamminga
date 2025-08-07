@@ -1,6 +1,7 @@
 'use client';
 
 import { Container, Divider, Typography, useMediaQuery } from '@mui/material';
+import Image from 'next/image';
 
 type HeaderProps = {
   title: string,
@@ -22,6 +23,7 @@ export default function Header({ title, subtitle }: HeaderProps) {
             textAlign: 'center',
           }}
         >
+
           {title}
           {subtitle && <Container maxWidth='sm'>
             <Typography
@@ -44,7 +46,44 @@ export default function Header({ title, subtitle }: HeaderProps) {
             marginRight: '130px',
           }} />
         </Typography>
-      </Container>
+        <span style={{ display: 'block', marginLeft: 'auto', width: '200px' }}>
+          <Image
+            src="/assets/icons/watermelon.png"
+            alt="watermelon icon"
+            height={30}
+            width={30}
+            style={{ marginRight: '2px' }}
+          />
+          <Image
+            src="/assets/icons/rainbow.png"
+            alt="rainbow icon"
+            height={30}
+            width={30}
+            style={{ marginRight: '2px' }}
+          />
+          <Image
+            src="/assets/icons/transflag.png"
+            alt="transgender flag icon"
+            height={30}
+            width={30}
+            style={{ marginRight: '2px' }}
+          />
+          <Image
+            src="/assets/icons/blm.png"
+            alt="black lives matter icon"
+            height={30}
+            width={30}
+            style={{ marginRight: '2px' }}
+          />
+          <Image
+            src="/assets/icons/peace.png"
+            alt="peace dove icon"
+            height={30}
+            width={30}
+            style={{ marginRight: '2px' }}
+          />
+        </span>
+      </Container >
     </ >
   );
 }

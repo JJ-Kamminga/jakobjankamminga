@@ -14,8 +14,14 @@ export default function Footer() {
   return (
     <footer>
       <Container sx={{ textAlign: 'center', marginTop: '100px', marginBottom: '20px' }}>
+        <IconButton>
+          <InfoIcon fontSize="large" />
+        </IconButton>
         <IconButton onClick={toggleDrawer(true)} aria-label='toggle footer'>
           <InfoIcon fontSize='large' />
+        </IconButton>
+        <IconButton>
+          <InfoIcon fontSize="large" />
         </IconButton>
       </Container>
       <Drawer
@@ -26,7 +32,8 @@ export default function Footer() {
         <Container sx={{ padding: '25px' }}>
           <Typography component='h2'><b>Copyright</b></Typography>
           <Typography>
-            <p>Owl icon by Freepik on <Link target="_blank" href='https://www.flaticon.com/'>Flatikon</Link>.</p>
+            <p>Owl, Watermelon, Rainbow icons by Freepik on <Link target="_blank" href='https://www.flaticon.com/'>Flatikon</Link>.</p>
+            <p>Trans flag icon by <Link target="_blank" href="https://www.flaticon.com/authors/gruffystudio">Gruffy Studio</Link></p>
             <p>
               Source code © {new Date().getFullYear()} under MIT License.
             </p>
