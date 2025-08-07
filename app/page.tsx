@@ -7,7 +7,7 @@ export default function Page() {
     <>
       <Header title='Jakob Jan Kamminga' />
       <section style={{
-        borderTop: '4px double var(--main-darkgrey)'
+        borderTop: '4px double var(--main-darkgrey)',
       }}>
         <Container maxWidth='md'>
           <AboutSection />

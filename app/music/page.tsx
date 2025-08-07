@@ -20,7 +20,10 @@ export default async function MusicPage() {
   return (
     <section>
       <Header title={musicMetadata.title} subtitle={musicMetadata.description} />
-      <Container maxWidth='md'>
+      <Container sx={{
+        borderTop: '4px double var(--main-darkgrey)',
+        paddingTop: '20px'
+      }} maxWidth='md'>
         <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
           <List>
             {blogPosts.map((blogPost) => (

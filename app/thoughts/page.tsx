@@ -21,7 +21,10 @@ export default async function ThoughtsPage() {
     <section>
       <Header title={thoughtsMetadata.title} subtitle={thoughtsMetadata.description} />
 
-      <Container maxWidth='xl'>
+      <Container maxWidth='xl' sx={{
+        borderTop: '4px double var(--main-darkgrey)',
+        paddingTop: '20px'
+      }}>
         <Grid container maxWidth='xl' spacing={4}>
           {blogPosts.map(async (blogPost) => {
             const htmlContent = await processBlogPostContent(blogPost.content);
