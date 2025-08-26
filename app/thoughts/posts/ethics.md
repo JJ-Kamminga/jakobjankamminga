@@ -1,9 +1,7 @@
 ---
-title: "Ethics"
+title: "Ethics is not a tool to change the world with"
 date: "2025-03-31"
 ---
-
-What a silly subject of study.
 
 When I studied ethics as part of my philosophy Bachelor, and then later as part of my _Applied Ethics_ Master, there was an idea that this was somehow less of a purely theoretical field then, say, ontology (the study of what is) or epistemology (the study of what is knowledge). At least, I had that idea.
 

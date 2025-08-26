@@ -1,5 +1,5 @@
 ---
-title: "Volition"
+title: "How can we excercise willpower when our choices are limited?"
 date: "2025-07-03"
 ---
 

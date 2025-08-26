@@ -1,5 +1,5 @@
 ---
-title: "Writing"
+title: "Why do I write?"
 date: "2025-03-24"
 ---
 

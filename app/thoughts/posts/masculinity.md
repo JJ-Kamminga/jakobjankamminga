@@ -1,5 +1,5 @@
 ---
-title: "Masculinity"
+title: "A constructive ideal of masculinity"
 date: "2025-06-13"
 ---
 

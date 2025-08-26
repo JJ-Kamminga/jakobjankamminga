@@ -1,5 +1,5 @@
 ---
-title: "Mixtapes"
+title: "Mixtapes are a pure form of curation"
 date: "2025-04-01"
 ---
 
@@ -11,4 +11,4 @@ It's better not to take advice from someone like Rob Gordon. But for mixtapes, w
 
 In eiter case, the mixtape is in this sense a pure form of curation. When done badly, it takes a work of art out of its context, making it estrange its listeners. But when done right, it takes something that the artist might not have consciously embedded into his work, and it places it together with other works that share that characteristic, to create something new that makes you realise that it fits, that makes this new creation sound as natural as the works that it consists of.
 
-Making mixtapes has been a passion of mine for a long time. You can find some of them on this site under "Music".
+Making mixtapes has been a passion of mine for a long time. You can find some of them on this site under "Music". This thought was originally written for the mixtapes section on a previous iteration of my website.
