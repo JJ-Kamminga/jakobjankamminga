@@ -17,3 +17,8 @@ export const thoughtsMetadata: SimpleMetadata = {
   title: 'Thoughts',
   description: 'My condensed thoughts on specific topics. Personal and possibly cheesy, but always well-considered, and never final.',
 };
+
+export const canonMetadata: SimpleMetadata = {
+  title: 'Good stuff',
+  description: 'Really good stuff'
+};
