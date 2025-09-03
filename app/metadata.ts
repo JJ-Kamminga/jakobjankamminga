@@ -19,6 +19,6 @@ export const thoughtsMetadata: SimpleMetadata = {
 };
 
 export const canonMetadata: SimpleMetadata = {
-  title: 'Good stuff',
-  description: 'Really good stuff'
+  title: 'My personal canon',
+  description: 'Recommended listens, reads and watches'
 };

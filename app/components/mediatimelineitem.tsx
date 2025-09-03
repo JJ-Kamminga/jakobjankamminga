@@ -12,17 +12,13 @@ export const MediaTimelineItem = ({ media, isLeft, isLast }: MediaTimelineProps)
     const MoviePoster = () => {
         return (
             <Image
-                style={moviePosterStyle}
+                style={{ boxShadow: '7px 1px 1px black' }}
                 src={media.image}
                 alt={media.title + ' film poster'}
-                width={200}
-                height={300}
+                width={250}
+                height={375}
             />
         );
-    };
-
-    const moviePosterStyle = {
-        boxShadow: '7px 1px 1px black',
     };
 
     const dotStyle = {
@@ -51,23 +47,19 @@ export const MediaTimelineItem = ({ media, isLeft, isLast }: MediaTimelineProps)
         height: '100%',
         overflow: 'auto',
         paddingTop: '12px',
-        paddingLeft: isLeft ? '0' : '20px',
-        paddingRight: isLeft ? '20px' : '0',
+        paddingLeft: isLeft ? '0' : '50px',
+        paddingRight: isLeft ? '50px' : '0',
     };
 
     const cardStyle = {
         maxWidth: '100%',
         marginLeft: isLeft ? 'auto' : '0',
         marginRight: isLeft ? '0' : 'auto',
-        borderRadius: '8px',
+        borderRadius: '5px',
         background: 'linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(59, 59, 59, 1) 81%, rgba(74, 74, 74, 1) 100%)',
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-        overflow: 'hidden',
+        boxShadow: '0px 1px 3px var(--main-darkgrey)',
+        overflow: 'auto',
         display: 'flex',
-    };
-
-    const cardContentStyle = {
-        padding: '16px',
     };
 
     const titleStyle = {
@@ -94,7 +86,7 @@ export const MediaTimelineItem = ({ media, isLeft, isLast }: MediaTimelineProps)
     };
 
     return (
-        <Card sx={{ display: 'flex', background: 'transparent', height: '400px', }}>
+        <Card sx={{ display: 'flex', background: 'transparent', boxShadow: 'none', height: '450px' }}>
             <aside style={{
                 fontSize: '2rem',
                 fontWeight: 'bold',
@@ -113,12 +105,11 @@ export const MediaTimelineItem = ({ media, isLeft, isLast }: MediaTimelineProps)
                 <div style={dotStyle} />
                 <div style={connectorStyle}></div>
             </div>
-
             <div style={contentStyle}>
                 <Card style={cardStyle}>
                     {isLeft && (
                         <MoviePoster />)}
-                    <div style={cardContentStyle}>
+                    <div style={{ padding: '16px' }}>
                         <h2 style={titleStyle}>
                             {media.title}
                         </h2>

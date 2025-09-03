@@ -15,69 +15,73 @@ export const filmData: Film[] = [
   {
     title: "They Live",
     year: 1988,
-    description: "Description",
+    description: "Largely forgotten among horror fans, never really reaching sci-fi fans, \
+      there is brilliance in They Live, Carpenter\'s take on the Invasion of the Body Snatchers trope.\
+      Its setting, a world where the powerful exploit and crack down on the powerless, feels\
+      shockingly relevant today. A paper thin plot and buckets of action movie tropes then\
+      quickly plunge it into camp territory, but the imagery (\"OBEY\" on billboards, \"THIS\
+      IS YOUR GOD\" on dollar bills\") and the alien overlord conspiracy remain iconic and \
+      relevant to this day.",
     image: "/film/they_live.jpg",
     metadata: {
       director: "John Carpenter",
-      genre: ["Science Fiction"],
+      genre: ["Science Fiction", "Action"],
     }
   },
   {
     title: "American Psycho",
     year: 2000,
-    description: "Description",
+    description: "No film captures the existential hell of contemporary life quite like American Psycho.\
+      It plays beautifully with the question who, in a society where nothing matters except status,\
+      the Psycho moniker belongs to. Patrick Bateman, the most pitiful of all, lying and murdering\
+      to keep up an artificial image. The likeminded yuppies he surrounds himself with, who deny\
+      anything they see that doesn't fit their worldview. Or larger societal forces that encourage\
+       and reward the behaviour in question?\
+     ",
     image: "/film/american_psycho.jpg",
     metadata: {
       director: "Mary Harron",
       genre: ["Horror", "Drama"],
     }
   },
-  // {
-  //   title: "The Matrix",
-  //   year: 1999,
-  //   description: "A computer programmer is led to fight an underground war against powerful computers who have constructed his entire reality with a system called the Matrix.",
-  //   image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=600&fit=crop",
-  //   metadata: {
-  //     director: "The Wachowskis",
-  //     genre: "Action",
-  //     rating: "R",
-  //     runtime: "136 min"
-  //   }
-  // },
-  // {
-  //   title: "Blade Runner 2049",
-  //   year: 2017,
-  //   description: "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.",
-  //   image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=600&fit=crop",
-  //   metadata: {
-  //     director: "Denis Villeneuve",
-  //     genre: "Sci-Fi",
-  //     rating: "R",
-  //     runtime: "164 min"
-  //   }
-  // },
-  // {
-  //   title: "Interstellar",
-  //   year: 2014,
-  //   description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
-  //   image: "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=400&h=600&fit=crop",
-  //   metadata: {
-  //     director: "Christopher Nolan",
-  //     genre: "Sci-Fi",
-  //     rating: "PG-13",
-  //     runtime: "169 min"
-  //   }
-  // },
-  // {
-  //   title: "Ex Machina",
-  //   year: 2014,
-  //   description: "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I.",
-  //   image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=600&fit=crop",
-  //   metadata: {
-  //     director: "Alex Garland",
-  //     genre: "Sci-Fi",
-  //     rating: "R",
-  //     runtime: "108 min"
-  //   }
-  // }
+  {
+    title: "Porco Rosso",
+    year: 1992,
+    description: "Description",
+    image: "/film/porco_rosso.jpg",
+    metadata: {
+      director: "Hayao Miyazaki",
+      genre: ["Animation", "Comedy", "Adventure"],
+    }
+  },
+  {
+    title: "Jurassic Park",
+    year: 1993,
+    description: "Description",
+    image: "/film/jurassic_park.webp",
+    metadata: {
+      director: "Steven Spielberg",
+      genre: ["Adventure", "Action"],
+    }
+  },
+  {
+    title: "The Lord of the Rings: The Fellowship of the Ring",
+    year: 2001,
+    description: "OK, this one is a known quantity. ",
+    image: "/film/lotr_fellowship.jpg",
+    metadata: {
+      director: "Peter Jackson",
+      genre: ["Fantasy", "Adventure"],
+    }
+  },
+  {
+    title: "Hackers",
+    year: 1995,
+    description: "Description",
+    image: "/film/hackers.jpg",
+    metadata: {
+      director: "Iain Softley",
+      genre: ["Crime", "Drama"],
+    }
+  },
 ];
