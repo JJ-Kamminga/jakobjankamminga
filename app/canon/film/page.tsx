@@ -7,7 +7,7 @@ export async function generateMetadata() {
   return canonFilmMetadata;
 }
 
-export default async function CanonPage() {
+export default async function CanonFilmPage() {
   return (
     <section>
       <Header title={canonFilmMetadata.title} subtitle={canonFilmMetadata.description} />

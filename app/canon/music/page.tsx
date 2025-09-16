@@ -6,7 +6,7 @@ export async function generateMetadata() {
   return canonMusicMetadata;
 }
 
-export default async function CanonPage() {
+export default async function CanonMusicPage() {
   return (
     <section>
       <Header title={canonMusicMetadata.title} subtitle={canonMusicMetadata.description} />

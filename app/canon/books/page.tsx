@@ -6,7 +6,7 @@ export async function generateMetadata() {
   return canonBooksMetadata;
 }
 
-export default async function CanonPage() {
+export default async function CanonBooksPage() {
   return (
     <section>
       <Header title={canonBooksMetadata.title} subtitle={canonBooksMetadata.description} />
