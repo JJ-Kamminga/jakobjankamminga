@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import MediaTimeline from "app/components/canontimeline";
+import FilmTimeline from "app/components/canonfilmtimeline";
 import Header from "app/components/header";
 import { canonFilmMetadata } from "app/metadata";
 
@@ -15,7 +15,7 @@ export default async function CanonPage() {
         borderTop: '4px double var(--main-darkgrey)',
         paddingTop: '20px'
       }} maxWidth='md'>
-        <MediaTimeline />
+        <FilmTimeline />
       </Container>
     </section>
   );

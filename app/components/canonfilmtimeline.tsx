@@ -3,7 +3,7 @@ import React from 'react';
 import { MediaTimelineItem } from './mediatimelineitem';
 import { Container } from '@mui/material';
 
-const MediaTimeline = ({ mediaData = filmData }) => {
+const FilmTimeline = ({ mediaData = filmData }) => {
   const sortedMedia = [...mediaData].sort((a, b) => a.year - b.year);
 
   return (
@@ -20,4 +20,4 @@ const MediaTimeline = ({ mediaData = filmData }) => {
   );
 };
 
-export default MediaTimeline;
+export default FilmTimeline;
