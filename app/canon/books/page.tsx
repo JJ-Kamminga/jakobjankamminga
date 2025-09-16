@@ -1,19 +1,20 @@
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import Header from "app/components/header";
-import { canonMetadata } from "app/metadata";
+import { canonBooksMetadata } from "app/metadata";
 
 export async function generateMetadata() {
-  return canonMetadata;
+  return canonBooksMetadata;
 }
 
 export default async function CanonPage() {
   return (
     <section>
-      <Header title={canonMetadata.title} subtitle={canonMetadata.description} />
+      <Header title={canonBooksMetadata.title} subtitle={canonBooksMetadata.description} />
       <Container sx={{
         borderTop: '4px double var(--main-darkgrey)',
         paddingTop: '20px'
       }} maxWidth='md'>
+        <Typography variant="body1">Work in progress, please check back later.</Typography>
       </Container>
     </section>
   );

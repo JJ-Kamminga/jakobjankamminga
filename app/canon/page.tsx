@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Container, List, ListItem, Typography } from "@mui/material";
 import Header from "app/components/header";
 import { canonMetadata } from "app/metadata";
 import Link from "next/link";
@@ -15,12 +15,15 @@ export default async function CanonPage() {
         borderTop: '4px double var(--main-darkgrey)',
         paddingTop: '20px'
       }} maxWidth='lg'>
-        <ul>
-          <li><Link href="/">← Back to home</Link></li>
-          <li><Link href="/canon/music" style={{ marginLeft: '20px' }}>Music</Link></li>
-          <li><Link href="/canon/film" style={{ marginLeft: '20px' }}>Film</Link></li>
-          <li><Link href="/canon/books" style={{ marginLeft: '20px' }}>Books</Link></li>
-        </ul>
+        <Typography variant="body1">
+          <Link href="/">← Back to home</Link>
+          <List>
+            <ListItem></ListItem>
+            <ListItem><Link href="/canon/music" style={{ marginLeft: '20px' }}>Music</Link></ListItem>
+            <ListItem><Link href="/canon/film" style={{ marginLeft: '20px' }}>Film</Link></ListItem>
+            <ListItem><Link href="/canon/books" style={{ marginLeft: '20px' }}>Books</Link></ListItem>
+          </List>
+        </Typography>
       </Container>
     </section>
   );
