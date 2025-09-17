@@ -7,7 +7,6 @@ import { formatDate } from "./utils/client";
 import { blogMetadata } from "app/metadata";
 import { ReactNode } from "react";
 import Image from "next/image";
-import { ResponsiveGrid } from "app/components/grid";
 
 export async function generateMetadata() {
   return blogMetadata;
@@ -37,7 +36,7 @@ export default async function BlogPage() {
     <section>
       <Header title={blogMetadata.title} subtitle={blogMetadata.description} />
       <Container maxWidth='md'>
-        <ResponsiveGrid>
+        <Grid container spacing={2} size={12}>
           {blogPosts.map((blogPost) => (
             <Grid size={{ xs: 10, md: 6, lg: 4 }} key={blogPost.id}>
               <Post>
@@ -59,7 +58,7 @@ export default async function BlogPage() {
             </Grid>
           ))}
           {/* </Typography> */}
-        </ResponsiveGrid>
+        </Grid>
       </Container>
     </section >
   );
