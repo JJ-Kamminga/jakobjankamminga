@@ -3,19 +3,19 @@
   color: #fefefe;
 }
 
-p a:link {
+p a:link, article a:link {
   color: var(--main-teal);
 }
 
-p a:visited {
+p a:visited, article a:visited {
   color: var(--main-darkblue);
 }
 
-p a:hover {
+p a:hover, article a:hover {
   color: var(--main-lavender);
 }
 
-p a:active {
+p a:active, article a:active {
   color: var(--main-jasper);
 }
 
