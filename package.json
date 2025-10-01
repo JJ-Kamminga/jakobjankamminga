@@ -27,7 +27,7 @@
     "remark-gfm": "^4.0.1",
     "remark-html": "^16.0.1",
     "remark-images": "^4.1.0",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "15.5.0",
