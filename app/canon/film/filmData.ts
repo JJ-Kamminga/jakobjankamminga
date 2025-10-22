@@ -15,10 +15,11 @@ export const filmData: Film[] = [
   {
     title: "They Live",
     year: 1988,
-    description: "Largely forgotten among horror fans, never really reaching sci-fi fans, \
+    description: "Though largely forgotten among horror fans, perhaps \"too easy\" for sci-fi fans, \
       there is brilliance in They Live, Carpenter\'s take on the Invasion of the Body Snatchers trope.\
-      Its setting, a world where the powerful exploit and crack down on the powerless, feels\
-      shockingly relevant today. A paper thin plot and buckets of action movie tropes then\
+      Though set in the late eighties, the backdrop is an unexpectedly real and current America,\
+      where the powerful exploit and crack down on the powerless.\
+      A paper thin plot and buckets of action movie tropes then\
       quickly plunge it into camp territory, but the imagery (\"OBEY\" on billboards, \"THIS\
       IS YOUR GOD\" on dollar bills\") and the alien overlord conspiracy remain iconic and \
       relevant to this day.",
