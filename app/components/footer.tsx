@@ -2,7 +2,7 @@
 import { Container, Drawer, IconButton, Typography } from "@mui/material";
 import { useState } from "react";
 import InfoIcon from '@mui/icons-material/Info';
-import Link from "next/link";
+import { Link } from "./link";
 
 export default function Footer() {
   const [isDrawerOpen, setDrawerOpen] = useState<boolean>(false);

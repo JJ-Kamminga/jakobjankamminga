@@ -1,7 +1,7 @@
 import { Container, List, ListItem, Typography } from "@mui/material";
 import Header from "app/components/header";
+import { Link } from "app/components/link";
 import { canonMetadata } from "app/metadata";
-import Link from "next/link";
 
 export async function generateMetadata() {
   return canonMetadata;
@@ -16,7 +16,7 @@ export default async function CanonPage() {
         paddingTop: '20px'
       }} maxWidth='lg'>
         <Typography variant="body1">
-          <Link href="/">← Back to home</Link>
+          <Link href="/">Back to home</Link>
           <List>
             <ListItem></ListItem>
             <ListItem><Link href="/canon/music" style={{ marginLeft: '20px' }}>Music</Link></ListItem>

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { getAllBlogPosts, sortBlogPosts } from "../blog.utils";
 import { Container, List, ListItem, Typography } from "@mui/material";
 import Header from "app/components/header";
@@ -6,6 +5,7 @@ import path from "path";
 import { NotesOutlined } from "@mui/icons-material";
 import { formatDate } from "./utils/client";
 import { blogMetadata } from "app/metadata";
+import { Link } from "app/components/link";
 
 export async function generateMetadata() {
   return blogMetadata;

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Container, List, ListItem, Typography } from "@mui/material";
 import Header from "app/components/header";
 import { getAllBlogPosts, sortBlogPosts } from "app/blog.utils";
@@ -6,6 +5,7 @@ import path from "path";
 import { formatDate } from "app/blog/utils/client";
 import { MusicPostIcon } from "./components/posticon";
 import { musicMetadata } from "app/metadata";
+import { Link } from "app/components/link";
 
 export async function generateMetadata() {
   return musicMetadata;

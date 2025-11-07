@@ -6,7 +6,7 @@ import { thoughtsMetadata } from "app/metadata";
 import { ThoughtsMasonry } from "app/components/thoughtsmasonry";
 import { Thought } from "app/components/thought";
 import { PostContents } from "app/components/postcontents";
-import Link from "next/link";
+import { Link } from "app/components/link";
 
 export async function generateMetadata() {
   return thoughtsMetadata;
