@@ -19,7 +19,7 @@
     "@types/react-dom": "19.1.9",
     "gray-matter": "^4.0.3",
     "jiti": "^2.5.1",
-    "next": "15.5.2",
+    "next": "15.5.7",
     "react": "^19.1.16",
     "react-dom": "^19.1.16",
     "react-responsive-masonry": "^2.7.1",
