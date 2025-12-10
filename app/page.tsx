@@ -1,5 +1,5 @@
 import { Container } from '@mui/material';
-import { AboutSection } from './components/aboutsection';
+import { AboutSection } from './components/AboutSection';
 import Header from './components/Header';
 
 export default function Page() {

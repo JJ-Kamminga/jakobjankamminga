@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import SchemaIcon from '@mui/icons-material/Schema';
-import Link from "next/link";
+import { Link } from "./Link";
 
 /** Palette
  * #ffcb18, #8a7560, #3891a6, #41333b, #e2afde
