@@ -1,5 +1,5 @@
 import { Container, List, ListItem, Typography } from "@mui/material";
-import Header from "app/components/header";
+import Header from "app/components/Header";
 import { canonMetadata } from "app/metadata";
 import Link from "next/link";
 

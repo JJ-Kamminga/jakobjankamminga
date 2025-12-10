@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container, List, ListItem, Typography } from "@mui/material";
-import Header from "app/components/header";
+import Header from "app/components/Header";
 import { getAllBlogPosts, sortBlogPosts } from "app/blog.utils";
 import path from "path";
 import { formatDate } from "app/blog/utils/client";

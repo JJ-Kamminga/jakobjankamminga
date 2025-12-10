@@ -1,5 +1,5 @@
 import { getBlogPostById, parseFileId, processBlogPostContent, readAllBlogPostFiles } from "../../blog.utils";
-import { PostContents } from "app/components/postcontents";
+import { PostContents } from "app/components/PostContents";
 import { Container, Divider, Typography } from "@mui/material";
 import path from "path";
 import { formatDate } from "app/blog/utils/client";
