@@ -13,17 +13,19 @@ interface LinkProps extends Omit<MuiLinkProps, 'href'> {
 
 const StyledMuiLink = styled(MuiLink)`
     color: var(--main-teal);
+    text-decoration: none;
     &:hover {
         color: var(--main-teal);
+        text-decoration: underline;
     }
     &:visited {
-    color: var(--main-darkblue);
-    }
-    &:hover {
-    color: var(--main-lavender);
+        color: var(--main-darkblue);
     }
     &:active {
-    color: var(--main-jasper);
+        color: var(--main-jasper);
+    }
+    &:focus {
+        color: var(--main-jasper);
     }
 `;
 

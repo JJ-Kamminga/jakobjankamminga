@@ -15,7 +15,7 @@ export async function generateMetadata() {
 const Post = ({ children }: { children: ReactNode }) => {
   return (
     <article style={{
-      height: '600px',
+      //height: '600px',
       width: '275px',
       marginLeft: 'auto',
       marginRight: 'auto',
@@ -41,10 +41,10 @@ export default async function BlogPage() {
             <Grid size={{ xs: 10, md: 6, lg: 4 }} key={blogPost.id}>
               <Post>
                 <Image
-                  src={"/blog/test.jpg"}
-                  alt={'TODO'}
-                  width={273}
-                  height={400}
+                  src={blogPost.image || "/blog/test.jpeg"}
+                  alt={'Image for blogpost'}
+                  width={300}
+                  height={200}
                 />
                 <Typography variant="h3" component="h3" sx={{ fontSize: '1.5rem', fontWeight: 'bold', }}>
                   <Link href={`/blog/${blogPost.id}`}>
@@ -57,7 +57,6 @@ export default async function BlogPage() {
               </Post>
             </Grid>
           ))}
-          {/* </Typography> */}
         </Grid>
       </Container>
     </section >

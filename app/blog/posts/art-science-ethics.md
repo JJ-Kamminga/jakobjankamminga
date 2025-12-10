@@ -1,6 +1,7 @@
 ---
 title: "The art and science of ethics"
 date: "2025-05-15"
+image: "/blog/test.jpeg"
 ---
 
 The following thoughts originated from a discussion on living virtuously. It harkens back to ideas I've had since my studies of philosophy, now over ten years ago.
