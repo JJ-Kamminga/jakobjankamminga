@@ -1,6 +1,6 @@
 import { filmData } from 'app/canon/film/filmData';
 import React from 'react';
-import { MediaTimelineItem } from './mediatimelineitem';
+import { MediaTimelineItem } from './MediaTimelineItem';
 import { Container } from '@mui/material';
 
 const FilmTimeline = ({ mediaData = filmData }) => {

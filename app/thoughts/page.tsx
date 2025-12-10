@@ -1,12 +1,12 @@
 import { Container, Typography } from "@mui/material";
-import Header from "app/components/header";
+import Header from "app/components/Header";
 import { getAllBlogPosts, processBlogPostContent, sortBlogPosts } from "app/blog.utils";
 import path from "path";
 import { thoughtsMetadata } from "app/metadata";
-import { ThoughtsMasonry } from "app/components/thoughtsmasonry";
-import { Thought } from "app/components/thought";
-import { PostContents } from "app/components/postcontents";
-import Link from "next/link";
+import { ThoughtsMasonry } from "app/components/ThoughtsMasonry";
+import { Thought } from "app/components/Thought";
+import { PostContents } from "app/components/PostContents";
+import { Link } from "app/components/Link";
 
 export async function generateMetadata() {
   return thoughtsMetadata;

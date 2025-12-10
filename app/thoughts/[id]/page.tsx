@@ -1,7 +1,7 @@
 import { getBlogPostById, parseFileId, processBlogPostContent, readAllBlogPostFiles } from "../../blog.utils";
-import { PostContents } from "app/components/postcontents";
+import { PostContents } from "app/components/PostContents";
 import { Container, Typography } from "@mui/material";
-import Header from "app/components/header";
+import Header from "app/components/Header";
 import path from "path";
 import { thoughtsMetadata } from "app/metadata";
 
