@@ -66,6 +66,9 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
     devDependencies:
+      '@eslint/eslintrc':
+        specifier: ^3.3.3
+        version: 3.3.3
       '@next/eslint-plugin-next':
         specifier: ^15.5.9
         version: 15.5.9
