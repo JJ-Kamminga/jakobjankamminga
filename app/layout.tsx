@@ -3,11 +3,11 @@ import type { Metadata } from 'next';
 import '@fontsource-variable/eb-garamond';
 import { baseUrl } from './sitemap';
 import { CssBaseline, GlobalStyles, ThemeProvider } from '@mui/material';
-import { globalStyles } from './components/globalstyles';
+import { globalStyles } from './components/GlobalStyles';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import theme from './theme';
-import { Navbar } from './components/nav';
-import Footer from './components/footer';
+import { Navbar } from './components/Nav';
+import Footer from './components/Footer';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

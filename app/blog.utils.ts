@@ -42,6 +42,7 @@ async function mapFileToBlogPost(file: fs.Dirent): Promise<BlogPostMetadata> {
     date: matterData.data.date.toString(),
     summary: matterData.content.slice(0, 280),
     content: matterData.content,
+    image: matterData.data.image,
     type: matterData.data.type
   };
 }
