@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { styled, Typography } from "@mui/material";
 
@@ -25,7 +25,7 @@ p a:link {
       color: var(--main-jasper);
     }
 
-`
+`;
 
 export const PostContents = ({ contents }: { contents: string }) => {
   return (
