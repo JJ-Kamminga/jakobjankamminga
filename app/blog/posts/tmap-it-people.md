@@ -1,7 +1,7 @@
 ---
 title: "Succesful high-performance IT delivery depends on people"
 date: "2025-03-24"
-image: "/blog/people-on-zebra.jpg"
+image: "people-on-zebra.jpg"
 ---
 
 ## Introduction

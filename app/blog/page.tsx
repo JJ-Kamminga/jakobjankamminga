@@ -41,7 +41,7 @@ export default async function BlogPage() {
             <Grid size={{ xs: 10, md: 6, lg: 4 }} key={blogPost.id}>
               <Post>
                 <Image
-                  src={blogPost.image || "/blog/test.jpeg"}
+                  src={`/600x400/${blogPost.image}`}
                   alt={'Image for blogpost'}
                   width={300}
                   height={200}
