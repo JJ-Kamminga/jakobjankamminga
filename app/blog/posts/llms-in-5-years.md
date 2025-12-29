@@ -1,6 +1,8 @@
 ---
 title: "AI in 5 years from now"
 date: "2025-04-16"
+image: "sad-robot.jpg"
+imagecredit: "Daniil Perunov"
 ---
 
 ## Let's place some bets
