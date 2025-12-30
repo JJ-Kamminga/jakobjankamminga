@@ -1,6 +1,8 @@
 ---
 title: "Non-gendered relations"
 date: "2025-09-13"
+image: "berlin-wall-kiss.avif"
+imagecredit: "Nick Fewings"
 ---
 
 ## An interpretation of androgyny
