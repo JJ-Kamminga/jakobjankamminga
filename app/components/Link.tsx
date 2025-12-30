@@ -29,7 +29,6 @@ const StyledMuiLink = styled(MuiLink)`
     }
 `;
 
-
 export const Link: React.FC<LinkProps> = ({ href, children, Icon, ...muiLinkProps }) => {
     return (
         <StyledMuiLink component={NextLink} href={href} {...muiLinkProps}>

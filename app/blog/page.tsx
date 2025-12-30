@@ -15,7 +15,6 @@ export async function generateMetadata() {
 const Post = ({ children }: { children: ReactNode }) => {
   return (
     <article style={{
-      //height: '600px',
       width: '275px',
       marginLeft: 'auto',
       marginRight: 'auto',
@@ -78,6 +77,6 @@ export default async function BlogPage() {
           ))}
         </Grid>
       </Container>
-    </section >
+    </section>
   );
 }
