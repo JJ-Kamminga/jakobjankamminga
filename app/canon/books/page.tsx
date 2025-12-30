@@ -1,5 +1,5 @@
 import { Container, Typography } from "@mui/material";
-import Header from "app/components/header";
+import Header from "app/components/Header";
 import { canonBooksMetadata } from "app/metadata";
 
 export async function generateMetadata() {

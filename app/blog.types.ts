@@ -5,5 +5,6 @@ export type BlogPostMetadata = {
   summary: string
   content: string
   image?: string
+  imagecredit?: string
   type?: 'list' | 'playlist'
 }

@@ -3,22 +3,6 @@
   color: #fefefe;
 }
 
-p a:link {
-  color: var(--main-teal);
-}
-
-p a:visited {
-  color: var(--main-darkblue);
-}
-
-p a:hover {
-  color: var(--main-lavender);
-}
-
-p a:active {
-  color: var(--main-jasper);
-}
-
 .sentence:first-letter {
   float: left;
   font-size: 5rem;
@@ -121,3 +105,4 @@ blockquote::after {
 section img {
   max-width: 100%;
 }
+

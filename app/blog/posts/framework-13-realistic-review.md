@@ -1,6 +1,7 @@
 ---
 title: "Framework 13 Ubuntu Ryzen 7040 series - a realistic review"
 date: "2025-07-12"
+image: "frameworklaptop.jpeg"
 ---
 
 When I was shopping for laptops earlier this year, I was able to find plenty of quick impressions of Framework laptops. However, was it going to hold up to intensive professional use? I didn't really know. I did end up buying it, but it was a bit of a shot in the dark. Hopefully, this article will help others make a more informed choice.

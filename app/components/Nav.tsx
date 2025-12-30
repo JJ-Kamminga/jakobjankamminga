@@ -2,7 +2,7 @@
 
 import { Grid, useMediaQuery } from '@mui/material';
 
-import { NavLink } from './navlink';
+import { NavLink } from './NavLink';
 
 const navItems = {
   '/': {

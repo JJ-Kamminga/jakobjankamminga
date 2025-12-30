@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
-import FilmTimeline from "app/components/canonfilmtimeline";
-import Header from "app/components/header";
+import FilmTimeline from "app/components/CanonFilmTimeline";
+import Header from "app/components/Header";
 import { canonFilmMetadata } from "app/metadata";
 
 export async function generateMetadata() {

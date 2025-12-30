@@ -1,6 +1,8 @@
 ---
 title: "Succesful high-performance IT delivery depends on people"
 date: "2025-03-24"
+image: "people-on-zebra.jpg"
+imagecredit: "Conrad Alexander"
 ---
 
 ## Introduction

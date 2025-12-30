@@ -1,6 +1,8 @@
 ---
 title: "Which tests should you automate?"
 date: "2025-07-02"
+image: "factory-automation.avif"
+imagecredit: "Simon Kadula"
 ---
 
 ## Introduction
