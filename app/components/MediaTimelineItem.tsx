@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { Card, useMediaQuery, useTheme } from "@mui/material";
 import { Film } from "app/canon/film/filmData";
@@ -14,7 +14,7 @@ export const MediaTimelineItem = ({ media, isLeft, isLast }: MediaTimelineProps)
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-    const MoviePoster = ({ mobile = false }: { mobile?: boolean }) => {
+    const MoviePoster = () => {
         return (
             <Image
                 style={{
@@ -131,7 +131,7 @@ export const MediaTimelineItem = ({ media, isLeft, isLast }: MediaTimelineProps)
                         overflow: 'hidden',
                     }}>
                         <div style={{ width: '100%' }}>
-                            <MoviePoster mobile />
+                            <MoviePoster />
                         </div>
                         <div style={{ padding: '16px' }}>
                             <h2 style={{
