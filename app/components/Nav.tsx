@@ -11,8 +11,8 @@ const navItems = {
   '/blog': {
     name: 'Blog',
   },
-  '/thoughts': {
-    name: 'Thoughts',
+  '/canon': {
+    name: 'Canon',
   },
   '/music': {
     name: 'Music',

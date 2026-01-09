@@ -13,27 +13,22 @@ export const blogMetadata: SimpleMetadata = {
   description: 'I think about technology, philosophy and history. This blog may or may not contain structured thoughts.',
 };
 
-export const thoughtsMetadata: SimpleMetadata = {
-  title: 'Thoughts',
-  description: 'My condensed thoughts on specific topics. Personal and possibly cheesy, but always well-considered, and never final.',
-};
-
 export const canonMetadata: SimpleMetadata = {
   title: 'My personal canon',
-  description: 'Recommended listens, reads and watches'
+  description: 'The works that have shaped my identity and thinking, and that I heartily recommend to others.'
 };
 
 export const canonFilmMetadata: SimpleMetadata = {
-  title: 'My personal film canon',
-  description: 'Recommended watches'
+  title: 'Film',
+  description: 'Recommended films and other visual media.'
 };
 
 export const canonBooksMetadata: SimpleMetadata = {
-  title: 'My personal books canon',
-  description: 'Recommended reads'
+  title: 'Literature',
+  description: 'Recommended books and articles.'
 };
 
 export const canonMusicMetadata: SimpleMetadata = {
-  title: 'My personal music canon',
-  description: 'Recommended listens'
+  title: 'Music',
+  description: 'Recommended music.'
 };
