@@ -1,4 +1,6 @@
-import { Card } from "@mui/material";
+'use client'
+
+import { Card, useMediaQuery, useTheme } from "@mui/material";
 import { Film } from "app/canon/film/filmData";
 import Image from "next/image";
 
@@ -9,10 +11,18 @@ type MediaTimelineProps = {
 };
 
 export const MediaTimelineItem = ({ media, isLeft, isLast }: MediaTimelineProps) => {
-    const MoviePoster = () => {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+
+    const MoviePoster = ({ mobile = false }: { mobile?: boolean }) => {
         return (
             <Image
-                style={{ boxShadow: '7px 1px 1px black' }}
+                style={{
+                    boxShadow: '7px 1px 1px black',
+                    margin: '7px',
+                    width: 'auto',
+                    height: 'auto'
+                }}
                 src={media.image}
                 alt={media.title + ' film poster'}
                 width={250}
@@ -22,8 +32,8 @@ export const MediaTimelineItem = ({ media, isLeft, isLast }: MediaTimelineProps)
     };
 
     const dotStyle = {
-        width: '48px',
-        height: '48px',
+        width: isMobile ? '32px' : '48px',
+        height: isMobile ? '32px' : '48px',
         borderRadius: '50%',
         border: '4px solid var(--main-darkgrey)',
         borderColor: 'var(--main-darkgrey)',
@@ -38,14 +48,14 @@ export const MediaTimelineItem = ({ media, isLeft, isLast }: MediaTimelineProps)
         width: '3px',
         backgroundColor: 'var(--main-darkgrey)',
         flex: 1,
-        minHeight: '352px',
+        minHeight: isMobile ? '100px' : '352px',
         display: isLast ? 'none' : 'flex',
     };
 
     const contentStyle = {
         flex: '1',
         height: '100%',
-        overflow: 'auto',
+        overflow: 'hidden',
         paddingTop: '12px',
         paddingLeft: isLeft ? '0' : '50px',
         paddingRight: isLeft ? '50px' : '0',
@@ -85,8 +95,87 @@ export const MediaTimelineItem = ({ media, isLeft, isLast }: MediaTimelineProps)
         color: 'var(--main-darkgrey)',
     };
 
+    if (isMobile) {
+        return (
+            <Card sx={{
+                display: 'flex',
+                background: 'transparent',
+                boxShadow: 'none',
+                marginBottom: '20px',
+                flexDirection: 'row'
+            }}>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    marginRight: '16px'
+                }}>
+                    <div style={dotStyle} />
+                    <div style={connectorStyle}></div>
+                </div>
+
+                <div style={{ flex: 1 }}>
+                    <div style={{
+                        fontSize: '1.5rem',
+                        fontWeight: 'bold',
+                        color: 'var(--main-darkgrey)',
+                        marginBottom: '8px',
+                    }}>
+                        {media.year}
+                    </div>
+
+                    <Card sx={{
+                        borderRadius: '5px',
+                        background: 'linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(59, 59, 59, 1) 81%, rgba(74, 74, 74, 1) 100%)',
+                        boxShadow: '0px 1px 3px var(--main-darkgrey)',
+                        overflow: 'hidden',
+                    }}>
+                        <div style={{ width: '100%' }}>
+                            <MoviePoster mobile />
+                        </div>
+                        <div style={{ padding: '16px' }}>
+                            <h2 style={{
+                                fontSize: '1.25rem',
+                                fontWeight: 'bold',
+                                color: 'var(--main-white)',
+                                marginTop: '0',
+                                marginBottom: '8px',
+                            }}>
+                                {media.title}
+                            </h2>
+                            <p style={{
+                                fontSize: '0.875rem',
+                                color: 'var(--main-white)',
+                                lineHeight: '1.6',
+                                marginBottom: '16px',
+                            }}>
+                                {media.description}
+                            </p>
+                            {media.metadata && (
+                                <div style={{
+                                    display: 'flex',
+                                    flexWrap: 'wrap',
+                                    gap: '8px',
+                                }}>
+                                    <span style={chipStyle}>
+                                        Dir: {media.metadata.director}
+                                    </span>
+                                    {media.metadata.genre.map((genre, i) => (
+                                        <span key={genre + i} style={chipStyle}>
+                                            {genre}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    </Card>
+                </div>
+            </Card>
+        );
+    }
+
     return (
-        <Card sx={{ display: 'flex', background: 'transparent', boxShadow: 'none', height: '450px' }}>
+        <Card sx={{ display: 'flex', background: 'transparent', boxShadow: 'none', height: '550px' }}>
             <aside style={{
                 fontSize: '2rem',
                 fontWeight: 'bold',
@@ -107,8 +196,7 @@ export const MediaTimelineItem = ({ media, isLeft, isLast }: MediaTimelineProps)
             </div>
             <div style={contentStyle}>
                 <Card style={cardStyle}>
-                    {isLeft && (
-                        <MoviePoster />)}
+                    {isLeft && <MoviePoster />}
                     <div style={{ padding: '16px' }}>
                         <h2 style={titleStyle}>
                             {media.title}
