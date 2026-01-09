@@ -8,7 +8,8 @@
     "lint": "eslint app --c 'eslint.config.ts'",
     "lint:fix": "eslint app --fix",
     "type-check": "tsc --noEmit",
-    "generate-blog-thumbnails": "bash resize_crop_images.sh images/blog 400 600"
+    "generate-blog-thumbnails": "bash resize_crop_images.sh images/blog 400 600",
+    "prepare": "husky"
   },
   "dependencies": {
     "@emotion/styled": "^11.14.1",
@@ -36,6 +37,14 @@
     "@next/eslint-plugin-next": "^15.5.9",
     "eslint": "9.34.0",
     "eslint-config-next": "^15.5.9",
-    "eslint-config-prettier": "^10.1.8"
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "bash -c 'pnpm type-check'"
+    ]
   }
 }
