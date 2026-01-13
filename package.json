@@ -9,6 +9,7 @@
     "lint:fix": "eslint app --fix",
     "type-check": "tsc --noEmit",
     "generate-blog-thumbnails": "bash resize_crop_images.sh images/blog 400 600",
+    "generate-blog-content-images": "bash resize_content_images.sh images/blog 1200",
     "prepare": "husky"
   },
   "dependencies": {
