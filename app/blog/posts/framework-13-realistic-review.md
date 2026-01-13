@@ -10,7 +10,7 @@ These are simply expanded versions of my personal notes about using the Framewor
 
 I received my Framework in March of 2025, sadly just missing the release of the new CPU series, but alas - I needed it for work. I've been using it roughly 6 days a week, for professional and private purposes.
 
-![My Framework 13, with my old (2013) MacBook Air in the background](/blog/frameworklaptop.jpeg)
+![My Framework 13, with my old (2013) MacBook Air in the background](frameworklaptop.jpeg)
 My Framework 13, with my old (2013) MacBook Air in the background
 
 ## My types of use
@@ -44,7 +44,7 @@ Framework Laptop 13 DIY Edition (AMD Ryzen™ 7040 Series). AMD Ryzen™ 7 7840U
 
 This was the highest possible configuration at the time, except that I have room for an additional 32GB of memory.
 
-![My Framework 13 in my home office](/blog/frameworkindock.jpeg)
+![My Framework 13 in my home office](/frameworkindock.jpeg)
 My Framework 13 in my home office
 
 ## My impressions
