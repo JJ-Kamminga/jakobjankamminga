@@ -44,7 +44,7 @@ Framework Laptop 13 DIY Edition (AMD Ryzen™ 7040 Series). AMD Ryzen™ 7 7840U
 
 This was the highest possible configuration at the time, except that I have room for an additional 32GB of memory.
 
-![My Framework 13 in my home office](frameworkindock.jpeg)
+![My Framework 13 in my home office](/frameworkindock.jpeg)
 My Framework 13 in my home office
 
 ## My impressions

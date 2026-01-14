@@ -18,13 +18,21 @@ p a:link {
 
     p a:hover {
       color: var(--main-lavender);
-        text-decoration: underline;
+      text-decoration: underline;
     }
 
     p a:active {
       color: var(--main-jasper);
     }
 
+    p img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      outline: 3px double var(--main-lightgrey);
+      border-right: 15px solid var(--main-yellow);
+      border-left: 2px solid var(--main-yellow);
+    }
 `;
 
 export const PostContents = ({ contents }: { contents: string }) => {

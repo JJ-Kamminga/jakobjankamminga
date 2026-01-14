@@ -76,7 +76,6 @@ blockquote {
   margin: 0 0 10px;
   position: relative;
 
-  /*Font*/
   font-family: Georgia, serif;
   font-size: '1.2rem';
   font-style: italic;
@@ -84,7 +83,6 @@ blockquote {
   color: var(--main-darkgrey);
   text-align: justify;
 
-  /*Borders - (Optional)*/
   border-left: 15px solid var(--main-yellow);
   border-right: 2px solid var(--main-yellow);
 }
