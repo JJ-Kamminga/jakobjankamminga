@@ -32,6 +32,9 @@ importers:
       '@types/react-dom':
         specifier: 19.1.9
         version: 19.1.9(@types/react@19.1.16)
+      '@types/unist':
+        specifier: ^3.0.3
+        version: 3.0.3
       gray-matter:
         specifier: ^4.0.3
         version: 4.0.3
