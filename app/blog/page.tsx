@@ -41,7 +41,7 @@ export default async function BlogPage() {
               <Post>
             <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
                 <Image
-                  src={`/600x400/${blogPost.image}`}
+                  src={`/thumbnail-600x400/${blogPost.image}`}
                   alt={`Image for blogpost. ${blogPost.imagecredit && `Photo by ${blogPost.imagecredit}`}`}
                   width={300}
                   height={200}
