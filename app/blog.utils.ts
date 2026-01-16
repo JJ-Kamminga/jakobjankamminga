@@ -53,7 +53,7 @@ async function mapFileToBlogPost(file: fs.Dirent): Promise<BlogPostMetadata> {
 }
 
 function getFilePath(file: fs.Dirent): string {
-  return path.join(file.path, file.name);
+  return path.join(file.parentPath, file.name);
 }
 
 export function parseFileId(file: fs.Dirent): string {
