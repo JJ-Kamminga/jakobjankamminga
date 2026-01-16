@@ -5,7 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint app --c 'eslint.config.ts'",
+    "lint": "eslint app",
     "lint:fix": "eslint app --fix",
     "type-check": "tsc --noEmit",
     "generate-blog-thumbnails": "bash resize_blog_images.sh images/blog crop 600 400",

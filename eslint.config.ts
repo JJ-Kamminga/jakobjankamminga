@@ -1,20 +1,11 @@
-import { defineConfig } from "eslint/config";
-import { FlatCompat } from '@eslint/eslintrc';
+import nextConfig from 'eslint-config-next';
 
-const compat = new FlatCompat({
-  // import.meta.dirname is available after Node.js v20.11.0
-  baseDirectory: import.meta.dirname,
-});
-
-export default defineConfig([
-  ...compat.config({
-    extends: [
-      "next/core-web-vitals",
-      "next/typescript"
-    ],
+export default [
+  ...nextConfig,
+  {
     rules: {
       semi: "error",
       "prefer-const": "error",
     },
   },
-  )]);
+];

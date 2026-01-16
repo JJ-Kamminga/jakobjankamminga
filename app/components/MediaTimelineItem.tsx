@@ -14,22 +14,20 @@ export const MediaTimelineItem = ({ media, isLeft, isLast }: MediaTimelineProps)
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-    const MoviePoster = () => {
-        return (
-            <Image
-                style={{
-                    boxShadow: '7px 1px 1px black',
-                    margin: '7px',
-                    width: 'auto',
-                    height: 'auto'
-                }}
-                src={media.image}
-                alt={media.title + ' film poster'}
-                width={250}
-                height={375}
-            />
-        );
-    };
+    const moviePoster = (
+        <Image
+            style={{
+                boxShadow: '7px 1px 1px black',
+                margin: '7px',
+                width: 'auto',
+                height: 'auto'
+            }}
+            src={media.image}
+            alt={media.title + ' film poster'}
+            width={250}
+            height={375}
+        />
+    );
 
     const dotStyle = {
         width: isMobile ? '32px' : '48px',
@@ -131,7 +129,7 @@ export const MediaTimelineItem = ({ media, isLeft, isLast }: MediaTimelineProps)
                         overflow: 'hidden',
                     }}>
                         <div style={{ width: '100%' }}>
-                            <MoviePoster />
+                            {moviePoster}
                         </div>
                         <div style={{ padding: '16px' }}>
                             <h2 style={{
@@ -196,7 +194,7 @@ export const MediaTimelineItem = ({ media, isLeft, isLast }: MediaTimelineProps)
             </div>
             <div style={contentStyle}>
                 <Card style={cardStyle}>
-                    {isLeft && <MoviePoster />}
+                    {isLeft && moviePoster}
                     <div style={{ padding: '16px' }}>
                         <h2 style={titleStyle}>
                             {media.title}
@@ -219,7 +217,7 @@ export const MediaTimelineItem = ({ media, isLeft, isLast }: MediaTimelineProps)
                             </div>
                         )}
                     </div>
-                    {!isLeft && <MoviePoster />}
+                    {!isLeft && moviePoster}
                 </Card>
             </div>
         </Card>
