@@ -84,16 +84,23 @@ export const filmData: Film[] = [
       genre: ["Psychological", "Horror"],
     }
   },
-  // {
-  //   title: "Porco Rosso",
-  //   year: 1992,
-  //   description: "Description",
-  //   image: "/film/porco_rosso.jpg",
-  //   metadata: {
-  //     director: "Hayao Miyazaki",
-  //     genre: ["Animation", "Comedy", "Adventure"],
-  //   }
-  // },
+  {
+     title: "Porco Rosso",
+     year: 1992,
+     description: "Porco Rosso is a Miyazaki film in all the best ways.\
+       Seemingly a romantic display of an imaginative, fictional world where pigs \
+       literally fly, Porco Rosso is a story deeply human. Porco Rosso, the Pig Pilot\
+       needs to come to terms with what we could call survivor\'s guilt, and battle \
+       air pirates Mussolini\'s fascism along the way. The film introduces a lot of\
+       ambiguity, but always in the right place, leaving us guessing and wondering\
+       but marveling at the characters, music and stunning animation.\
+         ",
+     image: "/film/porco_rosso.jpg",
+     metadata: {
+       director: "Hayao Miyazaki",
+       genre: ["Animation", "Comedy", "Adventure"],
+     }
+   },
   // {
   //   title: "Jurassic Park",
   //   year: 1993,
