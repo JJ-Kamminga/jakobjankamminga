@@ -62,6 +62,28 @@ export const filmData: Film[] = [
       genre: ["Horror", "Drama"],
     }
   },
+  {
+    title: "The Haunting",
+    year: 1963,
+    description: "\
+       This adaptation of the 1958 Shirley Jackson novel was ahead of its\
+       time on more than one front. \
+       Coming at \"classic\" (pre-1980) horror films with a modern view, I found it\
+       among the most tense and frightening ones. And that while there are no\
+       actual supernatural beings, let alone gore on display.\
+       Its choices and use of music and more importantly, silence work wonders. \
+       Its cinematography is excellent. But most importantly, the interaction\
+       between characters is realistic and deep. Each character is notable, in \
+       particular Theodora, an unusually un-stereotypical lesbian, not a mistress of evil, \
+       but a regular person, and spared the tragic plot that modern cinema \
+       typically reserves for that archetype.\
+    ",
+    image: "/film/the_haunting.jpg",
+    metadata: {
+      director: "Robert Wise",
+      genre: ["Psychological", "Horror"],
+    }
+  },
   // {
   //   title: "Porco Rosso",
   //   year: 1992,
